@@ -1,0 +1,66 @@
+[32;1m2025-04-30 22:00:15,019 [datasets.wordnet_full][0m 0 GPUs available
+[32;1m2025-04-30 22:00:15,019 [datasets.wordnet_full][0m Using seed 43 on class 1
+[32;1m2025-04-30 22:00:15,069 [datasets.wordnet_full][0m 52552 train and 16423 test samples for fold 0
+[32;1m2025-04-30 22:00:16,680 [datasets.wordnet_full][0m Hyperbolic tree f1 micro: 0.9940, f1 macro: 0.9687, f1_weight: 0.9941. acc 0.99
+[32;1m2025-04-30 22:00:16,723 [datasets.wordnet_full][0m 52552 train and 16423 test samples for fold 1
+[32;1m2025-04-30 22:00:18,354 [datasets.wordnet_full][0m Hyperbolic tree f1 micro: 0.9948, f1 macro: 0.9725, f1_weight: 0.9949. acc 0.99
+[32;1m2025-04-30 22:00:18,396 [datasets.wordnet_full][0m 52552 train and 16423 test samples for fold 2
+[32;1m2025-04-30 22:00:20,031 [datasets.wordnet_full][0m Hyperbolic tree f1 micro: 0.9933, f1 macro: 0.9647, f1_weight: 0.9934. acc 0.99
+[32;1m2025-04-30 22:00:20,074 [datasets.wordnet_full][0m 52552 train and 16423 test samples for fold 3
+[32;1m2025-04-30 22:00:21,675 [datasets.wordnet_full][0m Hyperbolic tree f1 micro: 0.9949, f1 macro: 0.9726, f1_weight: 0.9949. acc 0.99
+[32;1m2025-04-30 22:00:21,719 [datasets.wordnet_full][0m 52552 train and 16423 test samples for fold 0
+[32;1m2025-04-30 22:00:23,823 [datasets.wordnet_full][0m Hyperbolic tree f1 micro: 0.9722, f1 macro: 0.9245, f1_weight: 0.9722. acc 0.97
+[32;1m2025-04-30 22:00:23,867 [datasets.wordnet_full][0m 52552 train and 16423 test samples for fold 1
+[32;1m2025-04-30 22:00:25,954 [datasets.wordnet_full][0m Hyperbolic tree f1 micro: 0.9699, f1 macro: 0.9165, f1_weight: 0.9696. acc 0.97
+[32;1m2025-04-30 22:00:25,997 [datasets.wordnet_full][0m 52552 train and 16423 test samples for fold 2
+[32;1m2025-04-30 22:00:28,109 [datasets.wordnet_full][0m Hyperbolic tree f1 micro: 0.9705, f1 macro: 0.9189, f1_weight: 0.9704. acc 0.97
+[32;1m2025-04-30 22:00:28,155 [datasets.wordnet_full][0m 52552 train and 16423 test samples for fold 3
+[32;1m2025-04-30 22:00:30,304 [datasets.wordnet_full][0m Hyperbolic tree f1 micro: 0.9712, f1 macro: 0.9207, f1_weight: 0.9711. acc 0.97
+[32;1m2025-04-30 22:00:30,348 [datasets.wordnet_full][0m 52552 train and 16423 test samples for fold 0
+[32;1m2025-04-30 22:00:31,882 [datasets.wordnet_full][0m Hyperbolic tree f1 micro: 0.9903, f1 macro: 0.7859, f1_weight: 0.9894. acc 0.99
+[32;1m2025-04-30 22:00:31,924 [datasets.wordnet_full][0m 52552 train and 16423 test samples for fold 1
+[32;1m2025-04-30 22:00:33,430 [datasets.wordnet_full][0m Hyperbolic tree f1 micro: 0.9901, f1 macro: 0.7813, f1_weight: 0.9892. acc 0.99
+[32;1m2025-04-30 22:00:33,473 [datasets.wordnet_full][0m 52552 train and 16423 test samples for fold 2
+[32;1m2025-04-30 22:00:34,988 [datasets.wordnet_full][0m Hyperbolic tree f1 micro: 0.9906, f1 macro: 0.7813, f1_weight: 0.9895. acc 0.99
+[32;1m2025-04-30 22:00:35,030 [datasets.wordnet_full][0m 52552 train and 16423 test samples for fold 3
+[32;1m2025-04-30 22:00:36,568 [datasets.wordnet_full][0m Hyperbolic tree f1 micro: 0.9911, f1 macro: 0.8036, f1_weight: 0.9903. acc 0.99
+[32;1m2025-04-30 22:00:36,612 [datasets.wordnet_full][0m 52552 train and 16423 test samples for fold 0
+[32;1m2025-04-30 22:00:38,000 [datasets.wordnet_full][0m Hyperbolic tree f1 micro: 0.9989, f1 macro: 0.9806, f1_weight: 0.9989. acc 1.00
+[32;1m2025-04-30 22:00:38,044 [datasets.wordnet_full][0m 52552 train and 16423 test samples for fold 1
+[32;1m2025-04-30 22:00:39,421 [datasets.wordnet_full][0m Hyperbolic tree f1 micro: 0.9990, f1 macro: 0.9827, f1_weight: 0.9990. acc 1.00
+[32;1m2025-04-30 22:00:39,464 [datasets.wordnet_full][0m 52552 train and 16423 test samples for fold 2
+[32;1m2025-04-30 22:00:40,853 [datasets.wordnet_full][0m Hyperbolic tree f1 micro: 0.9990, f1 macro: 0.9817, f1_weight: 0.9990. acc 1.00
+[32;1m2025-04-30 22:00:40,896 [datasets.wordnet_full][0m 52552 train and 16423 test samples for fold 3
+[32;1m2025-04-30 22:00:42,553 [datasets.wordnet_full][0m Hyperbolic tree f1 micro: 0.9992, f1 macro: 0.9861, f1_weight: 0.9992. acc 1.00
+[32;1m2025-04-30 22:00:42,608 [datasets.wordnet_full][0m 52552 train and 16423 test samples for fold 0
+[32;1m2025-04-30 22:00:44,233 [datasets.wordnet_full][0m Hyperbolic tree f1 micro: 0.9929, f1 macro: 0.8370, f1_weight: 0.9925. acc 0.99
+[32;1m2025-04-30 22:00:44,276 [datasets.wordnet_full][0m 52552 train and 16423 test samples for fold 1
+[32;1m2025-04-30 22:00:45,881 [datasets.wordnet_full][0m Hyperbolic tree f1 micro: 0.9918, f1 macro: 0.8169, f1_weight: 0.9914. acc 0.99
+[32;1m2025-04-30 22:00:45,934 [datasets.wordnet_full][0m 52552 train and 16423 test samples for fold 2
+[32;1m2025-04-30 22:00:47,525 [datasets.wordnet_full][0m Hyperbolic tree f1 micro: 0.9932, f1 macro: 0.8471, f1_weight: 0.9929. acc 0.99
+[32;1m2025-04-30 22:00:47,570 [datasets.wordnet_full][0m 52552 train and 16423 test samples for fold 3
+[32;1m2025-04-30 22:00:49,041 [datasets.wordnet_full][0m Hyperbolic tree f1 micro: 0.9935, f1 macro: 0.8559, f1_weight: 0.9933. acc 0.99
+[32;1m2025-04-30 22:00:49,086 [datasets.wordnet_full][0m 52552 train and 16423 test samples for fold 0
+[32;1m2025-04-30 22:00:50,610 [datasets.wordnet_full][0m Hyperbolic tree f1 micro: 0.9955, f1 macro: 0.9191, f1_weight: 0.9954. acc 1.00
+[32;1m2025-04-30 22:00:50,654 [datasets.wordnet_full][0m 52552 train and 16423 test samples for fold 1
+[32;1m2025-04-30 22:00:52,184 [datasets.wordnet_full][0m Hyperbolic tree f1 micro: 0.9954, f1 macro: 0.9190, f1_weight: 0.9953. acc 1.00
+[32;1m2025-04-30 22:00:52,228 [datasets.wordnet_full][0m 52552 train and 16423 test samples for fold 2
+[32;1m2025-04-30 22:00:53,704 [datasets.wordnet_full][0m Hyperbolic tree f1 micro: 0.9959, f1 macro: 0.9272, f1_weight: 0.9958. acc 1.00
+[32;1m2025-04-30 22:00:53,747 [datasets.wordnet_full][0m 52552 train and 16423 test samples for fold 3
+[32;1m2025-04-30 22:00:55,172 [datasets.wordnet_full][0m Hyperbolic tree f1 micro: 0.9960, f1 macro: 0.9279, f1_weight: 0.9959. acc 1.00
+[32;1m2025-04-30 22:00:55,214 [datasets.wordnet_full][0m 52552 train and 16423 test samples for fold 0
+[32;1m2025-04-30 22:00:56,360 [datasets.wordnet_full][0m Hyperbolic tree f1 micro: 0.9965, f1 macro: 0.4991, f1_weight: 0.9948. acc 1.00
+[32;1m2025-04-30 22:00:56,401 [datasets.wordnet_full][0m 52552 train and 16423 test samples for fold 1
+[32;1m2025-04-30 22:00:57,551 [datasets.wordnet_full][0m Hyperbolic tree f1 micro: 0.9970, f1 macro: 0.6316, f1_weight: 0.9959. acc 1.00
+[32;1m2025-04-30 22:00:57,593 [datasets.wordnet_full][0m 52552 train and 16423 test samples for fold 2
+[32;1m2025-04-30 22:00:58,704 [datasets.wordnet_full][0m Hyperbolic tree f1 micro: 0.9971, f1 macro: 0.7066, f1_weight: 0.9965. acc 1.00
+[32;1m2025-04-30 22:00:58,746 [datasets.wordnet_full][0m 52552 train and 16423 test samples for fold 3
+[32;1m2025-04-30 22:00:59,852 [datasets.wordnet_full][0m Hyperbolic tree f1 micro: 0.9966, f1 macro: 0.5991, f1_weight: 0.9955. acc 1.00
+[32;1m2025-04-30 22:00:59,894 [datasets.wordnet_full][0m 52552 train and 16423 test samples for fold 0
+[32;1m2025-04-30 22:01:00,783 [datasets.wordnet_full][0m Hyperbolic tree f1 micro: 0.9983, f1 macro: 0.4996, f1_weight: 0.9974. acc 1.00
+[32;1m2025-04-30 22:01:00,824 [datasets.wordnet_full][0m 52552 train and 16423 test samples for fold 1
+[32;1m2025-04-30 22:01:01,650 [datasets.wordnet_full][0m Hyperbolic tree f1 micro: 0.9983, f1 macro: 0.4996, f1_weight: 0.9974. acc 1.00
+[32;1m2025-04-30 22:01:01,690 [datasets.wordnet_full][0m 52552 train and 16423 test samples for fold 2
+[32;1m2025-04-30 22:01:02,577 [datasets.wordnet_full][0m Hyperbolic tree f1 micro: 0.9983, f1 macro: 0.4996, f1_weight: 0.9974. acc 1.00
+[32;1m2025-04-30 22:01:02,618 [datasets.wordnet_full][0m 52552 train and 16423 test samples for fold 3
+[32;1m2025-04-30 22:01:03,518 [datasets.wordnet_full][0m Hyperbolic tree f1 micro: 0.9983, f1 macro: 0.4996, f1_weight: 0.9974. acc 1.00

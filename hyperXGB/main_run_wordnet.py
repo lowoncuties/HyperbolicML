@@ -1,40 +1,40 @@
+#!/usr/bin/env python3
+"""
+Run the WordNet dataset experiments with correct Python path setup.
+This script ensures the packages can be properly imported.
+"""
+
+import os
+import sys
 import yaml
+
+# Add the current directory to Python path
+current_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, current_dir)
+
+# Import required modules
 from xgb.utils import set_seeds
+from xgb.hyper_trainer import run_train_UCI
 
-
-from xgb.hyper_trainer import  run_train_UCI
-from xgb.hyper_trainer import run_train
 
 def main():
-    import sys
-    # params_file = sys.argv[1]
-    # print(params_file)
+    # Use a fixed path for the parameter file
+    params_file = os.path.join(current_dir, "configs/params.wordnet.yml")
 
-    #method = ['randomforest', 'hsvm', 'Exgboost', 'Pxgboost', 'SVM', 'LinearHSVM', 'randomforest', 'horoRF']
-    method = [ 'tuneEPxgboost','tunesingXGB', 'tuneSVM', 'tuneRF'] # 'Exgboost', 'Pxgboost', 'EPxgboost_m',
-#'UCIdata', 'UCIdataE', 'gauss', 'karate', 'polblogs', 'polbooks',
-    paramfile = [ 'gausshyper',
-                 'football']  # , 'wordnet'
+    with open(params_file, "r") as f:
+        params = yaml.safe_load(f)
 
-    for med in method:
-        for file in ['wordnet']:
-            # Different seed for each of the 5 network embeddings
-            params_file = "configs/params." + file + ".yml"
-            with open(params_file, 'r') as f:
-                params = yaml.safe_load(f)
+    # Correct the path to the data directory
+    # Change 'data//wordnet//' to the correct path
+    params["source"] = os.path.join(current_dir, "data")
 
-            params['seed'] = 42
-            params["seed"] = params["seed"] + params["class_label"]
-            set_seeds(params["seed"])
-            params['method'] = med
+    # Configure the run
+    params["seed"] = params["seed"] + params["class_label"]
+    set_seeds(params["seed"])
 
-            if params['method'] == 'Exgboost':
-                params['space'] = 'original'
-
-            if file == 'UCIdata' or file == 'UCIdataE' or file == 'wordnet':
-                run_train_UCI(params, params_file)
-            else:
-                run_train(params, params_file)
+    # Run the training
+    run_train_UCI(params, params_file)
 
 
-main()
+if __name__ == "__main__":
+    main()

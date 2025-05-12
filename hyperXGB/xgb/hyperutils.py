@@ -2,18 +2,20 @@ import numpy as np
 import xgboost as xgb
 from xgb.poincare import PoincareBall
 from xgb.hyperboloid1 import Hyperbolic
+
 # kRows, kClasses = 280, 4  # for gaussion data
 
 # # https://www.kaggle.com/code/kevalm/xgboost-implementation-on-iris-dataset-python
 # # https://xgboost.readthedocs.io/en/stable/tutorials/custom_metric_obj.html
 # # https://xgboost.readthedocs.io/en/stable/python/examples/custom_softmax.html#sphx-glr-python-examples-custom-softmax-py
 
+
 # predict the results
 def predict(booster: xgb.Booster, X):
-    '''A customized prediction function that converts raw prediction to
+    """A customized prediction function that converts raw prediction to
     target class.
 
-    '''
+    """
     # Output margin means we want to obtain the raw prediction obtained from
     # tree leaf weight.
     predt = booster.predict(X, output_margin=True)
@@ -26,15 +28,18 @@ def predict(booster: xgb.Booster, X):
         out[r] = i
     return out
 
+
 # for poincare ball
 def egradrgrad(preds, grad):
     caredisk = PoincareBall(1)
     return caredisk.euclidean_to_riemannian_gradient(preds, grad)
 
+
 # for poincare ball
 def ehessrhess(preds, grad, hess, u):
     caredisk = PoincareBall(1)
     return caredisk.euclidean_to_riemannian_hessian(preds, grad, hess, u)
+
 
 # for hyperbolid
 def hyperegradrgrad(preds, grad):
@@ -44,6 +49,7 @@ def hyperegradrgrad(preds, grad):
     grads = hyperbo.filldata(grad)
     fgrad = hyperbo.egrad2rgrad(pred, grads)
     return fgrad[:, 1]
+
 
 # for hyperbolid
 def hyperehessrhess(preds, grad, hess, u):
@@ -58,16 +64,17 @@ def hyperehessrhess(preds, grad, hess, u):
 
 
 def softmax(x):
-    '''Softmax function with x as input vector.'''
+    """Softmax function with x as input vector."""
     x = np.where(x > 15, 15, x)
     e = np.exp(x)
-    return e / (np.sum(e)+ 1e-6)
+    return e / (np.sum(e) + 1e-6)
+
 
 def customgobj(predt: np.ndarray, data: xgb.DMatrix):
-    '''Loss function.  Computing the gradient and approximated hessian (diagonal).
+    """Loss function.  Computing the gradient and approximated hessian (diagonal).
     Reimplements the `multi:softprob` inside XGBoost.
 
-    '''
+    """
     kRows, kClasses = predt.shape
     labels = data.get_label()
     if data.get_weight().size == 0:
@@ -109,11 +116,12 @@ def customgobj(predt: np.ndarray, data: xgb.DMatrix):
     hess = hess.reshape((kRows * kClasses, 1))
     return grad, hess
 
+
 def logregobj(predt: np.ndarray, data: xgb.DMatrix):
-    '''Loss function.  Computing the gradient and approximated hessian (diagonal).
+    """Loss function.  Computing the gradient and approximated hessian (diagonal).
     Reimplements the `multi:softprob` inside XGBoost.
 
-    '''
+    """
     kRows, kClasses = predt.shape
     labels = data.get_label()
     if data.get_weight().size == 0:
@@ -153,6 +161,7 @@ def logregobj(predt: np.ndarray, data: xgb.DMatrix):
     hess = hess.reshape((kRows * kClasses, 1))
     return grad, hess
 
+
 def accMetric(predt: np.ndarray, dtrain: xgb.DMatrix):
     ytrue = dtrain.get_label()
     # Like custom objective, the predt is untransformed leaf weight when custom objective
@@ -173,13 +182,14 @@ def accMetric(predt: np.ndarray, dtrain: xgb.DMatrix):
 
     errors = np.zeros(row)
     errors[ytrue != out] = 1.0
-    return 'PyMError', np.sum(errors) / row
+    return "PyMError", np.sum(errors) / row
+
 
 def hyperobj(predt: np.ndarray, data: xgb.DMatrix):
-    '''Loss function.  Computing the gradient and approximated hessian (diagonal).
+    """Loss function.  Computing the gradient and approximated hessian (diagonal).
     Reimplements the `multi:softprob` inside XGBoost.
 
-    '''
+    """
     kRows, kClasses = predt.shape
     labels = data.get_label()
     if data.get_weight().size == 0:
@@ -221,6 +231,7 @@ def hyperobj(predt: np.ndarray, data: xgb.DMatrix):
     hess = hess.reshape((kRows * kClasses, 1))
     return grad, hess
 
+
 # this is for multi-label
 def logregobj_binary(preds, dtrain):
     scale_pos_weight = 3.0
@@ -231,6 +242,7 @@ def logregobj_binary(preds, dtrain):
     grad = preds - labels
     hess = preds * (1.0 - preds)
     return grad * weights, hess * weights
+
 
 # this is for multi-label--poincare
 def customobj_binary(preds, dtrain):
@@ -249,10 +261,10 @@ def customobj_binary(preds, dtrain):
 
 # this is for multi-label--poincare
 def testregobj(predt: np.ndarray, data: xgb.DMatrix):
-    '''Loss function.  Computing the gradient and approximated hessian (diagonal).
+    """Loss function.  Computing the gradient and approximated hessian (diagonal).
     Reimplements the `multi:softprob` inside XGBoost.
 
-    '''
+    """
     kRows, kClasses = data.shape
     labels = data
     # if data.get_weight().size == 0:
@@ -283,7 +295,7 @@ def testregobj(predt: np.ndarray, data: xgb.DMatrix):
             assert target >= 0 or target <= kClasses
             g = p[c] - 1.0 if c == target else p[c]
             g = g
-            h = max((2.0 * p[c] * (1.0 - p[c]) ).item(), eps)
+            h = max((2.0 * p[c] * (1.0 - p[c])).item(), eps)
             grad[r, c] = g
             hess[r, c] = h
 
@@ -291,6 +303,7 @@ def testregobj(predt: np.ndarray, data: xgb.DMatrix):
     grad = grad.reshape((kRows * kClasses, 1))
     hess = hess.reshape((kRows * kClasses, 1))
     return grad, hess
+
 
 # this is for multi-label--poincare
 def hyperobj_binary(preds, dtrain):

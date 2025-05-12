@@ -1,0 +1,2 @@
+[32;1m2025-04-30 21:57:41,104 [datasets.wordnet_full][0m 0 GPUs available
+[32;1m2025-04-30 21:57:41,105 [datasets.wordnet_full][0m Using seed 43 on class 1

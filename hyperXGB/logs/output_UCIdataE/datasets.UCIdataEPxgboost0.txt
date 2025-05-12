@@ -1,0 +1,6 @@
+[32;1m2025-04-30 21:52:32,170 [datasets.UCIdataE][0m 0 GPUs available
+[32;1m2025-04-30 21:52:32,171 [datasets.UCIdataE][0m Using seed 43 on class 1
+[32;1m2025-04-30 21:55:44,928 [datasets.UCIdataE][0m 0 GPUs available
+[32;1m2025-04-30 21:55:44,929 [datasets.UCIdataE][0m Using seed 43 on class 1
+[32;1m2025-04-30 21:56:17,787 [datasets.UCIdataE][0m 0 GPUs available
+[32;1m2025-04-30 21:56:17,788 [datasets.UCIdataE][0m Using seed 43 on class 1
