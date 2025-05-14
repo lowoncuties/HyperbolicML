@@ -1,10 +1,11 @@
-
 import torch
 import scipy.io
 
 
 def get_training_data(source, class_label, seed):
-    mat = scipy.io.loadmat(source+'//football_data_' + str(class_label) + '.mat')
+    mat = scipy.io.loadmat(
+        source + "//football_data_" + str(class_label) + ".mat"
+    )
     data = mat["B"]
     labels = mat["label"]
     labels = labels - 1
@@ -12,7 +13,9 @@ def get_training_data(source, class_label, seed):
 
 
 def get_testing_data(source, class_label, seed):
-    mat = scipy.io.loadmat(source + 'football_data_' + str(class_label) + '.mat')
+    mat = scipy.io.loadmat(
+        source + "//football_data_" + str(class_label) + ".mat"
+    )
     data = mat["B"]
     labels = mat["label"]
     labels = labels - 1
@@ -20,4 +23,4 @@ def get_testing_data(source, class_label, seed):
 
 
 def get_space():
-    return 'hyperbolic'
+    return "hyperbolic"

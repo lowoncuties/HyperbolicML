@@ -8,8 +8,7 @@ from xgb.hyperboloid1 import Hyperbolic
 
 def egradrgrad(pred: float, grad: float) -> float:
     """
-    Convert a scalar Euclidean gradient to the Riemannian gradient on a 1D
-    Poincaré ball.
+    Convert a scalar Euclidean gradient to the Riemannian gradient on a 1D Poincaré ball.
 
     Parameters
     ----------
@@ -21,8 +20,7 @@ def egradrgrad(pred: float, grad: float) -> float:
     Returns
     -------
     rgrad : float
-        The Riemannian gradient: grad / lambda(pred)^2,
-        where lambda = 2/(1 - pred^2).
+        The Riemannian gradient: grad / lambda(pred)^2, where lambda = 2/(1 - pred^2).
     """
     lam = 2.0 / (1.0 - pred**2)
     return grad / (lam**2)
@@ -30,8 +28,7 @@ def egradrgrad(pred: float, grad: float) -> float:
 
 def batch_egradrgrad(preds: np.ndarray, grads: np.ndarray) -> np.ndarray:
     """
-    Vectorized conversion of Euclidean gradients to Riemannian gradients
-    on a 1D Poincaré ball.
+    Vectorized conversion of Euclidean gradients to Riemannian gradients on a 1D Poincaré ball.
 
     Parameters
     ----------
@@ -53,8 +50,7 @@ def batch_ehessrhess(
     preds: np.ndarray, grads: np.ndarray, hesses: np.ndarray, u: np.ndarray
 ) -> np.ndarray:
     """
-    Vectorized conversion of Euclidean Hessians to Riemannian Hessians
-    on a 1D Poincaré ball.
+    Vectorized conversion of Euclidean Hessians to Riemannian Hessians on a 1D Poincaré ball.
 
     Parameters
     ----------
@@ -115,8 +111,7 @@ def predict(booster: xgb.Booster, X: xgb.DMatrix) -> np.ndarray:
 
 def batch_softmax(logits: np.ndarray) -> np.ndarray:
     """
-    Compute softmax probabilities in a numerically stable way over the
-    last axis.
+    Compute softmax probabilities in a numerically stable way over the last axis.
 
     Parameters
     ----------
@@ -180,8 +175,7 @@ def batch_poincare_rhess(
 
 def batch_hyperboloid_rgrad(x: np.ndarray, eucl_grad: np.ndarray) -> np.ndarray:
     """
-    Vectorized Riemannian gradient on a 1D hyperboloid model
-    (spatial component).
+    Vectorized Riemannian gradient on a 1D hyperboloid model (spatial component).
 
     Parameters
     ----------
@@ -206,8 +200,7 @@ def batch_hyperboloid_rhess(
     x: np.ndarray, eucl_grad: np.ndarray, eucl_hess: np.ndarray
 ) -> np.ndarray:
     """
-    Vectorized Riemannian Hessian on a 1D hyperboloid model
-    (spatial component).
+    Vectorized Riemannian Hessian on a 1D hyperboloid model (spatial component).
 
     Parameters
     ----------
