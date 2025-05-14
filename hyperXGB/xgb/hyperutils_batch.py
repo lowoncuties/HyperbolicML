@@ -310,8 +310,10 @@ def custom_multiclass_obj(
     flat_hess = eu_hess.ravel()
 
     if manifold == "poincare":
-        rgrad = batch_poincare_rgrad(flat_x, flat_grad)
-        rhess = batch_poincare_rhess(flat_x, flat_grad, flat_hess)
+        # Transform logits to be within the Poincare ball (-1, 1)
+        flat_x_transformed = np.tanh(flat_x)
+        rgrad = batch_poincare_rgrad(flat_x_transformed, flat_grad)
+        rhess = batch_poincare_rhess(flat_x_transformed, flat_grad, flat_hess)
     elif manifold == "hyperboloid":
         rgrad = batch_hyperboloid_rgrad(flat_x, flat_grad)
         rhess = batch_hyperboloid_rhess(flat_x, flat_grad, flat_hess)

@@ -1,0 +1,15 @@
+class_label: 0
+colsample_bylevel: 0.7
+colsample_bynode: 0.5
+colsample_bytree: 0.8
+data_num: 1
+dataname: iris
+eta: 0.1
+folds: 1
+gamma: 0.3
+max_depth: 6
+method: Pxgboost0
+n_estimators: 20
+seed: 42
+space: hyperbolic
+subsample: 0.8

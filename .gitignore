@@ -1,0 +1,16 @@
+/data
+
+/hyperXGB/data
+
+/hyperXGB/datasets
+
+/hyperXGB/datasets__
+
+__pycache__
+
+*.pyc
+
+*.pyo
+
+*.pyd
+

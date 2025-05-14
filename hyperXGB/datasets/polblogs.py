@@ -21,6 +21,3 @@ def get_testing_data(source, class_label, seed):
 
 def get_space():
     return 'hyperbolic'
-
-def get_multi_class():
-    return False

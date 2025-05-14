@@ -18,8 +18,9 @@ def get_training_data(source, class_label, seed):
     shuffle_index = np.random.permutation(len(y))
     X = X[shuffle_index]
     X = poincare_pts_to_hyperboloid(X, metric='minkowski')
-    labels_binary = label_binarize(y, classes=[1, 2, 3, 4])
-    y = labels_binary[:, class_label-1]
+    #labels_binary = label_binarize(y, classes=[1, 2, 3, 4])
+    #y = labels_binary[:, class_label-1]
+    y = y - 1
     return torch.as_tensor(X), y
 
 
@@ -36,8 +37,9 @@ def get_testing_data(source, class_label, seed):
     shuffle_index = np.random.permutation(len(y))
     X = X[shuffle_index]
     X = poincare_pts_to_hyperboloid(X, metric='minkowski')
-    labels_binary = label_binarize(y, classes=[1, 2, 3, 4])
-    y = labels_binary[:, class_label-1]
+    #labels_binary = label_binarize(y, classes=[1, 2, 3, 4])
+    #y = labels_binary[:, class_label-1]
+    y = y - 1
     return torch.as_tensor(X), y
 
 
