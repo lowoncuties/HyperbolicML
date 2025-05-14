@@ -97,9 +97,9 @@ def load_dataset_data(params, dataset_config_name):
         train_x, train_y = dataset_module.get_training_data(
             params["source"], params["seed"]
         )
-        test_x, test_y = dataset_module.get_testing_data(
-            params["source"], params["seed"]
-        )
+    test_x, test_y = dataset_module.get_testing_data(
+        params["source"], params["seed"]
+    )
 
     train_x = train_x.numpy()
     test_x = test_x.numpy()
