@@ -630,61 +630,71 @@ def main():
         print(f"No config files in {config_path}")
         return
 
+    monte_carlo_seeds = list(range(10))  # Default: 10 seeds (0-9)
     all_results = []
-    for cfg_file in config_files:
-        cfg_name = (
-            os.path.basename(cfg_file)
-            .replace("params.", "")
-            .replace(".yml", "")
-        )
-        print(f"\n\n===== PROCESSING DATASET: {cfg_name} =====")
-        with open(cfg_file, "r") as f:
-            params = yaml.safe_load(f)
-        try:
-            dtrain, dtest, _, test_y, n_cl = load_dataset_data(params, cfg_name)
-        except Exception as e:
-            print(f"Error loading {cfg_name}: {e}. Skipping.")
-            err_res = {
-                "name": f"ERROR ({cfg_name})",
-                "error_message": str(e),
-                "sample_size": 0,
-            }
-            num_fields = [
-                "obj_speedup",
-                "regular_train_time",
-                "regular_model_stopped_early",
-                "regular_model_rounds_completed",
-                "batch_train_time",
-                "train_speedup",
-                "grad_diff",
-                "hess_diff",
-                "regular_accuracy",
-                "batch_accuracy",
-                "regular_f1_macro",
-                "batch_f1_macro",
-                "regular_f1_micro",
-                "batch_f1_micro",
-                "regular_precision",
-                "batch_precision",
-                "regular_recall",
-                "batch_recall",
-                "n_classes",
-            ]
-            for k in num_fields:
-                err_res[k] = float("nan")
-            all_results.append(err_res)
-            continue
+    for mc_seed in monte_carlo_seeds:
+        print(f"\n==== Monte Carlo Run with seed {mc_seed} ====")
+        for cfg_file in config_files:
+            cfg_name = (
+                os.path.basename(cfg_file)
+                .replace("params.", "")
+                .replace(".yml", "")
+            )
+            print(
+                f"\n\n===== PROCESSING DATASET: {cfg_name} (seed {mc_seed}) ====="
+            )
+            with open(cfg_file, "r") as f:
+                params = yaml.safe_load(f)
+            # Set the seed for this run
+            params["seed"] = mc_seed
+            set_seeds(mc_seed)
+            try:
+                dtrain, dtest, _, test_y, n_cl = load_dataset_data(
+                    params, cfg_name
+                )
+            except Exception as e:
+                print(f"Error loading {cfg_name}: {e}. Skipping.")
+                err_res = {
+                    "name": f"ERROR ({cfg_name})",
+                    "error_message": str(e),
+                    "sample_size": 0,
+                    "mc_seed": mc_seed,
+                }
+                num_fields = [
+                    "obj_speedup",
+                    "regular_train_time",
+                    "regular_model_stopped_early",
+                    "regular_model_rounds_completed",
+                    "batch_train_time",
+                    "train_speedup",
+                    "grad_diff",
+                    "hess_diff",
+                    "regular_accuracy",
+                    "batch_accuracy",
+                    "regular_f1_macro",
+                    "batch_f1_macro",
+                    "regular_f1_micro",
+                    "batch_f1_micro",
+                    "regular_precision",
+                    "batch_precision",
+                    "regular_recall",
+                    "batch_recall",
+                    "n_classes",
+                ]
+                for k in num_fields:
+                    err_res[k] = float("nan")
+                all_results.append(err_res)
+                continue
 
-        model_tests = [
-            ("Logistic Regression", regular_logregobj, batch_logregobj),
-            ("Poincare", regular_customgobj, batch_customgobj),
-            ("Hyperboloid", regular_hyperobj, batch_hyperobj),
-        ]
-        for model_desc, reg_fn, batch_fn in model_tests:
-            model_name = f"{model_desc} ({cfg_name})"
-            print(f"\n--- Testing {model_name} ---")
-            all_results.append(
-                compare_speed_and_metrics(
+            model_tests = [
+                ("Logistic Regression", regular_logregobj, batch_logregobj),
+                ("Poincare", regular_customgobj, batch_customgobj),
+                ("Hyperboloid", regular_hyperobj, batch_hyperobj),
+            ]
+            for model_desc, reg_fn, batch_fn in model_tests:
+                model_name = f"{model_desc} ({cfg_name})"
+                print(f"\n--- Testing {model_name} ---")
+                result = compare_speed_and_metrics(
                     dtrain,
                     dtest,
                     test_y,
@@ -694,7 +704,8 @@ def main():
                     batch_fn,
                     params,
                 )
-            )
+                result["mc_seed"] = mc_seed
+                all_results.append(result)
 
     output_dir = os.path.join(current_dir, "logs", "all_datasets_comparison")
     os.makedirs(output_dir, exist_ok=True)
@@ -714,7 +725,9 @@ def main():
     with open(txt_path, "w") as f:
         f.write("Comprehensive Comparison:\n" + "=" * 60 + "\n\n")
         for r in all_results:
-            f.write(f"Entry: {r.get('name', 'N/A')}\n")
+            f.write(
+                f"Entry: {r.get('name', 'N/A')} (seed {r.get('mc_seed', 'N/A')})\n"
+            )
             if "error_message" in r:
                 f.write(f"  ERROR: {r['error_message']}\n\n")
                 continue

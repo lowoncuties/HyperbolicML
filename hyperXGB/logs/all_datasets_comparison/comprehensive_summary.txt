@@ -1,19 +1,19 @@
 Comprehensive Comparison:
 ============================================================
 
-Entry: Logistic Regression (wordnet)
+Entry: Logistic Regression (wordnet) (seed 0)
 ----------------------------------------
-  Reg. Obj Time               : 0.60005 s
-  Batch Obj Time              : 0.00333 s
-  Obj Speedup                 : 180.22 x
+  Reg. Obj Time               : 0.64161 s
+  Batch Obj Time              : 0.00358 s
+  Obj Speedup                 : 179.29 x
   Grad Diff                   : 0.00000019 
   Hess Diff                   : 0.00000003 
 
-  Reg. Train Time             : 31.78462 s
+  Reg. Train Time             : 37.30005 s
   Reg. Stopped Early          : True 
-  Reg. Rounds Completed       : 36 
-  Batch Train Time            : 0.63463 s
-  Train Speedup               : 50.08 x
+  Reg. Rounds Completed       : 40 
+  Batch Train Time            : 0.74545 s
+  Train Speedup               : 50.04 x
 
 Regular Metrics:
     Accuracy                  : 0.9948 
@@ -32,50 +32,50 @@ Batch Metrics:
   Num Classes                 : 2 
 
 
-Entry: Poincare (wordnet)
+Entry: Poincare (wordnet) (seed 0)
 ----------------------------------------
-  Reg. Obj Time               : 2.27679 s
-  Batch Obj Time              : 0.00436 s
-  Obj Speedup                 : 522.40 x
+  Reg. Obj Time               : 2.41489 s
+  Batch Obj Time              : 0.00590 s
+  Obj Speedup                 : 409.57 x
   Grad Diff                   : 0.00157969 
   Hess Diff                   : 0.02562779 
 
-  Reg. Train Time             : 37.59940 s
+  Reg. Train Time             : 43.60087 s
   Reg. Stopped Early          : True 
-  Reg. Rounds Completed       : 13 
-  Batch Train Time            : 0.70277 s
-  Train Speedup               : 53.50 x
+  Reg. Rounds Completed       : 15 
+  Batch Train Time            : 0.84899 s
+  Train Speedup               : 51.36 x
 
 Regular Metrics:
-    Accuracy                  : 0.9939 
-    F1-Macro                  : 0.9668 
-    F1-Micro                  : 0.9939 
-    Precision                 : 0.9693 
-    Recall                    : 0.9643 
+    Accuracy                  : 0.9940 
+    F1-Macro                  : 0.9676 
+    F1-Micro                  : 0.9940 
+    Precision                 : 0.9673 
+    Recall                    : 0.9679 
 Batch Metrics:
     Accuracy                  : 0.9944 
     F1-Macro                  : 0.9698 
     F1-Micro                  : 0.9944 
-    Precision                 : 0.9709 
-    Recall                    : 0.9687 
+    Precision                 : 0.9704 
+    Recall                    : 0.9693 
 
   Sample Size                 : 52552 
   Num Classes                 : 2 
 
 
-Entry: Hyperboloid (wordnet)
+Entry: Hyperboloid (wordnet) (seed 0)
 ----------------------------------------
-  Reg. Obj Time               : 17.50766 s
-  Batch Obj Time              : 0.01131 s
-  Obj Speedup                 : 1548.27 x
+  Reg. Obj Time               : 17.19242 s
+  Batch Obj Time              : 0.01095 s
+  Obj Speedup                 : 1570.68 x
   Grad Diff                   : 0.30806259 
   Hess Diff                   : 0.62041312 
 
-  Reg. Train Time             : 72.00728 s
+  Reg. Train Time             : 71.40146 s
   Reg. Stopped Early          : True 
   Reg. Rounds Completed       : 4 
-  Batch Train Time            : 1.23448 s
-  Train Speedup               : 58.33 x
+  Batch Train Time            : 1.26102 s
+  Train Speedup               : 56.62 x
 
 Regular Metrics:
     Accuracy                  : 0.9942 
@@ -84,29 +84,29 @@ Regular Metrics:
     Precision                 : 0.9631 
     Recall                    : 0.9751 
 Batch Metrics:
-    Accuracy                  : 0.9948 
-    F1-Macro                  : 0.9720 
-    F1-Micro                  : 0.9948 
-    Precision                 : 0.9688 
+    Accuracy                  : 0.9947 
+    F1-Macro                  : 0.9717 
+    F1-Micro                  : 0.9947 
+    Precision                 : 0.9682 
     Recall                    : 0.9754 
 
   Sample Size                 : 52552 
   Num Classes                 : 2 
 
 
-Entry: Logistic Regression (polbooks)
+Entry: Logistic Regression (polbooks) (seed 0)
 ----------------------------------------
-  Reg. Obj Time               : 0.00172 s
-  Batch Obj Time              : 0.00004 s
-  Obj Speedup                 : 47.24 x
+  Reg. Obj Time               : 0.00704 s
+  Batch Obj Time              : 0.00019 s
+  Obj Speedup                 : 37.59 x
   Grad Diff                   : 0.00000009 
   Hess Diff                   : 0.00000006 
 
-  Reg. Train Time             : 0.47649 s
+  Reg. Train Time             : 0.50367 s
   Reg. Stopped Early          : False 
   Reg. Rounds Completed       : 100 
-  Batch Train Time            : 0.24331 s
-  Train Speedup               : 1.96 x
+  Batch Train Time            : 0.27960 s
+  Train Speedup               : 1.80 x
 
 Regular Metrics:
     Accuracy                  : 0.8762 
@@ -125,19 +125,19 @@ Batch Metrics:
   Num Classes                 : 3 
 
 
-Entry: Poincare (polbooks)
+Entry: Poincare (polbooks) (seed 0)
 ----------------------------------------
-  Reg. Obj Time               : 0.00650 s
-  Batch Obj Time              : 0.00004 s
-  Obj Speedup                 : 167.57 x
+  Reg. Obj Time               : 0.00663 s
+  Batch Obj Time              : 0.00005 s
+  Obj Speedup                 : 130.54 x
   Grad Diff                   : 0.00143101 
   Hess Diff                   : 0.02811761 
 
-  Reg. Train Time             : 0.91599 s
+  Reg. Train Time             : 0.94849 s
   Reg. Stopped Early          : False 
   Reg. Rounds Completed       : 100 
-  Batch Train Time            : 0.08812 s
-  Train Speedup               : 10.39 x
+  Batch Train Time            : 0.09450 s
+  Train Speedup               : 10.04 x
 
 Regular Metrics:
     Accuracy                  : 0.8476 
@@ -156,19 +156,19 @@ Batch Metrics:
   Num Classes                 : 3 
 
 
-Entry: Hyperboloid (polbooks)
+Entry: Hyperboloid (polbooks) (seed 0)
 ----------------------------------------
-  Reg. Obj Time               : 0.04860 s
-  Batch Obj Time              : 0.00010 s
-  Obj Speedup                 : 510.66 x
+  Reg. Obj Time               : 0.05019 s
+  Batch Obj Time              : 0.00012 s
+  Obj Speedup                 : 434.45 x
   Grad Diff                   : 0.28059473 
   Hess Diff                   : 0.53729890 
 
-  Reg. Train Time             : 5.37569 s
+  Reg. Train Time             : 5.49101 s
   Reg. Stopped Early          : False 
   Reg. Rounds Completed       : 100 
-  Batch Train Time            : 0.22786 s
-  Train Speedup               : 23.59 x
+  Batch Train Time            : 0.27715 s
+  Train Speedup               : 19.81 x
 
 Regular Metrics:
     Accuracy                  : 0.8762 
@@ -187,19 +187,19 @@ Batch Metrics:
   Num Classes                 : 3 
 
 
-Entry: Logistic Regression (football)
+Entry: Logistic Regression (football) (seed 0)
 ----------------------------------------
-  Reg. Obj Time               : 0.00607 s
-  Batch Obj Time              : 0.00004 s
-  Obj Speedup                 : 136.01 x
+  Reg. Obj Time               : 0.00628 s
+  Batch Obj Time              : 0.00007 s
+  Obj Speedup                 : 86.90 x
   Grad Diff                   : 0.00000001 
   Hess Diff                   : 0.00000001 
 
-  Reg. Train Time             : 1.81226 s
+  Reg. Train Time             : 2.04654 s
   Reg. Stopped Early          : False 
   Reg. Rounds Completed       : 100 
-  Batch Train Time            : 0.89717 s
-  Train Speedup               : 2.02 x
+  Batch Train Time            : 1.12354 s
+  Train Speedup               : 1.82 x
 
 Regular Metrics:
     Accuracy                  : 0.1478 
@@ -218,19 +218,19 @@ Batch Metrics:
   Num Classes                 : 12 
 
 
-Entry: Poincare (football)
+Entry: Poincare (football) (seed 0)
 ----------------------------------------
-  Reg. Obj Time               : 0.02637 s
-  Batch Obj Time              : 0.00006 s
-  Obj Speedup                 : 435.74 x
+  Reg. Obj Time               : 0.02749 s
+  Batch Obj Time              : 0.00008 s
+  Obj Speedup                 : 342.50 x
   Grad Diff                   : 0.00052624 
-  Hess Diff                   : 0.00938202 
+  Hess Diff                   : 0.00511573 
 
-  Reg. Train Time             : 3.76134 s
+  Reg. Train Time             : 4.15485 s
   Reg. Stopped Early          : False 
   Reg. Rounds Completed       : 100 
-  Batch Train Time            : 0.30274 s
-  Train Speedup               : 12.42 x
+  Batch Train Time            : 0.44590 s
+  Train Speedup               : 9.32 x
 
 Regular Metrics:
     Accuracy                  : 0.0783 
@@ -239,29 +239,29 @@ Regular Metrics:
     Precision                 : 0.0476 
     Recall                    : 0.0926 
 Batch Metrics:
-    Accuracy                  : 0.0696 
-    F1-Macro                  : 0.0108 
-    F1-Micro                  : 0.0696 
-    Precision                 : 0.0058 
-    Recall                    : 0.0833 
+    Accuracy                  : 0.0957 
+    F1-Macro                  : 0.0410 
+    F1-Micro                  : 0.0957 
+    Precision                 : 0.0375 
+    Recall                    : 0.1111 
 
   Sample Size                 : 115 
   Num Classes                 : 12 
 
 
-Entry: Hyperboloid (football)
+Entry: Hyperboloid (football) (seed 0)
 ----------------------------------------
-  Reg. Obj Time               : 0.21068 s
+  Reg. Obj Time               : 0.21501 s
   Batch Obj Time              : 0.00018 s
-  Obj Speedup                 : 1178.23 x
+  Obj Speedup                 : 1169.39 x
   Grad Diff                   : 0.26934825 
   Hess Diff                   : 0.15461652 
 
-  Reg. Train Time             : 22.72748 s
+  Reg. Train Time             : 24.81114 s
   Reg. Stopped Early          : False 
   Reg. Rounds Completed       : 100 
-  Batch Train Time            : 0.49886 s
-  Train Speedup               : 45.56 x
+  Batch Train Time            : 0.85663 s
+  Train Speedup               : 28.96 x
 
 Regular Metrics:
     Accuracy                  : 0.1478 
@@ -270,41 +270,41 @@ Regular Metrics:
     Precision                 : 0.0896 
     Recall                    : 0.1667 
 Batch Metrics:
-    Accuracy                  : 0.1304 
-    F1-Macro                  : 0.0511 
-    F1-Micro                  : 0.1304 
-    Precision                 : 0.0331 
-    Recall                    : 0.1470 
+    Accuracy                  : 0.0870 
+    F1-Macro                  : 0.0389 
+    F1-Micro                  : 0.0870 
+    Precision                 : 0.0615 
+    Recall                    : 0.1019 
 
   Sample Size                 : 115 
   Num Classes                 : 12 
 
 
-Entry: ERROR (UCIdataE)
+Entry: ERROR (UCIdataE) (seed 0)
   ERROR: list index out of range
 
-Entry: ERROR (UCIdata)
+Entry: ERROR (UCIdata) (seed 0)
   ERROR: list index out of range
 
-Entry: ERROR (gauss)
+Entry: ERROR (gauss) (seed 0)
   ERROR: [Errno 2] No such file or directory: '/Users/lowoncuties/School/HyperbolicML/hyperXGB/datadata_001.mat'
 
-Entry: ERROR (gausshyper)
+Entry: ERROR (gausshyper) (seed 0)
   ERROR: [Errno 2] No such file or directory: '/Users/lowoncuties/School/HyperbolicML/hyperXGB/datadata_001.mat'
 
-Entry: Logistic Regression (polblogs)
+Entry: Logistic Regression (polblogs) (seed 0)
 ----------------------------------------
-  Reg. Obj Time               : 0.01444 s
-  Batch Obj Time              : 0.00007 s
-  Obj Speedup                 : 198.83 x
+  Reg. Obj Time               : 0.01454 s
+  Batch Obj Time              : 0.00010 s
+  Obj Speedup                 : 139.93 x
   Grad Diff                   : 0.00000020 
   Hess Diff                   : 0.00000003 
 
-  Reg. Train Time             : 2.27914 s
+  Reg. Train Time             : 2.58160 s
   Reg. Stopped Early          : False 
   Reg. Rounds Completed       : 100 
-  Batch Train Time            : 0.25407 s
-  Train Speedup               : 8.97 x
+  Batch Train Time            : 0.25475 s
+  Train Speedup               : 10.13 x
 
 Regular Metrics:
     Accuracy                  : 0.9992 
@@ -323,19 +323,19 @@ Batch Metrics:
   Num Classes                 : 2 
 
 
-Entry: Poincare (polblogs)
+Entry: Poincare (polblogs) (seed 0)
 ----------------------------------------
-  Reg. Obj Time               : 0.05067 s
-  Batch Obj Time              : 0.00010 s
-  Obj Speedup                 : 528.14 x
+  Reg. Obj Time               : 0.05429 s
+  Batch Obj Time              : 0.00015 s
+  Obj Speedup                 : 355.70 x
   Grad Diff                   : 0.00158825 
   Hess Diff                   : 0.02595489 
 
-  Reg. Train Time             : 6.77758 s
+  Reg. Train Time             : 7.08650 s
   Reg. Stopped Early          : False 
   Reg. Rounds Completed       : 100 
-  Batch Train Time            : 0.22352 s
-  Train Speedup               : 30.32 x
+  Batch Train Time            : 0.26169 s
+  Train Speedup               : 27.08 x
 
 Regular Metrics:
     Accuracy                  : 0.9583 
@@ -344,29 +344,29 @@ Regular Metrics:
     Precision                 : 0.9583 
     Recall                    : 0.9582 
 Batch Metrics:
-    Accuracy                  : 0.9412 
-    F1-Macro                  : 0.9410 
-    F1-Micro                  : 0.9412 
-    Precision                 : 0.9414 
-    Recall                    : 0.9408 
+    Accuracy                  : 0.9428 
+    F1-Macro                  : 0.9427 
+    F1-Micro                  : 0.9428 
+    Precision                 : 0.9431 
+    Recall                    : 0.9424 
 
   Sample Size                 : 1224 
   Num Classes                 : 2 
 
 
-Entry: Hyperboloid (polblogs)
+Entry: Hyperboloid (polblogs) (seed 0)
 ----------------------------------------
-  Reg. Obj Time               : 0.41408 s
-  Batch Obj Time              : 0.00031 s
-  Obj Speedup                 : 1320.54 x
+  Reg. Obj Time               : 0.40196 s
+  Batch Obj Time              : 0.00033 s
+  Obj Speedup                 : 1234.77 x
   Grad Diff                   : 0.30262302 
   Hess Diff                   : 0.61993852 
 
-  Reg. Train Time             : 14.33180 s
+  Reg. Train Time             : 14.68501 s
   Reg. Stopped Early          : True 
   Reg. Rounds Completed       : 36 
-  Batch Train Time            : 0.28045 s
-  Train Speedup               : 51.10 x
+  Batch Train Time            : 0.28858 s
+  Train Speedup               : 50.89 x
 
 Regular Metrics:
     Accuracy                  : 0.9984 
@@ -379,25 +379,25 @@ Batch Metrics:
     F1-Macro                  : 0.9992 
     F1-Micro                  : 0.9992 
     Precision                 : 0.9992 
-    Recall                    : 0.9991 
+    Recall                    : 0.9992 
 
   Sample Size                 : 1224 
   Num Classes                 : 2 
 
 
-Entry: Logistic Regression (karate)
+Entry: Logistic Regression (karate) (seed 0)
 ----------------------------------------
-  Reg. Obj Time               : 0.00044 s
-  Batch Obj Time              : 0.00002 s
-  Obj Speedup                 : 19.76 x
+  Reg. Obj Time               : 0.00053 s
+  Batch Obj Time              : 0.00003 s
+  Obj Speedup                 : 16.12 x
   Grad Diff                   : 0.00000019 
   Hess Diff                   : 0.00000003 
 
-  Reg. Train Time             : 0.14562 s
+  Reg. Train Time             : 0.14811 s
   Reg. Stopped Early          : False 
   Reg. Rounds Completed       : 100 
-  Batch Train Time            : 0.09338 s
-  Train Speedup               : 1.56 x
+  Batch Train Time            : 0.09680 s
+  Train Speedup               : 1.53 x
 
 Regular Metrics:
     Accuracy                  : 1.0000 
@@ -416,19 +416,19 @@ Batch Metrics:
   Num Classes                 : 2 
 
 
-Entry: Poincare (karate)
+Entry: Poincare (karate) (seed 0)
 ----------------------------------------
-  Reg. Obj Time               : 0.00151 s
+  Reg. Obj Time               : 0.00150 s
   Batch Obj Time              : 0.00003 s
-  Obj Speedup                 : 46.49 x
+  Obj Speedup                 : 45.98 x
   Grad Diff                   : 0.00155522 
   Hess Diff                   : 0.02652969 
 
-  Reg. Train Time             : 0.24596 s
+  Reg. Train Time             : 0.25955 s
   Reg. Stopped Early          : False 
   Reg. Rounds Completed       : 100 
-  Batch Train Time            : 0.05438 s
-  Train Speedup               : 4.52 x
+  Batch Train Time            : 0.05511 s
+  Train Speedup               : 4.71 x
 
 Regular Metrics:
     Accuracy                  : 0.9706 
@@ -447,19 +447,4312 @@ Batch Metrics:
   Num Classes                 : 2 
 
 
-Entry: Hyperboloid (karate)
+Entry: Hyperboloid (karate) (seed 0)
 ----------------------------------------
-  Reg. Obj Time               : 0.01047 s
-  Batch Obj Time              : 0.00006 s
-  Obj Speedup                 : 169.95 x
+  Reg. Obj Time               : 0.01109 s
+  Batch Obj Time              : 0.00009 s
+  Obj Speedup                 : 129.57 x
   Grad Diff                   : 0.31913248 
   Hess Diff                   : 0.62620150 
 
-  Reg. Train Time             : 1.18804 s
+  Reg. Train Time             : 1.22305 s
   Reg. Stopped Early          : False 
   Reg. Rounds Completed       : 100 
-  Batch Train Time            : 0.15160 s
-  Train Speedup               : 7.84 x
+  Batch Train Time            : 0.10109 s
+  Train Speedup               : 12.10 x
+
+Regular Metrics:
+    Accuracy                  : 1.0000 
+    F1-Macro                  : 1.0000 
+    F1-Micro                  : 1.0000 
+    Precision                 : 1.0000 
+    Recall                    : 1.0000 
+Batch Metrics:
+    Accuracy                  : 1.0000 
+    F1-Macro                  : 1.0000 
+    F1-Micro                  : 1.0000 
+    Precision                 : 1.0000 
+    Recall                    : 1.0000 
+
+  Sample Size                 : 34 
+  Num Classes                 : 2 
+
+
+Entry: Logistic Regression (wordnet) (seed 1)
+----------------------------------------
+  Reg. Obj Time               : 0.62661 s
+  Batch Obj Time              : 0.00369 s
+  Obj Speedup                 : 170.04 x
+  Grad Diff                   : 0.00000019 
+  Hess Diff                   : 0.00000003 
+
+  Reg. Train Time             : 36.60525 s
+  Reg. Stopped Early          : True 
+  Reg. Rounds Completed       : 40 
+  Batch Train Time            : 0.71770 s
+  Train Speedup               : 51.00 x
+
+Regular Metrics:
+    Accuracy                  : 0.9948 
+    F1-Macro                  : 0.9726 
+    F1-Micro                  : 0.9948 
+    Precision                 : 0.9658 
+    Recall                    : 0.9796 
+Batch Metrics:
+    Accuracy                  : 0.9948 
+    F1-Macro                  : 0.9724 
+    F1-Micro                  : 0.9948 
+    Precision                 : 0.9693 
+    Recall                    : 0.9754 
+
+  Sample Size                 : 52552 
+  Num Classes                 : 2 
+
+
+Entry: Poincare (wordnet) (seed 1)
+----------------------------------------
+  Reg. Obj Time               : 2.66260 s
+  Batch Obj Time              : 0.00950 s
+  Obj Speedup                 : 280.32 x
+  Grad Diff                   : 0.00157969 
+  Hess Diff                   : 0.02562779 
+
+  Reg. Train Time             : 42.02481 s
+  Reg. Stopped Early          : True 
+  Reg. Rounds Completed       : 14 
+  Batch Train Time            : 0.79917 s
+  Train Speedup               : 52.59 x
+
+Regular Metrics:
+    Accuracy                  : 0.9941 
+    F1-Macro                  : 0.9682 
+    F1-Micro                  : 0.9941 
+    Precision                 : 0.9695 
+    Recall                    : 0.9668 
+Batch Metrics:
+    Accuracy                  : 0.9944 
+    F1-Macro                  : 0.9698 
+    F1-Micro                  : 0.9944 
+    Precision                 : 0.9704 
+    Recall                    : 0.9693 
+
+  Sample Size                 : 52552 
+  Num Classes                 : 2 
+
+
+Entry: Hyperboloid (wordnet) (seed 1)
+----------------------------------------
+  Reg. Obj Time               : 17.50136 s
+  Batch Obj Time              : 0.01078 s
+  Obj Speedup                 : 1623.31 x
+  Grad Diff                   : 0.30806259 
+  Hess Diff                   : 0.62041312 
+
+  Reg. Train Time             : 74.06246 s
+  Reg. Stopped Early          : True 
+  Reg. Rounds Completed       : 4 
+  Batch Train Time            : 1.34050 s
+  Train Speedup               : 55.25 x
+
+Regular Metrics:
+    Accuracy                  : 0.9942 
+    F1-Macro                  : 0.9690 
+    F1-Micro                  : 0.9942 
+    Precision                 : 0.9631 
+    Recall                    : 0.9751 
+Batch Metrics:
+    Accuracy                  : 0.9947 
+    F1-Macro                  : 0.9717 
+    F1-Micro                  : 0.9947 
+    Precision                 : 0.9682 
+    Recall                    : 0.9754 
+
+  Sample Size                 : 52552 
+  Num Classes                 : 2 
+
+
+Entry: Logistic Regression (polbooks) (seed 1)
+----------------------------------------
+  Reg. Obj Time               : 0.00427 s
+  Batch Obj Time              : 0.00019 s
+  Obj Speedup                 : 21.97 x
+  Grad Diff                   : 0.00000009 
+  Hess Diff                   : 0.00000006 
+
+  Reg. Train Time             : 0.50695 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.34165 s
+  Train Speedup               : 1.48 x
+
+Regular Metrics:
+    Accuracy                  : 0.8762 
+    F1-Macro                  : 0.6229 
+    F1-Micro                  : 0.8762 
+    Precision                 : 0.5893 
+    Recall                    : 0.6667 
+Batch Metrics:
+    Accuracy                  : 0.8762 
+    F1-Macro                  : 0.6229 
+    F1-Micro                  : 0.8762 
+    Precision                 : 0.5893 
+    Recall                    : 0.6667 
+
+  Sample Size                 : 105 
+  Num Classes                 : 3 
+
+
+Entry: Poincare (polbooks) (seed 1)
+----------------------------------------
+  Reg. Obj Time               : 0.00655 s
+  Batch Obj Time              : 0.00005 s
+  Obj Speedup                 : 131.04 x
+  Grad Diff                   : 0.00143101 
+  Hess Diff                   : 0.02811761 
+
+  Reg. Train Time             : 0.94698 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.09374 s
+  Train Speedup               : 10.10 x
+
+Regular Metrics:
+    Accuracy                  : 0.8476 
+    F1-Macro                  : 0.6023 
+    F1-Micro                  : 0.8476 
+    Precision                 : 0.5673 
+    Recall                    : 0.6463 
+Batch Metrics:
+    Accuracy                  : 0.8286 
+    F1-Macro                  : 0.5916 
+    F1-Micro                  : 0.8286 
+    Precision                 : 0.5635 
+    Recall                    : 0.6289 
+
+  Sample Size                 : 105 
+  Num Classes                 : 3 
+
+
+Entry: Hyperboloid (polbooks) (seed 1)
+----------------------------------------
+  Reg. Obj Time               : 0.04992 s
+  Batch Obj Time              : 0.00011 s
+  Obj Speedup                 : 440.79 x
+  Grad Diff                   : 0.28059473 
+  Hess Diff                   : 0.53729890 
+
+  Reg. Train Time             : 5.43156 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.25999 s
+  Train Speedup               : 20.89 x
+
+Regular Metrics:
+    Accuracy                  : 0.8762 
+    F1-Macro                  : 0.6229 
+    F1-Micro                  : 0.8762 
+    Precision                 : 0.5893 
+    Recall                    : 0.6667 
+Batch Metrics:
+    Accuracy                  : 0.8762 
+    F1-Macro                  : 0.6229 
+    F1-Micro                  : 0.8762 
+    Precision                 : 0.5893 
+    Recall                    : 0.6667 
+
+  Sample Size                 : 105 
+  Num Classes                 : 3 
+
+
+Entry: Logistic Regression (football) (seed 1)
+----------------------------------------
+  Reg. Obj Time               : 0.00612 s
+  Batch Obj Time              : 0.00007 s
+  Obj Speedup                 : 87.74 x
+  Grad Diff                   : 0.00000001 
+  Hess Diff                   : 0.00000001 
+
+  Reg. Train Time             : 1.90328 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.96366 s
+  Train Speedup               : 1.98 x
+
+Regular Metrics:
+    Accuracy                  : 0.1478 
+    F1-Macro                  : 0.0950 
+    F1-Micro                  : 0.1478 
+    Precision                 : 0.0896 
+    Recall                    : 0.1667 
+Batch Metrics:
+    Accuracy                  : 0.1478 
+    F1-Macro                  : 0.0950 
+    F1-Micro                  : 0.1478 
+    Precision                 : 0.0896 
+    Recall                    : 0.1667 
+
+  Sample Size                 : 115 
+  Num Classes                 : 12 
+
+
+Entry: Poincare (football) (seed 1)
+----------------------------------------
+  Reg. Obj Time               : 0.02716 s
+  Batch Obj Time              : 0.00008 s
+  Obj Speedup                 : 333.73 x
+  Grad Diff                   : 0.00052624 
+  Hess Diff                   : 0.00511573 
+
+  Reg. Train Time             : 3.94474 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.36515 s
+  Train Speedup               : 10.80 x
+
+Regular Metrics:
+    Accuracy                  : 0.0783 
+    F1-Macro                  : 0.0262 
+    F1-Micro                  : 0.0783 
+    Precision                 : 0.0476 
+    Recall                    : 0.0926 
+Batch Metrics:
+    Accuracy                  : 0.0957 
+    F1-Macro                  : 0.0410 
+    F1-Micro                  : 0.0957 
+    Precision                 : 0.0375 
+    Recall                    : 0.1111 
+
+  Sample Size                 : 115 
+  Num Classes                 : 12 
+
+
+Entry: Hyperboloid (football) (seed 1)
+----------------------------------------
+  Reg. Obj Time               : 0.21856 s
+  Batch Obj Time              : 0.00018 s
+  Obj Speedup                 : 1233.79 x
+  Grad Diff                   : 0.26934825 
+  Hess Diff                   : 0.15461652 
+
+  Reg. Train Time             : 24.22041 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.85191 s
+  Train Speedup               : 28.43 x
+
+Regular Metrics:
+    Accuracy                  : 0.1478 
+    F1-Macro                  : 0.0950 
+    F1-Micro                  : 0.1478 
+    Precision                 : 0.0896 
+    Recall                    : 0.1667 
+Batch Metrics:
+    Accuracy                  : 0.0870 
+    F1-Macro                  : 0.0389 
+    F1-Micro                  : 0.0870 
+    Precision                 : 0.0615 
+    Recall                    : 0.1019 
+
+  Sample Size                 : 115 
+  Num Classes                 : 12 
+
+
+Entry: ERROR (UCIdataE) (seed 1)
+  ERROR: list index out of range
+
+Entry: ERROR (UCIdata) (seed 1)
+  ERROR: list index out of range
+
+Entry: ERROR (gauss) (seed 1)
+  ERROR: [Errno 2] No such file or directory: '/Users/lowoncuties/School/HyperbolicML/hyperXGB/datadata_001.mat'
+
+Entry: ERROR (gausshyper) (seed 1)
+  ERROR: [Errno 2] No such file or directory: '/Users/lowoncuties/School/HyperbolicML/hyperXGB/datadata_001.mat'
+
+Entry: Logistic Regression (polblogs) (seed 1)
+----------------------------------------
+  Reg. Obj Time               : 0.01503 s
+  Batch Obj Time              : 0.00009 s
+  Obj Speedup                 : 164.04 x
+  Grad Diff                   : 0.00000020 
+  Hess Diff                   : 0.00000003 
+
+  Reg. Train Time             : 2.47515 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.26507 s
+  Train Speedup               : 9.34 x
+
+Regular Metrics:
+    Accuracy                  : 0.9992 
+    F1-Macro                  : 0.9992 
+    F1-Micro                  : 0.9992 
+    Precision                 : 0.9992 
+    Recall                    : 0.9991 
+Batch Metrics:
+    Accuracy                  : 0.9992 
+    F1-Macro                  : 0.9992 
+    F1-Micro                  : 0.9992 
+    Precision                 : 0.9992 
+    Recall                    : 0.9991 
+
+  Sample Size                 : 1224 
+  Num Classes                 : 2 
+
+
+Entry: Poincare (polblogs) (seed 1)
+----------------------------------------
+  Reg. Obj Time               : 0.05212 s
+  Batch Obj Time              : 0.00014 s
+  Obj Speedup                 : 381.66 x
+  Grad Diff                   : 0.00158825 
+  Hess Diff                   : 0.02595489 
+
+  Reg. Train Time             : 7.58189 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.23711 s
+  Train Speedup               : 31.98 x
+
+Regular Metrics:
+    Accuracy                  : 0.9583 
+    F1-Macro                  : 0.9583 
+    F1-Micro                  : 0.9583 
+    Precision                 : 0.9583 
+    Recall                    : 0.9582 
+Batch Metrics:
+    Accuracy                  : 0.9428 
+    F1-Macro                  : 0.9427 
+    F1-Micro                  : 0.9428 
+    Precision                 : 0.9431 
+    Recall                    : 0.9424 
+
+  Sample Size                 : 1224 
+  Num Classes                 : 2 
+
+
+Entry: Hyperboloid (polblogs) (seed 1)
+----------------------------------------
+  Reg. Obj Time               : 0.44548 s
+  Batch Obj Time              : 0.00035 s
+  Obj Speedup                 : 1290.73 x
+  Grad Diff                   : 0.30262302 
+  Hess Diff                   : 0.61993852 
+
+  Reg. Train Time             : 17.75110 s
+  Reg. Stopped Early          : True 
+  Reg. Rounds Completed       : 43 
+  Batch Train Time            : 0.34787 s
+  Train Speedup               : 51.03 x
+
+Regular Metrics:
+    Accuracy                  : 0.9992 
+    F1-Macro                  : 0.9992 
+    F1-Micro                  : 0.9992 
+    Precision                 : 0.9992 
+    Recall                    : 0.9992 
+Batch Metrics:
+    Accuracy                  : 0.9992 
+    F1-Macro                  : 0.9992 
+    F1-Micro                  : 0.9992 
+    Precision                 : 0.9992 
+    Recall                    : 0.9992 
+
+  Sample Size                 : 1224 
+  Num Classes                 : 2 
+
+
+Entry: Logistic Regression (karate) (seed 1)
+----------------------------------------
+  Reg. Obj Time               : 0.00060 s
+  Batch Obj Time              : 0.00005 s
+  Obj Speedup                 : 12.95 x
+  Grad Diff                   : 0.00000019 
+  Hess Diff                   : 0.00000003 
+
+  Reg. Train Time             : 0.15310 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.10717 s
+  Train Speedup               : 1.43 x
+
+Regular Metrics:
+    Accuracy                  : 1.0000 
+    F1-Macro                  : 1.0000 
+    F1-Micro                  : 1.0000 
+    Precision                 : 1.0000 
+    Recall                    : 1.0000 
+Batch Metrics:
+    Accuracy                  : 1.0000 
+    F1-Macro                  : 1.0000 
+    F1-Micro                  : 1.0000 
+    Precision                 : 1.0000 
+    Recall                    : 1.0000 
+
+  Sample Size                 : 34 
+  Num Classes                 : 2 
+
+
+Entry: Poincare (karate) (seed 1)
+----------------------------------------
+  Reg. Obj Time               : 0.00155 s
+  Batch Obj Time              : 0.00004 s
+  Obj Speedup                 : 42.32 x
+  Grad Diff                   : 0.00155522 
+  Hess Diff                   : 0.02652969 
+
+  Reg. Train Time             : 0.24586 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.05760 s
+  Train Speedup               : 4.27 x
+
+Regular Metrics:
+    Accuracy                  : 0.9706 
+    F1-Macro                  : 0.9706 
+    F1-Micro                  : 0.9706 
+    Precision                 : 0.9722 
+    Recall                    : 0.9706 
+Batch Metrics:
+    Accuracy                  : 0.5000 
+    F1-Macro                  : 0.3333 
+    F1-Micro                  : 0.5000 
+    Precision                 : 0.2500 
+    Recall                    : 0.5000 
+
+  Sample Size                 : 34 
+  Num Classes                 : 2 
+
+
+Entry: Hyperboloid (karate) (seed 1)
+----------------------------------------
+  Reg. Obj Time               : 0.01093 s
+  Batch Obj Time              : 0.00008 s
+  Obj Speedup                 : 137.91 x
+  Grad Diff                   : 0.31913248 
+  Hess Diff                   : 0.62620150 
+
+  Reg. Train Time             : 1.23500 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.09735 s
+  Train Speedup               : 12.69 x
+
+Regular Metrics:
+    Accuracy                  : 1.0000 
+    F1-Macro                  : 1.0000 
+    F1-Micro                  : 1.0000 
+    Precision                 : 1.0000 
+    Recall                    : 1.0000 
+Batch Metrics:
+    Accuracy                  : 1.0000 
+    F1-Macro                  : 1.0000 
+    F1-Micro                  : 1.0000 
+    Precision                 : 1.0000 
+    Recall                    : 1.0000 
+
+  Sample Size                 : 34 
+  Num Classes                 : 2 
+
+
+Entry: Logistic Regression (wordnet) (seed 2)
+----------------------------------------
+  Reg. Obj Time               : 0.62361 s
+  Batch Obj Time              : 0.00346 s
+  Obj Speedup                 : 180.07 x
+  Grad Diff                   : 0.00000019 
+  Hess Diff                   : 0.00000003 
+
+  Reg. Train Time             : 36.13249 s
+  Reg. Stopped Early          : True 
+  Reg. Rounds Completed       : 41 
+  Batch Train Time            : 0.70696 s
+  Train Speedup               : 51.11 x
+
+Regular Metrics:
+    Accuracy                  : 0.9948 
+    F1-Macro                  : 0.9726 
+    F1-Micro                  : 0.9948 
+    Precision                 : 0.9658 
+    Recall                    : 0.9796 
+Batch Metrics:
+    Accuracy                  : 0.9948 
+    F1-Macro                  : 0.9724 
+    F1-Micro                  : 0.9948 
+    Precision                 : 0.9693 
+    Recall                    : 0.9754 
+
+  Sample Size                 : 52552 
+  Num Classes                 : 2 
+
+
+Entry: Poincare (wordnet) (seed 2)
+----------------------------------------
+  Reg. Obj Time               : 2.36702 s
+  Batch Obj Time              : 0.00490 s
+  Obj Speedup                 : 483.00 x
+  Grad Diff                   : 0.00157969 
+  Hess Diff                   : 0.02562779 
+
+  Reg. Train Time             : 39.99315 s
+  Reg. Stopped Early          : True 
+  Reg. Rounds Completed       : 14 
+  Batch Train Time            : 0.73955 s
+  Train Speedup               : 54.08 x
+
+Regular Metrics:
+    Accuracy                  : 0.9941 
+    F1-Macro                  : 0.9682 
+    F1-Micro                  : 0.9941 
+    Precision                 : 0.9695 
+    Recall                    : 0.9668 
+Batch Metrics:
+    Accuracy                  : 0.9944 
+    F1-Macro                  : 0.9698 
+    F1-Micro                  : 0.9944 
+    Precision                 : 0.9704 
+    Recall                    : 0.9693 
+
+  Sample Size                 : 52552 
+  Num Classes                 : 2 
+
+
+Entry: Hyperboloid (wordnet) (seed 2)
+----------------------------------------
+  Reg. Obj Time               : 16.98874 s
+  Batch Obj Time              : 0.00983 s
+  Obj Speedup                 : 1727.56 x
+  Grad Diff                   : 0.30806259 
+  Hess Diff                   : 0.62041312 
+
+  Reg. Train Time             : 71.53667 s
+  Reg. Stopped Early          : True 
+  Reg. Rounds Completed       : 4 
+  Batch Train Time            : 1.20851 s
+  Train Speedup               : 59.19 x
+
+Regular Metrics:
+    Accuracy                  : 0.9942 
+    F1-Macro                  : 0.9690 
+    F1-Micro                  : 0.9942 
+    Precision                 : 0.9631 
+    Recall                    : 0.9751 
+Batch Metrics:
+    Accuracy                  : 0.9947 
+    F1-Macro                  : 0.9717 
+    F1-Micro                  : 0.9947 
+    Precision                 : 0.9682 
+    Recall                    : 0.9754 
+
+  Sample Size                 : 52552 
+  Num Classes                 : 2 
+
+
+Entry: Logistic Regression (polbooks) (seed 2)
+----------------------------------------
+  Reg. Obj Time               : 0.00257 s
+  Batch Obj Time              : 0.00005 s
+  Obj Speedup                 : 48.49 x
+  Grad Diff                   : 0.00000009 
+  Hess Diff                   : 0.00000006 
+
+  Reg. Train Time             : 0.52959 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.25785 s
+  Train Speedup               : 2.05 x
+
+Regular Metrics:
+    Accuracy                  : 0.8762 
+    F1-Macro                  : 0.6229 
+    F1-Micro                  : 0.8762 
+    Precision                 : 0.5893 
+    Recall                    : 0.6667 
+Batch Metrics:
+    Accuracy                  : 0.8762 
+    F1-Macro                  : 0.6229 
+    F1-Micro                  : 0.8762 
+    Precision                 : 0.5893 
+    Recall                    : 0.6667 
+
+  Sample Size                 : 105 
+  Num Classes                 : 3 
+
+
+Entry: Poincare (polbooks) (seed 2)
+----------------------------------------
+  Reg. Obj Time               : 0.00663 s
+  Batch Obj Time              : 0.00005 s
+  Obj Speedup                 : 129.34 x
+  Grad Diff                   : 0.00143101 
+  Hess Diff                   : 0.02811761 
+
+  Reg. Train Time             : 0.96653 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.08787 s
+  Train Speedup               : 11.00 x
+
+Regular Metrics:
+    Accuracy                  : 0.8476 
+    F1-Macro                  : 0.6023 
+    F1-Micro                  : 0.8476 
+    Precision                 : 0.5673 
+    Recall                    : 0.6463 
+Batch Metrics:
+    Accuracy                  : 0.8286 
+    F1-Macro                  : 0.5916 
+    F1-Micro                  : 0.8286 
+    Precision                 : 0.5635 
+    Recall                    : 0.6289 
+
+  Sample Size                 : 105 
+  Num Classes                 : 3 
+
+
+Entry: Hyperboloid (polbooks) (seed 2)
+----------------------------------------
+  Reg. Obj Time               : 0.05182 s
+  Batch Obj Time              : 0.00012 s
+  Obj Speedup                 : 435.41 x
+  Grad Diff                   : 0.28059473 
+  Hess Diff                   : 0.53729890 
+
+  Reg. Train Time             : 5.77359 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.26463 s
+  Train Speedup               : 21.82 x
+
+Regular Metrics:
+    Accuracy                  : 0.8762 
+    F1-Macro                  : 0.6229 
+    F1-Micro                  : 0.8762 
+    Precision                 : 0.5893 
+    Recall                    : 0.6667 
+Batch Metrics:
+    Accuracy                  : 0.8762 
+    F1-Macro                  : 0.6229 
+    F1-Micro                  : 0.8762 
+    Precision                 : 0.5893 
+    Recall                    : 0.6667 
+
+  Sample Size                 : 105 
+  Num Classes                 : 3 
+
+
+Entry: Logistic Regression (football) (seed 2)
+----------------------------------------
+  Reg. Obj Time               : 0.00701 s
+  Batch Obj Time              : 0.00008 s
+  Obj Speedup                 : 84.46 x
+  Grad Diff                   : 0.00000001 
+  Hess Diff                   : 0.00000001 
+
+  Reg. Train Time             : 1.94842 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 1.19075 s
+  Train Speedup               : 1.64 x
+
+Regular Metrics:
+    Accuracy                  : 0.1478 
+    F1-Macro                  : 0.0950 
+    F1-Micro                  : 0.1478 
+    Precision                 : 0.0896 
+    Recall                    : 0.1667 
+Batch Metrics:
+    Accuracy                  : 0.1478 
+    F1-Macro                  : 0.0950 
+    F1-Micro                  : 0.1478 
+    Precision                 : 0.0896 
+    Recall                    : 0.1667 
+
+  Sample Size                 : 115 
+  Num Classes                 : 12 
+
+
+Entry: Poincare (football) (seed 2)
+----------------------------------------
+  Reg. Obj Time               : 0.04456 s
+  Batch Obj Time              : 0.00011 s
+  Obj Speedup                 : 414.25 x
+  Grad Diff                   : 0.00052624 
+  Hess Diff                   : 0.00511573 
+
+  Reg. Train Time             : 3.91909 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.37122 s
+  Train Speedup               : 10.56 x
+
+Regular Metrics:
+    Accuracy                  : 0.0783 
+    F1-Macro                  : 0.0262 
+    F1-Micro                  : 0.0783 
+    Precision                 : 0.0476 
+    Recall                    : 0.0926 
+Batch Metrics:
+    Accuracy                  : 0.0957 
+    F1-Macro                  : 0.0410 
+    F1-Micro                  : 0.0957 
+    Precision                 : 0.0375 
+    Recall                    : 0.1111 
+
+  Sample Size                 : 115 
+  Num Classes                 : 12 
+
+
+Entry: Hyperboloid (football) (seed 2)
+----------------------------------------
+  Reg. Obj Time               : 0.21447 s
+  Batch Obj Time              : 0.00017 s
+  Obj Speedup                 : 1242.83 x
+  Grad Diff                   : 0.26934825 
+  Hess Diff                   : 0.15461652 
+
+  Reg. Train Time             : 24.50244 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.80308 s
+  Train Speedup               : 30.51 x
+
+Regular Metrics:
+    Accuracy                  : 0.1478 
+    F1-Macro                  : 0.0950 
+    F1-Micro                  : 0.1478 
+    Precision                 : 0.0896 
+    Recall                    : 0.1667 
+Batch Metrics:
+    Accuracy                  : 0.0870 
+    F1-Macro                  : 0.0389 
+    F1-Micro                  : 0.0870 
+    Precision                 : 0.0615 
+    Recall                    : 0.1019 
+
+  Sample Size                 : 115 
+  Num Classes                 : 12 
+
+
+Entry: ERROR (UCIdataE) (seed 2)
+  ERROR: list index out of range
+
+Entry: ERROR (UCIdata) (seed 2)
+  ERROR: list index out of range
+
+Entry: ERROR (gauss) (seed 2)
+  ERROR: [Errno 2] No such file or directory: '/Users/lowoncuties/School/HyperbolicML/hyperXGB/datadata_001.mat'
+
+Entry: ERROR (gausshyper) (seed 2)
+  ERROR: [Errno 2] No such file or directory: '/Users/lowoncuties/School/HyperbolicML/hyperXGB/datadata_001.mat'
+
+Entry: Logistic Regression (polblogs) (seed 2)
+----------------------------------------
+  Reg. Obj Time               : 0.04050 s
+  Batch Obj Time              : 0.00176 s
+  Obj Speedup                 : 23.06 x
+  Grad Diff                   : 0.00000020 
+  Hess Diff                   : 0.00000003 
+
+  Reg. Train Time             : 2.60189 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.29483 s
+  Train Speedup               : 8.83 x
+
+Regular Metrics:
+    Accuracy                  : 0.9992 
+    F1-Macro                  : 0.9992 
+    F1-Micro                  : 0.9992 
+    Precision                 : 0.9992 
+    Recall                    : 0.9991 
+Batch Metrics:
+    Accuracy                  : 0.9992 
+    F1-Macro                  : 0.9992 
+    F1-Micro                  : 0.9992 
+    Precision                 : 0.9992 
+    Recall                    : 0.9991 
+
+  Sample Size                 : 1224 
+  Num Classes                 : 2 
+
+
+Entry: Poincare (polblogs) (seed 2)
+----------------------------------------
+  Reg. Obj Time               : 0.06299 s
+  Batch Obj Time              : 0.00021 s
+  Obj Speedup                 : 298.52 x
+  Grad Diff                   : 0.00158825 
+  Hess Diff                   : 0.02595489 
+
+  Reg. Train Time             : 7.46789 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.28194 s
+  Train Speedup               : 26.49 x
+
+Regular Metrics:
+    Accuracy                  : 0.9583 
+    F1-Macro                  : 0.9583 
+    F1-Micro                  : 0.9583 
+    Precision                 : 0.9583 
+    Recall                    : 0.9582 
+Batch Metrics:
+    Accuracy                  : 0.9428 
+    F1-Macro                  : 0.9427 
+    F1-Micro                  : 0.9428 
+    Precision                 : 0.9431 
+    Recall                    : 0.9424 
+
+  Sample Size                 : 1224 
+  Num Classes                 : 2 
+
+
+Entry: Hyperboloid (polblogs) (seed 2)
+----------------------------------------
+  Reg. Obj Time               : 0.39776 s
+  Batch Obj Time              : 0.00034 s
+  Obj Speedup                 : 1181.02 x
+  Grad Diff                   : 0.30262302 
+  Hess Diff                   : 0.61993852 
+
+  Reg. Train Time             : 15.44160 s
+  Reg. Stopped Early          : True 
+  Reg. Rounds Completed       : 36 
+  Batch Train Time            : 0.30126 s
+  Train Speedup               : 51.26 x
+
+Regular Metrics:
+    Accuracy                  : 0.9984 
+    F1-Macro                  : 0.9984 
+    F1-Micro                  : 0.9984 
+    Precision                 : 0.9984 
+    Recall                    : 0.9984 
+Batch Metrics:
+    Accuracy                  : 0.9992 
+    F1-Macro                  : 0.9992 
+    F1-Micro                  : 0.9992 
+    Precision                 : 0.9992 
+    Recall                    : 0.9992 
+
+  Sample Size                 : 1224 
+  Num Classes                 : 2 
+
+
+Entry: Logistic Regression (karate) (seed 2)
+----------------------------------------
+  Reg. Obj Time               : 0.00047 s
+  Batch Obj Time              : 0.00003 s
+  Obj Speedup                 : 14.26 x
+  Grad Diff                   : 0.00000019 
+  Hess Diff                   : 0.00000003 
+
+  Reg. Train Time             : 0.14322 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.09820 s
+  Train Speedup               : 1.46 x
+
+Regular Metrics:
+    Accuracy                  : 1.0000 
+    F1-Macro                  : 1.0000 
+    F1-Micro                  : 1.0000 
+    Precision                 : 1.0000 
+    Recall                    : 1.0000 
+Batch Metrics:
+    Accuracy                  : 1.0000 
+    F1-Macro                  : 1.0000 
+    F1-Micro                  : 1.0000 
+    Precision                 : 1.0000 
+    Recall                    : 1.0000 
+
+  Sample Size                 : 34 
+  Num Classes                 : 2 
+
+
+Entry: Poincare (karate) (seed 2)
+----------------------------------------
+  Reg. Obj Time               : 0.00164 s
+  Batch Obj Time              : 0.00004 s
+  Obj Speedup                 : 37.13 x
+  Grad Diff                   : 0.00155522 
+  Hess Diff                   : 0.02652969 
+
+  Reg. Train Time             : 0.26048 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.06551 s
+  Train Speedup               : 3.98 x
+
+Regular Metrics:
+    Accuracy                  : 0.9706 
+    F1-Macro                  : 0.9706 
+    F1-Micro                  : 0.9706 
+    Precision                 : 0.9722 
+    Recall                    : 0.9706 
+Batch Metrics:
+    Accuracy                  : 0.5000 
+    F1-Macro                  : 0.3333 
+    F1-Micro                  : 0.5000 
+    Precision                 : 0.2500 
+    Recall                    : 0.5000 
+
+  Sample Size                 : 34 
+  Num Classes                 : 2 
+
+
+Entry: Hyperboloid (karate) (seed 2)
+----------------------------------------
+  Reg. Obj Time               : 0.01093 s
+  Batch Obj Time              : 0.00007 s
+  Obj Speedup                 : 148.40 x
+  Grad Diff                   : 0.31913248 
+  Hess Diff                   : 0.62620150 
+
+  Reg. Train Time             : 1.34509 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.09781 s
+  Train Speedup               : 13.75 x
+
+Regular Metrics:
+    Accuracy                  : 1.0000 
+    F1-Macro                  : 1.0000 
+    F1-Micro                  : 1.0000 
+    Precision                 : 1.0000 
+    Recall                    : 1.0000 
+Batch Metrics:
+    Accuracy                  : 1.0000 
+    F1-Macro                  : 1.0000 
+    F1-Micro                  : 1.0000 
+    Precision                 : 1.0000 
+    Recall                    : 1.0000 
+
+  Sample Size                 : 34 
+  Num Classes                 : 2 
+
+
+Entry: Logistic Regression (wordnet) (seed 3)
+----------------------------------------
+  Reg. Obj Time               : 0.66362 s
+  Batch Obj Time              : 0.00371 s
+  Obj Speedup                 : 178.65 x
+  Grad Diff                   : 0.00000019 
+  Hess Diff                   : 0.00000003 
+
+  Reg. Train Time             : 39.19632 s
+  Reg. Stopped Early          : True 
+  Reg. Rounds Completed       : 43 
+  Batch Train Time            : 0.78184 s
+  Train Speedup               : 50.13 x
+
+Regular Metrics:
+    Accuracy                  : 0.9948 
+    F1-Macro                  : 0.9722 
+    F1-Micro                  : 0.9948 
+    Precision                 : 0.9658 
+    Recall                    : 0.9789 
+Batch Metrics:
+    Accuracy                  : 0.9948 
+    F1-Macro                  : 0.9724 
+    F1-Micro                  : 0.9948 
+    Precision                 : 0.9693 
+    Recall                    : 0.9754 
+
+  Sample Size                 : 52552 
+  Num Classes                 : 2 
+
+
+Entry: Poincare (wordnet) (seed 3)
+----------------------------------------
+  Reg. Obj Time               : 2.29771 s
+  Batch Obj Time              : 0.00447 s
+  Obj Speedup                 : 514.39 x
+  Grad Diff                   : 0.00157969 
+  Hess Diff                   : 0.02562779 
+
+  Reg. Train Time             : 38.24108 s
+  Reg. Stopped Early          : True 
+  Reg. Rounds Completed       : 13 
+  Batch Train Time            : 0.74859 s
+  Train Speedup               : 51.08 x
+
+Regular Metrics:
+    Accuracy                  : 0.9939 
+    F1-Macro                  : 0.9668 
+    F1-Micro                  : 0.9939 
+    Precision                 : 0.9693 
+    Recall                    : 0.9643 
+Batch Metrics:
+    Accuracy                  : 0.9944 
+    F1-Macro                  : 0.9698 
+    F1-Micro                  : 0.9944 
+    Precision                 : 0.9704 
+    Recall                    : 0.9693 
+
+  Sample Size                 : 52552 
+  Num Classes                 : 2 
+
+
+Entry: Hyperboloid (wordnet) (seed 3)
+----------------------------------------
+  Reg. Obj Time               : 17.99837 s
+  Batch Obj Time              : 0.01043 s
+  Obj Speedup                 : 1726.09 x
+  Grad Diff                   : 0.30806259 
+  Hess Diff                   : 0.62041312 
+
+  Reg. Train Time             : 74.06740 s
+  Reg. Stopped Early          : True 
+  Reg. Rounds Completed       : 4 
+  Batch Train Time            : 1.18006 s
+  Train Speedup               : 62.77 x
+
+Regular Metrics:
+    Accuracy                  : 0.9942 
+    F1-Macro                  : 0.9690 
+    F1-Micro                  : 0.9942 
+    Precision                 : 0.9631 
+    Recall                    : 0.9751 
+Batch Metrics:
+    Accuracy                  : 0.9947 
+    F1-Macro                  : 0.9717 
+    F1-Micro                  : 0.9947 
+    Precision                 : 0.9682 
+    Recall                    : 0.9754 
+
+  Sample Size                 : 52552 
+  Num Classes                 : 2 
+
+
+Entry: Logistic Regression (polbooks) (seed 3)
+----------------------------------------
+  Reg. Obj Time               : 0.00192 s
+  Batch Obj Time              : 0.00006 s
+  Obj Speedup                 : 34.73 x
+  Grad Diff                   : 0.00000009 
+  Hess Diff                   : 0.00000006 
+
+  Reg. Train Time             : 0.50832 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.24503 s
+  Train Speedup               : 2.07 x
+
+Regular Metrics:
+    Accuracy                  : 0.8762 
+    F1-Macro                  : 0.6229 
+    F1-Micro                  : 0.8762 
+    Precision                 : 0.5893 
+    Recall                    : 0.6667 
+Batch Metrics:
+    Accuracy                  : 0.8762 
+    F1-Macro                  : 0.6229 
+    F1-Micro                  : 0.8762 
+    Precision                 : 0.5893 
+    Recall                    : 0.6667 
+
+  Sample Size                 : 105 
+  Num Classes                 : 3 
+
+
+Entry: Poincare (polbooks) (seed 3)
+----------------------------------------
+  Reg. Obj Time               : 0.00673 s
+  Batch Obj Time              : 0.00006 s
+  Obj Speedup                 : 107.11 x
+  Grad Diff                   : 0.00143101 
+  Hess Diff                   : 0.02811761 
+
+  Reg. Train Time             : 1.02228 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.09150 s
+  Train Speedup               : 11.17 x
+
+Regular Metrics:
+    Accuracy                  : 0.8476 
+    F1-Macro                  : 0.6023 
+    F1-Micro                  : 0.8476 
+    Precision                 : 0.5673 
+    Recall                    : 0.6463 
+Batch Metrics:
+    Accuracy                  : 0.8286 
+    F1-Macro                  : 0.5916 
+    F1-Micro                  : 0.8286 
+    Precision                 : 0.5635 
+    Recall                    : 0.6289 
+
+  Sample Size                 : 105 
+  Num Classes                 : 3 
+
+
+Entry: Hyperboloid (polbooks) (seed 3)
+----------------------------------------
+  Reg. Obj Time               : 0.05137 s
+  Batch Obj Time              : 0.00013 s
+  Obj Speedup                 : 398.53 x
+  Grad Diff                   : 0.28059473 
+  Hess Diff                   : 0.53729890 
+
+  Reg. Train Time             : 5.83278 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.25129 s
+  Train Speedup               : 23.21 x
+
+Regular Metrics:
+    Accuracy                  : 0.8762 
+    F1-Macro                  : 0.6229 
+    F1-Micro                  : 0.8762 
+    Precision                 : 0.5893 
+    Recall                    : 0.6667 
+Batch Metrics:
+    Accuracy                  : 0.8762 
+    F1-Macro                  : 0.6229 
+    F1-Micro                  : 0.8762 
+    Precision                 : 0.5893 
+    Recall                    : 0.6667 
+
+  Sample Size                 : 105 
+  Num Classes                 : 3 
+
+
+Entry: Logistic Regression (football) (seed 3)
+----------------------------------------
+  Reg. Obj Time               : 0.00696 s
+  Batch Obj Time              : 0.00014 s
+  Obj Speedup                 : 50.23 x
+  Grad Diff                   : 0.00000001 
+  Hess Diff                   : 0.00000001 
+
+  Reg. Train Time             : 2.03435 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 1.17471 s
+  Train Speedup               : 1.73 x
+
+Regular Metrics:
+    Accuracy                  : 0.1478 
+    F1-Macro                  : 0.0950 
+    F1-Micro                  : 0.1478 
+    Precision                 : 0.0896 
+    Recall                    : 0.1667 
+Batch Metrics:
+    Accuracy                  : 0.1478 
+    F1-Macro                  : 0.0950 
+    F1-Micro                  : 0.1478 
+    Precision                 : 0.0896 
+    Recall                    : 0.1667 
+
+  Sample Size                 : 115 
+  Num Classes                 : 12 
+
+
+Entry: Poincare (football) (seed 3)
+----------------------------------------
+  Reg. Obj Time               : 0.02783 s
+  Batch Obj Time              : 0.00011 s
+  Obj Speedup                 : 251.22 x
+  Grad Diff                   : 0.00052624 
+  Hess Diff                   : 0.00511573 
+
+  Reg. Train Time             : 3.95812 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.43140 s
+  Train Speedup               : 9.18 x
+
+Regular Metrics:
+    Accuracy                  : 0.0783 
+    F1-Macro                  : 0.0262 
+    F1-Micro                  : 0.0783 
+    Precision                 : 0.0476 
+    Recall                    : 0.0926 
+Batch Metrics:
+    Accuracy                  : 0.0957 
+    F1-Macro                  : 0.0410 
+    F1-Micro                  : 0.0957 
+    Precision                 : 0.0375 
+    Recall                    : 0.1111 
+
+  Sample Size                 : 115 
+  Num Classes                 : 12 
+
+
+Entry: Hyperboloid (football) (seed 3)
+----------------------------------------
+  Reg. Obj Time               : 0.21810 s
+  Batch Obj Time              : 0.00020 s
+  Obj Speedup                 : 1108.58 x
+  Grad Diff                   : 0.26934825 
+  Hess Diff                   : 0.15461652 
+
+  Reg. Train Time             : 25.57063 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.86037 s
+  Train Speedup               : 29.72 x
+
+Regular Metrics:
+    Accuracy                  : 0.1478 
+    F1-Macro                  : 0.0950 
+    F1-Micro                  : 0.1478 
+    Precision                 : 0.0896 
+    Recall                    : 0.1667 
+Batch Metrics:
+    Accuracy                  : 0.0870 
+    F1-Macro                  : 0.0389 
+    F1-Micro                  : 0.0870 
+    Precision                 : 0.0615 
+    Recall                    : 0.1019 
+
+  Sample Size                 : 115 
+  Num Classes                 : 12 
+
+
+Entry: ERROR (UCIdataE) (seed 3)
+  ERROR: list index out of range
+
+Entry: ERROR (UCIdata) (seed 3)
+  ERROR: list index out of range
+
+Entry: ERROR (gauss) (seed 3)
+  ERROR: [Errno 2] No such file or directory: '/Users/lowoncuties/School/HyperbolicML/hyperXGB/datadata_001.mat'
+
+Entry: ERROR (gausshyper) (seed 3)
+  ERROR: [Errno 2] No such file or directory: '/Users/lowoncuties/School/HyperbolicML/hyperXGB/datadata_001.mat'
+
+Entry: Logistic Regression (polblogs) (seed 3)
+----------------------------------------
+  Reg. Obj Time               : 0.01591 s
+  Batch Obj Time              : 0.00013 s
+  Obj Speedup                 : 124.30 x
+  Grad Diff                   : 0.00000020 
+  Hess Diff                   : 0.00000003 
+
+  Reg. Train Time             : 2.38192 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.26093 s
+  Train Speedup               : 9.13 x
+
+Regular Metrics:
+    Accuracy                  : 0.9992 
+    F1-Macro                  : 0.9992 
+    F1-Micro                  : 0.9992 
+    Precision                 : 0.9992 
+    Recall                    : 0.9991 
+Batch Metrics:
+    Accuracy                  : 0.9992 
+    F1-Macro                  : 0.9992 
+    F1-Micro                  : 0.9992 
+    Precision                 : 0.9992 
+    Recall                    : 0.9991 
+
+  Sample Size                 : 1224 
+  Num Classes                 : 2 
+
+
+Entry: Poincare (polblogs) (seed 3)
+----------------------------------------
+  Reg. Obj Time               : 0.05149 s
+  Batch Obj Time              : 0.00013 s
+  Obj Speedup                 : 389.51 x
+  Grad Diff                   : 0.00158825 
+  Hess Diff                   : 0.02595489 
+
+  Reg. Train Time             : 7.04749 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.25086 s
+  Train Speedup               : 28.09 x
+
+Regular Metrics:
+    Accuracy                  : 0.9583 
+    F1-Macro                  : 0.9583 
+    F1-Micro                  : 0.9583 
+    Precision                 : 0.9583 
+    Recall                    : 0.9582 
+Batch Metrics:
+    Accuracy                  : 0.9428 
+    F1-Macro                  : 0.9427 
+    F1-Micro                  : 0.9428 
+    Precision                 : 0.9431 
+    Recall                    : 0.9424 
+
+  Sample Size                 : 1224 
+  Num Classes                 : 2 
+
+
+Entry: Hyperboloid (polblogs) (seed 3)
+----------------------------------------
+  Reg. Obj Time               : 0.39606 s
+  Batch Obj Time              : 0.00053 s
+  Obj Speedup                 : 741.68 x
+  Grad Diff                   : 0.30262302 
+  Hess Diff                   : 0.61993852 
+
+  Reg. Train Time             : 17.52566 s
+  Reg. Stopped Early          : True 
+  Reg. Rounds Completed       : 40 
+  Batch Train Time            : 0.34118 s
+  Train Speedup               : 51.37 x
+
+Regular Metrics:
+    Accuracy                  : 0.9992 
+    F1-Macro                  : 0.9992 
+    F1-Micro                  : 0.9992 
+    Precision                 : 0.9992 
+    Recall                    : 0.9992 
+Batch Metrics:
+    Accuracy                  : 0.9992 
+    F1-Macro                  : 0.9992 
+    F1-Micro                  : 0.9992 
+    Precision                 : 0.9992 
+    Recall                    : 0.9992 
+
+  Sample Size                 : 1224 
+  Num Classes                 : 2 
+
+
+Entry: Logistic Regression (karate) (seed 3)
+----------------------------------------
+  Reg. Obj Time               : 0.00054 s
+  Batch Obj Time              : 0.00003 s
+  Obj Speedup                 : 21.16 x
+  Grad Diff                   : 0.00000019 
+  Hess Diff                   : 0.00000003 
+
+  Reg. Train Time             : 0.15715 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.11368 s
+  Train Speedup               : 1.38 x
+
+Regular Metrics:
+    Accuracy                  : 1.0000 
+    F1-Macro                  : 1.0000 
+    F1-Micro                  : 1.0000 
+    Precision                 : 1.0000 
+    Recall                    : 1.0000 
+Batch Metrics:
+    Accuracy                  : 1.0000 
+    F1-Macro                  : 1.0000 
+    F1-Micro                  : 1.0000 
+    Precision                 : 1.0000 
+    Recall                    : 1.0000 
+
+  Sample Size                 : 34 
+  Num Classes                 : 2 
+
+
+Entry: Poincare (karate) (seed 3)
+----------------------------------------
+  Reg. Obj Time               : 0.00158 s
+  Batch Obj Time              : 0.00004 s
+  Obj Speedup                 : 39.87 x
+  Grad Diff                   : 0.00155522 
+  Hess Diff                   : 0.02652969 
+
+  Reg. Train Time             : 0.26765 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.06265 s
+  Train Speedup               : 4.27 x
+
+Regular Metrics:
+    Accuracy                  : 0.9706 
+    F1-Macro                  : 0.9706 
+    F1-Micro                  : 0.9706 
+    Precision                 : 0.9722 
+    Recall                    : 0.9706 
+Batch Metrics:
+    Accuracy                  : 0.5000 
+    F1-Macro                  : 0.3333 
+    F1-Micro                  : 0.5000 
+    Precision                 : 0.2500 
+    Recall                    : 0.5000 
+
+  Sample Size                 : 34 
+  Num Classes                 : 2 
+
+
+Entry: Hyperboloid (karate) (seed 3)
+----------------------------------------
+  Reg. Obj Time               : 0.01182 s
+  Batch Obj Time              : 0.00011 s
+  Obj Speedup                 : 104.63 x
+  Grad Diff                   : 0.31913248 
+  Hess Diff                   : 0.62620150 
+
+  Reg. Train Time             : 1.23510 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.09756 s
+  Train Speedup               : 12.66 x
+
+Regular Metrics:
+    Accuracy                  : 1.0000 
+    F1-Macro                  : 1.0000 
+    F1-Micro                  : 1.0000 
+    Precision                 : 1.0000 
+    Recall                    : 1.0000 
+Batch Metrics:
+    Accuracy                  : 1.0000 
+    F1-Macro                  : 1.0000 
+    F1-Micro                  : 1.0000 
+    Precision                 : 1.0000 
+    Recall                    : 1.0000 
+
+  Sample Size                 : 34 
+  Num Classes                 : 2 
+
+
+Entry: Logistic Regression (wordnet) (seed 4)
+----------------------------------------
+  Reg. Obj Time               : 0.63356 s
+  Batch Obj Time              : 0.00403 s
+  Obj Speedup                 : 157.38 x
+  Grad Diff                   : 0.00000019 
+  Hess Diff                   : 0.00000003 
+
+  Reg. Train Time             : 40.65743 s
+  Reg. Stopped Early          : True 
+  Reg. Rounds Completed       : 46 
+  Batch Train Time            : 0.81305 s
+  Train Speedup               : 50.01 x
+
+Regular Metrics:
+    Accuracy                  : 0.9948 
+    F1-Macro                  : 0.9722 
+    F1-Micro                  : 0.9948 
+    Precision                 : 0.9658 
+    Recall                    : 0.9789 
+Batch Metrics:
+    Accuracy                  : 0.9948 
+    F1-Macro                  : 0.9724 
+    F1-Micro                  : 0.9948 
+    Precision                 : 0.9693 
+    Recall                    : 0.9754 
+
+  Sample Size                 : 52552 
+  Num Classes                 : 2 
+
+
+Entry: Poincare (wordnet) (seed 4)
+----------------------------------------
+  Reg. Obj Time               : 2.37057 s
+  Batch Obj Time              : 0.00571 s
+  Obj Speedup                 : 415.22 x
+  Grad Diff                   : 0.00157969 
+  Hess Diff                   : 0.02562779 
+
+  Reg. Train Time             : 45.87092 s
+  Reg. Stopped Early          : True 
+  Reg. Rounds Completed       : 15 
+  Batch Train Time            : 0.91134 s
+  Train Speedup               : 50.33 x
+
+Regular Metrics:
+    Accuracy                  : 0.9940 
+    F1-Macro                  : 0.9676 
+    F1-Micro                  : 0.9940 
+    Precision                 : 0.9673 
+    Recall                    : 0.9679 
+Batch Metrics:
+    Accuracy                  : 0.9944 
+    F1-Macro                  : 0.9698 
+    F1-Micro                  : 0.9944 
+    Precision                 : 0.9704 
+    Recall                    : 0.9693 
+
+  Sample Size                 : 52552 
+  Num Classes                 : 2 
+
+
+Entry: Hyperboloid (wordnet) (seed 4)
+----------------------------------------
+  Reg. Obj Time               : 18.09631 s
+  Batch Obj Time              : 0.00997 s
+  Obj Speedup                 : 1815.04 x
+  Grad Diff                   : 0.30806259 
+  Hess Diff                   : 0.62041312 
+
+  Reg. Train Time             : 88.96365 s
+  Reg. Stopped Early          : True 
+  Reg. Rounds Completed       : 5 
+  Batch Train Time            : 1.55901 s
+  Train Speedup               : 57.06 x
+
+Regular Metrics:
+    Accuracy                  : 0.9946 
+    F1-Macro                  : 0.9713 
+    F1-Micro                  : 0.9946 
+    Precision                 : 0.9646 
+    Recall                    : 0.9783 
+Batch Metrics:
+    Accuracy                  : 0.9947 
+    F1-Macro                  : 0.9717 
+    F1-Micro                  : 0.9947 
+    Precision                 : 0.9682 
+    Recall                    : 0.9754 
+
+  Sample Size                 : 52552 
+  Num Classes                 : 2 
+
+
+Entry: Logistic Regression (polbooks) (seed 4)
+----------------------------------------
+  Reg. Obj Time               : 0.00170 s
+  Batch Obj Time              : 0.00003 s
+  Obj Speedup                 : 50.08 x
+  Grad Diff                   : 0.00000009 
+  Hess Diff                   : 0.00000006 
+
+  Reg. Train Time             : 0.51196 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.31949 s
+  Train Speedup               : 1.60 x
+
+Regular Metrics:
+    Accuracy                  : 0.8762 
+    F1-Macro                  : 0.6229 
+    F1-Micro                  : 0.8762 
+    Precision                 : 0.5893 
+    Recall                    : 0.6667 
+Batch Metrics:
+    Accuracy                  : 0.8762 
+    F1-Macro                  : 0.6229 
+    F1-Micro                  : 0.8762 
+    Precision                 : 0.5893 
+    Recall                    : 0.6667 
+
+  Sample Size                 : 105 
+  Num Classes                 : 3 
+
+
+Entry: Poincare (polbooks) (seed 4)
+----------------------------------------
+  Reg. Obj Time               : 0.00659 s
+  Batch Obj Time              : 0.00004 s
+  Obj Speedup                 : 147.71 x
+  Grad Diff                   : 0.00143101 
+  Hess Diff                   : 0.02811761 
+
+  Reg. Train Time             : 0.95680 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.09345 s
+  Train Speedup               : 10.24 x
+
+Regular Metrics:
+    Accuracy                  : 0.8476 
+    F1-Macro                  : 0.6023 
+    F1-Micro                  : 0.8476 
+    Precision                 : 0.5673 
+    Recall                    : 0.6463 
+Batch Metrics:
+    Accuracy                  : 0.8286 
+    F1-Macro                  : 0.5916 
+    F1-Micro                  : 0.8286 
+    Precision                 : 0.5635 
+    Recall                    : 0.6289 
+
+  Sample Size                 : 105 
+  Num Classes                 : 3 
+
+
+Entry: Hyperboloid (polbooks) (seed 4)
+----------------------------------------
+  Reg. Obj Time               : 0.05715 s
+  Batch Obj Time              : 0.00012 s
+  Obj Speedup                 : 471.71 x
+  Grad Diff                   : 0.28059473 
+  Hess Diff                   : 0.53729890 
+
+  Reg. Train Time             : 5.41241 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.25306 s
+  Train Speedup               : 21.39 x
+
+Regular Metrics:
+    Accuracy                  : 0.8762 
+    F1-Macro                  : 0.6229 
+    F1-Micro                  : 0.8762 
+    Precision                 : 0.5893 
+    Recall                    : 0.6667 
+Batch Metrics:
+    Accuracy                  : 0.8762 
+    F1-Macro                  : 0.6229 
+    F1-Micro                  : 0.8762 
+    Precision                 : 0.5893 
+    Recall                    : 0.6667 
+
+  Sample Size                 : 105 
+  Num Classes                 : 3 
+
+
+Entry: Logistic Regression (football) (seed 4)
+----------------------------------------
+  Reg. Obj Time               : 0.00617 s
+  Batch Obj Time              : 0.00006 s
+  Obj Speedup                 : 111.00 x
+  Grad Diff                   : 0.00000001 
+  Hess Diff                   : 0.00000001 
+
+  Reg. Train Time             : 1.87654 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.88866 s
+  Train Speedup               : 2.11 x
+
+Regular Metrics:
+    Accuracy                  : 0.1478 
+    F1-Macro                  : 0.0950 
+    F1-Micro                  : 0.1478 
+    Precision                 : 0.0896 
+    Recall                    : 0.1667 
+Batch Metrics:
+    Accuracy                  : 0.1478 
+    F1-Macro                  : 0.0950 
+    F1-Micro                  : 0.1478 
+    Precision                 : 0.0896 
+    Recall                    : 0.1667 
+
+  Sample Size                 : 115 
+  Num Classes                 : 12 
+
+
+Entry: Poincare (football) (seed 4)
+----------------------------------------
+  Reg. Obj Time               : 0.02683 s
+  Batch Obj Time              : 0.00026 s
+  Obj Speedup                 : 104.56 x
+  Grad Diff                   : 0.00052624 
+  Hess Diff                   : 0.00511573 
+
+  Reg. Train Time             : 3.90237 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.37372 s
+  Train Speedup               : 10.44 x
+
+Regular Metrics:
+    Accuracy                  : 0.0783 
+    F1-Macro                  : 0.0262 
+    F1-Micro                  : 0.0783 
+    Precision                 : 0.0476 
+    Recall                    : 0.0926 
+Batch Metrics:
+    Accuracy                  : 0.0957 
+    F1-Macro                  : 0.0410 
+    F1-Micro                  : 0.0957 
+    Precision                 : 0.0375 
+    Recall                    : 0.1111 
+
+  Sample Size                 : 115 
+  Num Classes                 : 12 
+
+
+Entry: Hyperboloid (football) (seed 4)
+----------------------------------------
+  Reg. Obj Time               : 0.21298 s
+  Batch Obj Time              : 0.00068 s
+  Obj Speedup                 : 311.08 x
+  Grad Diff                   : 0.26934825 
+  Hess Diff                   : 0.15461652 
+
+  Reg. Train Time             : 23.34106 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.81100 s
+  Train Speedup               : 28.78 x
+
+Regular Metrics:
+    Accuracy                  : 0.1478 
+    F1-Macro                  : 0.0950 
+    F1-Micro                  : 0.1478 
+    Precision                 : 0.0896 
+    Recall                    : 0.1667 
+Batch Metrics:
+    Accuracy                  : 0.0870 
+    F1-Macro                  : 0.0389 
+    F1-Micro                  : 0.0870 
+    Precision                 : 0.0615 
+    Recall                    : 0.1019 
+
+  Sample Size                 : 115 
+  Num Classes                 : 12 
+
+
+Entry: ERROR (UCIdataE) (seed 4)
+  ERROR: list index out of range
+
+Entry: ERROR (UCIdata) (seed 4)
+  ERROR: list index out of range
+
+Entry: ERROR (gauss) (seed 4)
+  ERROR: [Errno 2] No such file or directory: '/Users/lowoncuties/School/HyperbolicML/hyperXGB/datadata_001.mat'
+
+Entry: ERROR (gausshyper) (seed 4)
+  ERROR: [Errno 2] No such file or directory: '/Users/lowoncuties/School/HyperbolicML/hyperXGB/datadata_001.mat'
+
+Entry: Logistic Regression (polblogs) (seed 4)
+----------------------------------------
+  Reg. Obj Time               : 0.01482 s
+  Batch Obj Time              : 0.00010 s
+  Obj Speedup                 : 144.54 x
+  Grad Diff                   : 0.00000020 
+  Hess Diff                   : 0.00000003 
+
+  Reg. Train Time             : 2.45719 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.24831 s
+  Train Speedup               : 9.90 x
+
+Regular Metrics:
+    Accuracy                  : 0.9992 
+    F1-Macro                  : 0.9992 
+    F1-Micro                  : 0.9992 
+    Precision                 : 0.9992 
+    Recall                    : 0.9991 
+Batch Metrics:
+    Accuracy                  : 0.9992 
+    F1-Macro                  : 0.9992 
+    F1-Micro                  : 0.9992 
+    Precision                 : 0.9992 
+    Recall                    : 0.9991 
+
+  Sample Size                 : 1224 
+  Num Classes                 : 2 
+
+
+Entry: Poincare (polblogs) (seed 4)
+----------------------------------------
+  Reg. Obj Time               : 0.05999 s
+  Batch Obj Time              : 0.00015 s
+  Obj Speedup                 : 400.29 x
+  Grad Diff                   : 0.00158825 
+  Hess Diff                   : 0.02595489 
+
+  Reg. Train Time             : 7.03963 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.24704 s
+  Train Speedup               : 28.50 x
+
+Regular Metrics:
+    Accuracy                  : 0.9583 
+    F1-Macro                  : 0.9583 
+    F1-Micro                  : 0.9583 
+    Precision                 : 0.9583 
+    Recall                    : 0.9582 
+Batch Metrics:
+    Accuracy                  : 0.9428 
+    F1-Macro                  : 0.9427 
+    F1-Micro                  : 0.9428 
+    Precision                 : 0.9431 
+    Recall                    : 0.9424 
+
+  Sample Size                 : 1224 
+  Num Classes                 : 2 
+
+
+Entry: Hyperboloid (polblogs) (seed 4)
+----------------------------------------
+  Reg. Obj Time               : 0.49254 s
+  Batch Obj Time              : 0.00086 s
+  Obj Speedup                 : 569.93 x
+  Grad Diff                   : 0.30262302 
+  Hess Diff                   : 0.61993852 
+
+  Reg. Train Time             : 19.55515 s
+  Reg. Stopped Early          : True 
+  Reg. Rounds Completed       : 42 
+  Batch Train Time            : 0.38338 s
+  Train Speedup               : 51.01 x
+
+Regular Metrics:
+    Accuracy                  : 0.9992 
+    F1-Macro                  : 0.9992 
+    F1-Micro                  : 0.9992 
+    Precision                 : 0.9992 
+    Recall                    : 0.9992 
+Batch Metrics:
+    Accuracy                  : 0.9992 
+    F1-Macro                  : 0.9992 
+    F1-Micro                  : 0.9992 
+    Precision                 : 0.9992 
+    Recall                    : 0.9992 
+
+  Sample Size                 : 1224 
+  Num Classes                 : 2 
+
+
+Entry: Logistic Regression (karate) (seed 4)
+----------------------------------------
+  Reg. Obj Time               : 0.00058 s
+  Batch Obj Time              : 0.00004 s
+  Obj Speedup                 : 14.03 x
+  Grad Diff                   : 0.00000019 
+  Hess Diff                   : 0.00000003 
+
+  Reg. Train Time             : 0.44594 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.26857 s
+  Train Speedup               : 1.66 x
+
+Regular Metrics:
+    Accuracy                  : 1.0000 
+    F1-Macro                  : 1.0000 
+    F1-Micro                  : 1.0000 
+    Precision                 : 1.0000 
+    Recall                    : 1.0000 
+Batch Metrics:
+    Accuracy                  : 1.0000 
+    F1-Macro                  : 1.0000 
+    F1-Micro                  : 1.0000 
+    Precision                 : 1.0000 
+    Recall                    : 1.0000 
+
+  Sample Size                 : 34 
+  Num Classes                 : 2 
+
+
+Entry: Poincare (karate) (seed 4)
+----------------------------------------
+  Reg. Obj Time               : 0.00166 s
+  Batch Obj Time              : 0.00010 s
+  Obj Speedup                 : 16.40 x
+  Grad Diff                   : 0.00155522 
+  Hess Diff                   : 0.02652969 
+
+  Reg. Train Time             : 0.34540 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.07577 s
+  Train Speedup               : 4.56 x
+
+Regular Metrics:
+    Accuracy                  : 0.9706 
+    F1-Macro                  : 0.9706 
+    F1-Micro                  : 0.9706 
+    Precision                 : 0.9722 
+    Recall                    : 0.9706 
+Batch Metrics:
+    Accuracy                  : 0.5000 
+    F1-Macro                  : 0.3333 
+    F1-Micro                  : 0.5000 
+    Precision                 : 0.2500 
+    Recall                    : 0.5000 
+
+  Sample Size                 : 34 
+  Num Classes                 : 2 
+
+
+Entry: Hyperboloid (karate) (seed 4)
+----------------------------------------
+  Reg. Obj Time               : 0.01341 s
+  Batch Obj Time              : 0.00014 s
+  Obj Speedup                 : 96.71 x
+  Grad Diff                   : 0.31913248 
+  Hess Diff                   : 0.62620150 
+
+  Reg. Train Time             : 1.38207 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.13455 s
+  Train Speedup               : 10.27 x
+
+Regular Metrics:
+    Accuracy                  : 1.0000 
+    F1-Macro                  : 1.0000 
+    F1-Micro                  : 1.0000 
+    Precision                 : 1.0000 
+    Recall                    : 1.0000 
+Batch Metrics:
+    Accuracy                  : 1.0000 
+    F1-Macro                  : 1.0000 
+    F1-Micro                  : 1.0000 
+    Precision                 : 1.0000 
+    Recall                    : 1.0000 
+
+  Sample Size                 : 34 
+  Num Classes                 : 2 
+
+
+Entry: Logistic Regression (wordnet) (seed 5)
+----------------------------------------
+  Reg. Obj Time               : 0.86801 s
+  Batch Obj Time              : 0.00448 s
+  Obj Speedup                 : 193.91 x
+  Grad Diff                   : 0.00000019 
+  Hess Diff                   : 0.00000003 
+
+  Reg. Train Time             : 42.46646 s
+  Reg. Stopped Early          : True 
+  Reg. Rounds Completed       : 32 
+  Batch Train Time            : 0.84843 s
+  Train Speedup               : 50.05 x
+
+Regular Metrics:
+    Accuracy                  : 0.9948 
+    F1-Macro                  : 0.9726 
+    F1-Micro                  : 0.9948 
+    Precision                 : 0.9658 
+    Recall                    : 0.9796 
+Batch Metrics:
+    Accuracy                  : 0.9948 
+    F1-Macro                  : 0.9724 
+    F1-Micro                  : 0.9948 
+    Precision                 : 0.9693 
+    Recall                    : 0.9754 
+
+  Sample Size                 : 52552 
+  Num Classes                 : 2 
+
+
+Entry: Poincare (wordnet) (seed 5)
+----------------------------------------
+  Reg. Obj Time               : 3.40146 s
+  Batch Obj Time              : 0.01045 s
+  Obj Speedup                 : 325.45 x
+  Grad Diff                   : 0.00157969 
+  Hess Diff                   : 0.02562779 
+
+  Reg. Train Time             : 49.07701 s
+  Reg. Stopped Early          : True 
+  Reg. Rounds Completed       : 16 
+  Batch Train Time            : 0.95324 s
+  Train Speedup               : 51.48 x
+
+Regular Metrics:
+    Accuracy                  : 0.9942 
+    F1-Macro                  : 0.9685 
+    F1-Micro                  : 0.9942 
+    Precision                 : 0.9696 
+    Recall                    : 0.9674 
+Batch Metrics:
+    Accuracy                  : 0.9944 
+    F1-Macro                  : 0.9698 
+    F1-Micro                  : 0.9944 
+    Precision                 : 0.9704 
+    Recall                    : 0.9693 
+
+  Sample Size                 : 52552 
+  Num Classes                 : 2 
+
+
+Entry: Hyperboloid (wordnet) (seed 5)
+----------------------------------------
+  Reg. Obj Time               : 17.98292 s
+  Batch Obj Time              : 0.01060 s
+  Obj Speedup                 : 1697.23 x
+  Grad Diff                   : 0.30806259 
+  Hess Diff                   : 0.62041312 
+
+  Reg. Train Time             : 92.15199 s
+  Reg. Stopped Early          : True 
+  Reg. Rounds Completed       : 5 
+  Batch Train Time            : 1.46896 s
+  Train Speedup               : 62.73 x
+
+Regular Metrics:
+    Accuracy                  : 0.9946 
+    F1-Macro                  : 0.9713 
+    F1-Micro                  : 0.9946 
+    Precision                 : 0.9646 
+    Recall                    : 0.9783 
+Batch Metrics:
+    Accuracy                  : 0.9947 
+    F1-Macro                  : 0.9717 
+    F1-Micro                  : 0.9947 
+    Precision                 : 0.9682 
+    Recall                    : 0.9754 
+
+  Sample Size                 : 52552 
+  Num Classes                 : 2 
+
+
+Entry: Logistic Regression (polbooks) (seed 5)
+----------------------------------------
+  Reg. Obj Time               : 0.00183 s
+  Batch Obj Time              : 0.00005 s
+  Obj Speedup                 : 40.08 x
+  Grad Diff                   : 0.00000009 
+  Hess Diff                   : 0.00000006 
+
+  Reg. Train Time             : 0.52390 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.33008 s
+  Train Speedup               : 1.59 x
+
+Regular Metrics:
+    Accuracy                  : 0.8762 
+    F1-Macro                  : 0.6229 
+    F1-Micro                  : 0.8762 
+    Precision                 : 0.5893 
+    Recall                    : 0.6667 
+Batch Metrics:
+    Accuracy                  : 0.8762 
+    F1-Macro                  : 0.6229 
+    F1-Micro                  : 0.8762 
+    Precision                 : 0.5893 
+    Recall                    : 0.6667 
+
+  Sample Size                 : 105 
+  Num Classes                 : 3 
+
+
+Entry: Poincare (polbooks) (seed 5)
+----------------------------------------
+  Reg. Obj Time               : 0.00684 s
+  Batch Obj Time              : 0.00012 s
+  Obj Speedup                 : 56.81 x
+  Grad Diff                   : 0.00143101 
+  Hess Diff                   : 0.02811761 
+
+  Reg. Train Time             : 1.01743 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.10682 s
+  Train Speedup               : 9.52 x
+
+Regular Metrics:
+    Accuracy                  : 0.8476 
+    F1-Macro                  : 0.6023 
+    F1-Micro                  : 0.8476 
+    Precision                 : 0.5673 
+    Recall                    : 0.6463 
+Batch Metrics:
+    Accuracy                  : 0.8286 
+    F1-Macro                  : 0.5916 
+    F1-Micro                  : 0.8286 
+    Precision                 : 0.5635 
+    Recall                    : 0.6289 
+
+  Sample Size                 : 105 
+  Num Classes                 : 3 
+
+
+Entry: Hyperboloid (polbooks) (seed 5)
+----------------------------------------
+  Reg. Obj Time               : 0.05264 s
+  Batch Obj Time              : 0.00013 s
+  Obj Speedup                 : 417.98 x
+  Grad Diff                   : 0.28059473 
+  Hess Diff                   : 0.53729890 
+
+  Reg. Train Time             : 6.09532 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.27298 s
+  Train Speedup               : 22.33 x
+
+Regular Metrics:
+    Accuracy                  : 0.8762 
+    F1-Macro                  : 0.6229 
+    F1-Micro                  : 0.8762 
+    Precision                 : 0.5893 
+    Recall                    : 0.6667 
+Batch Metrics:
+    Accuracy                  : 0.8762 
+    F1-Macro                  : 0.6229 
+    F1-Micro                  : 0.8762 
+    Precision                 : 0.5893 
+    Recall                    : 0.6667 
+
+  Sample Size                 : 105 
+  Num Classes                 : 3 
+
+
+Entry: Logistic Regression (football) (seed 5)
+----------------------------------------
+  Reg. Obj Time               : 0.00765 s
+  Batch Obj Time              : 0.00042 s
+  Obj Speedup                 : 18.01 x
+  Grad Diff                   : 0.00000001 
+  Hess Diff                   : 0.00000001 
+
+  Reg. Train Time             : 2.09884 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 1.30074 s
+  Train Speedup               : 1.61 x
+
+Regular Metrics:
+    Accuracy                  : 0.1478 
+    F1-Macro                  : 0.0950 
+    F1-Micro                  : 0.1478 
+    Precision                 : 0.0896 
+    Recall                    : 0.1667 
+Batch Metrics:
+    Accuracy                  : 0.1478 
+    F1-Macro                  : 0.0950 
+    F1-Micro                  : 0.1478 
+    Precision                 : 0.0896 
+    Recall                    : 0.1667 
+
+  Sample Size                 : 115 
+  Num Classes                 : 12 
+
+
+Entry: Poincare (football) (seed 5)
+----------------------------------------
+  Reg. Obj Time               : 0.02683 s
+  Batch Obj Time              : 0.00009 s
+  Obj Speedup                 : 301.41 x
+  Grad Diff                   : 0.00052624 
+  Hess Diff                   : 0.00511573 
+
+  Reg. Train Time             : 4.24079 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.42106 s
+  Train Speedup               : 10.07 x
+
+Regular Metrics:
+    Accuracy                  : 0.0783 
+    F1-Macro                  : 0.0262 
+    F1-Micro                  : 0.0783 
+    Precision                 : 0.0476 
+    Recall                    : 0.0926 
+Batch Metrics:
+    Accuracy                  : 0.0957 
+    F1-Macro                  : 0.0410 
+    F1-Micro                  : 0.0957 
+    Precision                 : 0.0375 
+    Recall                    : 0.1111 
+
+  Sample Size                 : 115 
+  Num Classes                 : 12 
+
+
+Entry: Hyperboloid (football) (seed 5)
+----------------------------------------
+  Reg. Obj Time               : 0.22642 s
+  Batch Obj Time              : 0.00055 s
+  Obj Speedup                 : 408.68 x
+  Grad Diff                   : 0.26934825 
+  Hess Diff                   : 0.15461652 
+
+  Reg. Train Time             : 23.91887 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.93230 s
+  Train Speedup               : 25.66 x
+
+Regular Metrics:
+    Accuracy                  : 0.1478 
+    F1-Macro                  : 0.0950 
+    F1-Micro                  : 0.1478 
+    Precision                 : 0.0896 
+    Recall                    : 0.1667 
+Batch Metrics:
+    Accuracy                  : 0.0870 
+    F1-Macro                  : 0.0389 
+    F1-Micro                  : 0.0870 
+    Precision                 : 0.0615 
+    Recall                    : 0.1019 
+
+  Sample Size                 : 115 
+  Num Classes                 : 12 
+
+
+Entry: ERROR (UCIdataE) (seed 5)
+  ERROR: list index out of range
+
+Entry: ERROR (UCIdata) (seed 5)
+  ERROR: list index out of range
+
+Entry: ERROR (gauss) (seed 5)
+  ERROR: [Errno 2] No such file or directory: '/Users/lowoncuties/School/HyperbolicML/hyperXGB/datadata_001.mat'
+
+Entry: ERROR (gausshyper) (seed 5)
+  ERROR: [Errno 2] No such file or directory: '/Users/lowoncuties/School/HyperbolicML/hyperXGB/datadata_001.mat'
+
+Entry: Logistic Regression (polblogs) (seed 5)
+----------------------------------------
+  Reg. Obj Time               : 0.01502 s
+  Batch Obj Time              : 0.00012 s
+  Obj Speedup                 : 120.88 x
+  Grad Diff                   : 0.00000020 
+  Hess Diff                   : 0.00000003 
+
+  Reg. Train Time             : 2.54056 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.23768 s
+  Train Speedup               : 10.69 x
+
+Regular Metrics:
+    Accuracy                  : 0.9992 
+    F1-Macro                  : 0.9992 
+    F1-Micro                  : 0.9992 
+    Precision                 : 0.9992 
+    Recall                    : 0.9991 
+Batch Metrics:
+    Accuracy                  : 0.9992 
+    F1-Macro                  : 0.9992 
+    F1-Micro                  : 0.9992 
+    Precision                 : 0.9992 
+    Recall                    : 0.9991 
+
+  Sample Size                 : 1224 
+  Num Classes                 : 2 
+
+
+Entry: Poincare (polblogs) (seed 5)
+----------------------------------------
+  Reg. Obj Time               : 0.05496 s
+  Batch Obj Time              : 0.00019 s
+  Obj Speedup                 : 285.80 x
+  Grad Diff                   : 0.00158825 
+  Hess Diff                   : 0.02595489 
+
+  Reg. Train Time             : 7.61535 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.25570 s
+  Train Speedup               : 29.78 x
+
+Regular Metrics:
+    Accuracy                  : 0.9583 
+    F1-Macro                  : 0.9583 
+    F1-Micro                  : 0.9583 
+    Precision                 : 0.9583 
+    Recall                    : 0.9582 
+Batch Metrics:
+    Accuracy                  : 0.9428 
+    F1-Macro                  : 0.9427 
+    F1-Micro                  : 0.9428 
+    Precision                 : 0.9431 
+    Recall                    : 0.9424 
+
+  Sample Size                 : 1224 
+  Num Classes                 : 2 
+
+
+Entry: Hyperboloid (polblogs) (seed 5)
+----------------------------------------
+  Reg. Obj Time               : 0.42133 s
+  Batch Obj Time              : 0.00062 s
+  Obj Speedup                 : 674.96 x
+  Grad Diff                   : 0.30262302 
+  Hess Diff                   : 0.61993852 
+
+  Reg. Train Time             : 15.32479 s
+  Reg. Stopped Early          : True 
+  Reg. Rounds Completed       : 37 
+  Batch Train Time            : 0.30013 s
+  Train Speedup               : 51.06 x
+
+Regular Metrics:
+    Accuracy                  : 0.9984 
+    F1-Macro                  : 0.9984 
+    F1-Micro                  : 0.9984 
+    Precision                 : 0.9984 
+    Recall                    : 0.9984 
+Batch Metrics:
+    Accuracy                  : 0.9992 
+    F1-Macro                  : 0.9992 
+    F1-Micro                  : 0.9992 
+    Precision                 : 0.9992 
+    Recall                    : 0.9992 
+
+  Sample Size                 : 1224 
+  Num Classes                 : 2 
+
+
+Entry: Logistic Regression (karate) (seed 5)
+----------------------------------------
+  Reg. Obj Time               : 0.00043 s
+  Batch Obj Time              : 0.00003 s
+  Obj Speedup                 : 14.12 x
+  Grad Diff                   : 0.00000019 
+  Hess Diff                   : 0.00000003 
+
+  Reg. Train Time             : 0.14621 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.09120 s
+  Train Speedup               : 1.60 x
+
+Regular Metrics:
+    Accuracy                  : 1.0000 
+    F1-Macro                  : 1.0000 
+    F1-Micro                  : 1.0000 
+    Precision                 : 1.0000 
+    Recall                    : 1.0000 
+Batch Metrics:
+    Accuracy                  : 1.0000 
+    F1-Macro                  : 1.0000 
+    F1-Micro                  : 1.0000 
+    Precision                 : 1.0000 
+    Recall                    : 1.0000 
+
+  Sample Size                 : 34 
+  Num Classes                 : 2 
+
+
+Entry: Poincare (karate) (seed 5)
+----------------------------------------
+  Reg. Obj Time               : 0.00162 s
+  Batch Obj Time              : 0.00005 s
+  Obj Speedup                 : 35.17 x
+  Grad Diff                   : 0.00155522 
+  Hess Diff                   : 0.02652969 
+
+  Reg. Train Time             : 0.26037 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.06253 s
+  Train Speedup               : 4.16 x
+
+Regular Metrics:
+    Accuracy                  : 0.9706 
+    F1-Macro                  : 0.9706 
+    F1-Micro                  : 0.9706 
+    Precision                 : 0.9722 
+    Recall                    : 0.9706 
+Batch Metrics:
+    Accuracy                  : 0.5000 
+    F1-Macro                  : 0.3333 
+    F1-Micro                  : 0.5000 
+    Precision                 : 0.2500 
+    Recall                    : 0.5000 
+
+  Sample Size                 : 34 
+  Num Classes                 : 2 
+
+
+Entry: Hyperboloid (karate) (seed 5)
+----------------------------------------
+  Reg. Obj Time               : 0.01084 s
+  Batch Obj Time              : 0.00008 s
+  Obj Speedup                 : 134.94 x
+  Grad Diff                   : 0.31913248 
+  Hess Diff                   : 0.62620150 
+
+  Reg. Train Time             : 1.28800 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.09251 s
+  Train Speedup               : 13.92 x
+
+Regular Metrics:
+    Accuracy                  : 1.0000 
+    F1-Macro                  : 1.0000 
+    F1-Micro                  : 1.0000 
+    Precision                 : 1.0000 
+    Recall                    : 1.0000 
+Batch Metrics:
+    Accuracy                  : 1.0000 
+    F1-Macro                  : 1.0000 
+    F1-Micro                  : 1.0000 
+    Precision                 : 1.0000 
+    Recall                    : 1.0000 
+
+  Sample Size                 : 34 
+  Num Classes                 : 2 
+
+
+Entry: Logistic Regression (wordnet) (seed 6)
+----------------------------------------
+  Reg. Obj Time               : 0.69603 s
+  Batch Obj Time              : 0.00396 s
+  Obj Speedup                 : 175.71 x
+  Grad Diff                   : 0.00000019 
+  Hess Diff                   : 0.00000003 
+
+  Reg. Train Time             : 36.25222 s
+  Reg. Stopped Early          : True 
+  Reg. Rounds Completed       : 41 
+  Batch Train Time            : 0.70931 s
+  Train Speedup               : 51.11 x
+
+Regular Metrics:
+    Accuracy                  : 0.9948 
+    F1-Macro                  : 0.9726 
+    F1-Micro                  : 0.9948 
+    Precision                 : 0.9658 
+    Recall                    : 0.9796 
+Batch Metrics:
+    Accuracy                  : 0.9948 
+    F1-Macro                  : 0.9724 
+    F1-Micro                  : 0.9948 
+    Precision                 : 0.9693 
+    Recall                    : 0.9754 
+
+  Sample Size                 : 52552 
+  Num Classes                 : 2 
+
+
+Entry: Poincare (wordnet) (seed 6)
+----------------------------------------
+  Reg. Obj Time               : 2.39740 s
+  Batch Obj Time              : 0.00489 s
+  Obj Speedup                 : 490.60 x
+  Grad Diff                   : 0.00157969 
+  Hess Diff                   : 0.02562779 
+
+  Reg. Train Time             : 42.08377 s
+  Reg. Stopped Early          : True 
+  Reg. Rounds Completed       : 14 
+  Batch Train Time            : 0.81174 s
+  Train Speedup               : 51.84 x
+
+Regular Metrics:
+    Accuracy                  : 0.9941 
+    F1-Macro                  : 0.9682 
+    F1-Micro                  : 0.9941 
+    Precision                 : 0.9695 
+    Recall                    : 0.9668 
+Batch Metrics:
+    Accuracy                  : 0.9944 
+    F1-Macro                  : 0.9698 
+    F1-Micro                  : 0.9944 
+    Precision                 : 0.9704 
+    Recall                    : 0.9693 
+
+  Sample Size                 : 52552 
+  Num Classes                 : 2 
+
+
+Entry: Hyperboloid (wordnet) (seed 6)
+----------------------------------------
+  Reg. Obj Time               : 17.41024 s
+  Batch Obj Time              : 0.01250 s
+  Obj Speedup                 : 1392.66 x
+  Grad Diff                   : 0.30806259 
+  Hess Diff                   : 0.62041312 
+
+  Reg. Train Time             : 77.57296 s
+  Reg. Stopped Early          : True 
+  Reg. Rounds Completed       : 4 
+  Batch Train Time            : 1.32565 s
+  Train Speedup               : 58.52 x
+
+Regular Metrics:
+    Accuracy                  : 0.9942 
+    F1-Macro                  : 0.9690 
+    F1-Micro                  : 0.9942 
+    Precision                 : 0.9631 
+    Recall                    : 0.9751 
+Batch Metrics:
+    Accuracy                  : 0.9947 
+    F1-Macro                  : 0.9717 
+    F1-Micro                  : 0.9947 
+    Precision                 : 0.9682 
+    Recall                    : 0.9754 
+
+  Sample Size                 : 52552 
+  Num Classes                 : 2 
+
+
+Entry: Logistic Regression (polbooks) (seed 6)
+----------------------------------------
+  Reg. Obj Time               : 0.00337 s
+  Batch Obj Time              : 0.00021 s
+  Obj Speedup                 : 15.95 x
+  Grad Diff                   : 0.00000009 
+  Hess Diff                   : 0.00000006 
+
+  Reg. Train Time             : 0.54834 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.35053 s
+  Train Speedup               : 1.56 x
+
+Regular Metrics:
+    Accuracy                  : 0.8762 
+    F1-Macro                  : 0.6229 
+    F1-Micro                  : 0.8762 
+    Precision                 : 0.5893 
+    Recall                    : 0.6667 
+Batch Metrics:
+    Accuracy                  : 0.8762 
+    F1-Macro                  : 0.6229 
+    F1-Micro                  : 0.8762 
+    Precision                 : 0.5893 
+    Recall                    : 0.6667 
+
+  Sample Size                 : 105 
+  Num Classes                 : 3 
+
+
+Entry: Poincare (polbooks) (seed 6)
+----------------------------------------
+  Reg. Obj Time               : 0.00693 s
+  Batch Obj Time              : 0.00008 s
+  Obj Speedup                 : 91.58 x
+  Grad Diff                   : 0.00143101 
+  Hess Diff                   : 0.02811761 
+
+  Reg. Train Time             : 1.15949 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.10276 s
+  Train Speedup               : 11.28 x
+
+Regular Metrics:
+    Accuracy                  : 0.8476 
+    F1-Macro                  : 0.6023 
+    F1-Micro                  : 0.8476 
+    Precision                 : 0.5673 
+    Recall                    : 0.6463 
+Batch Metrics:
+    Accuracy                  : 0.8286 
+    F1-Macro                  : 0.5916 
+    F1-Micro                  : 0.8286 
+    Precision                 : 0.5635 
+    Recall                    : 0.6289 
+
+  Sample Size                 : 105 
+  Num Classes                 : 3 
+
+
+Entry: Hyperboloid (polbooks) (seed 6)
+----------------------------------------
+  Reg. Obj Time               : 0.05210 s
+  Batch Obj Time              : 0.00014 s
+  Obj Speedup                 : 363.69 x
+  Grad Diff                   : 0.28059473 
+  Hess Diff                   : 0.53729890 
+
+  Reg. Train Time             : 5.80956 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.27725 s
+  Train Speedup               : 20.95 x
+
+Regular Metrics:
+    Accuracy                  : 0.8762 
+    F1-Macro                  : 0.6229 
+    F1-Micro                  : 0.8762 
+    Precision                 : 0.5893 
+    Recall                    : 0.6667 
+Batch Metrics:
+    Accuracy                  : 0.8762 
+    F1-Macro                  : 0.6229 
+    F1-Micro                  : 0.8762 
+    Precision                 : 0.5893 
+    Recall                    : 0.6667 
+
+  Sample Size                 : 105 
+  Num Classes                 : 3 
+
+
+Entry: Logistic Regression (football) (seed 6)
+----------------------------------------
+  Reg. Obj Time               : 0.00616 s
+  Batch Obj Time              : 0.00006 s
+  Obj Speedup                 : 97.24 x
+  Grad Diff                   : 0.00000001 
+  Hess Diff                   : 0.00000001 
+
+  Reg. Train Time             : 1.90956 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.89642 s
+  Train Speedup               : 2.13 x
+
+Regular Metrics:
+    Accuracy                  : 0.1478 
+    F1-Macro                  : 0.0950 
+    F1-Micro                  : 0.1478 
+    Precision                 : 0.0896 
+    Recall                    : 0.1667 
+Batch Metrics:
+    Accuracy                  : 0.1478 
+    F1-Macro                  : 0.0950 
+    F1-Micro                  : 0.1478 
+    Precision                 : 0.0896 
+    Recall                    : 0.1667 
+
+  Sample Size                 : 115 
+  Num Classes                 : 12 
+
+
+Entry: Poincare (football) (seed 6)
+----------------------------------------
+  Reg. Obj Time               : 0.02678 s
+  Batch Obj Time              : 0.00010 s
+  Obj Speedup                 : 260.66 x
+  Grad Diff                   : 0.00052624 
+  Hess Diff                   : 0.00511573 
+
+  Reg. Train Time             : 3.93042 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.35389 s
+  Train Speedup               : 11.11 x
+
+Regular Metrics:
+    Accuracy                  : 0.0783 
+    F1-Macro                  : 0.0262 
+    F1-Micro                  : 0.0783 
+    Precision                 : 0.0476 
+    Recall                    : 0.0926 
+Batch Metrics:
+    Accuracy                  : 0.0957 
+    F1-Macro                  : 0.0410 
+    F1-Micro                  : 0.0957 
+    Precision                 : 0.0375 
+    Recall                    : 0.1111 
+
+  Sample Size                 : 115 
+  Num Classes                 : 12 
+
+
+Entry: Hyperboloid (football) (seed 6)
+----------------------------------------
+  Reg. Obj Time               : 0.21568 s
+  Batch Obj Time              : 0.00050 s
+  Obj Speedup                 : 427.97 x
+  Grad Diff                   : 0.26934825 
+  Hess Diff                   : 0.15461652 
+
+  Reg. Train Time             : 25.35281 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.82690 s
+  Train Speedup               : 30.66 x
+
+Regular Metrics:
+    Accuracy                  : 0.1478 
+    F1-Macro                  : 0.0950 
+    F1-Micro                  : 0.1478 
+    Precision                 : 0.0896 
+    Recall                    : 0.1667 
+Batch Metrics:
+    Accuracy                  : 0.0870 
+    F1-Macro                  : 0.0389 
+    F1-Micro                  : 0.0870 
+    Precision                 : 0.0615 
+    Recall                    : 0.1019 
+
+  Sample Size                 : 115 
+  Num Classes                 : 12 
+
+
+Entry: ERROR (UCIdataE) (seed 6)
+  ERROR: list index out of range
+
+Entry: ERROR (UCIdata) (seed 6)
+  ERROR: list index out of range
+
+Entry: ERROR (gauss) (seed 6)
+  ERROR: [Errno 2] No such file or directory: '/Users/lowoncuties/School/HyperbolicML/hyperXGB/datadata_001.mat'
+
+Entry: ERROR (gausshyper) (seed 6)
+  ERROR: [Errno 2] No such file or directory: '/Users/lowoncuties/School/HyperbolicML/hyperXGB/datadata_001.mat'
+
+Entry: Logistic Regression (polblogs) (seed 6)
+----------------------------------------
+  Reg. Obj Time               : 0.01498 s
+  Batch Obj Time              : 0.00012 s
+  Obj Speedup                 : 127.15 x
+  Grad Diff                   : 0.00000020 
+  Hess Diff                   : 0.00000003 
+
+  Reg. Train Time             : 2.36804 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.25043 s
+  Train Speedup               : 9.46 x
+
+Regular Metrics:
+    Accuracy                  : 0.9992 
+    F1-Macro                  : 0.9992 
+    F1-Micro                  : 0.9992 
+    Precision                 : 0.9992 
+    Recall                    : 0.9991 
+Batch Metrics:
+    Accuracy                  : 0.9992 
+    F1-Macro                  : 0.9992 
+    F1-Micro                  : 0.9992 
+    Precision                 : 0.9992 
+    Recall                    : 0.9991 
+
+  Sample Size                 : 1224 
+  Num Classes                 : 2 
+
+
+Entry: Poincare (polblogs) (seed 6)
+----------------------------------------
+  Reg. Obj Time               : 0.05258 s
+  Batch Obj Time              : 0.00015 s
+  Obj Speedup                 : 341.92 x
+  Grad Diff                   : 0.00158825 
+  Hess Diff                   : 0.02595489 
+
+  Reg. Train Time             : 6.91375 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.23893 s
+  Train Speedup               : 28.94 x
+
+Regular Metrics:
+    Accuracy                  : 0.9583 
+    F1-Macro                  : 0.9583 
+    F1-Micro                  : 0.9583 
+    Precision                 : 0.9583 
+    Recall                    : 0.9582 
+Batch Metrics:
+    Accuracy                  : 0.9428 
+    F1-Macro                  : 0.9427 
+    F1-Micro                  : 0.9428 
+    Precision                 : 0.9431 
+    Recall                    : 0.9424 
+
+  Sample Size                 : 1224 
+  Num Classes                 : 2 
+
+
+Entry: Hyperboloid (polblogs) (seed 6)
+----------------------------------------
+  Reg. Obj Time               : 0.39876 s
+  Batch Obj Time              : 0.00080 s
+  Obj Speedup                 : 496.45 x
+  Grad Diff                   : 0.30262302 
+  Hess Diff                   : 0.61993852 
+
+  Reg. Train Time             : 14.48362 s
+  Reg. Stopped Early          : True 
+  Reg. Rounds Completed       : 34 
+  Batch Train Time            : 0.28690 s
+  Train Speedup               : 50.48 x
+
+Regular Metrics:
+    Accuracy                  : 0.9984 
+    F1-Macro                  : 0.9984 
+    F1-Micro                  : 0.9984 
+    Precision                 : 0.9983 
+    Recall                    : 0.9984 
+Batch Metrics:
+    Accuracy                  : 0.9992 
+    F1-Macro                  : 0.9992 
+    F1-Micro                  : 0.9992 
+    Precision                 : 0.9992 
+    Recall                    : 0.9992 
+
+  Sample Size                 : 1224 
+  Num Classes                 : 2 
+
+
+Entry: Logistic Regression (karate) (seed 6)
+----------------------------------------
+  Reg. Obj Time               : 0.00057 s
+  Batch Obj Time              : 0.00004 s
+  Obj Speedup                 : 15.53 x
+  Grad Diff                   : 0.00000019 
+  Hess Diff                   : 0.00000003 
+
+  Reg. Train Time             : 0.22639 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.36927 s
+  Train Speedup               : 0.61 x
+
+Regular Metrics:
+    Accuracy                  : 1.0000 
+    F1-Macro                  : 1.0000 
+    F1-Micro                  : 1.0000 
+    Precision                 : 1.0000 
+    Recall                    : 1.0000 
+Batch Metrics:
+    Accuracy                  : 1.0000 
+    F1-Macro                  : 1.0000 
+    F1-Micro                  : 1.0000 
+    Precision                 : 1.0000 
+    Recall                    : 1.0000 
+
+  Sample Size                 : 34 
+  Num Classes                 : 2 
+
+
+Entry: Poincare (karate) (seed 6)
+----------------------------------------
+  Reg. Obj Time               : 0.00212 s
+  Batch Obj Time              : 0.00008 s
+  Obj Speedup                 : 26.39 x
+  Grad Diff                   : 0.00155522 
+  Hess Diff                   : 0.02652969 
+
+  Reg. Train Time             : 0.35768 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.09180 s
+  Train Speedup               : 3.90 x
+
+Regular Metrics:
+    Accuracy                  : 0.9706 
+    F1-Macro                  : 0.9706 
+    F1-Micro                  : 0.9706 
+    Precision                 : 0.9722 
+    Recall                    : 0.9706 
+Batch Metrics:
+    Accuracy                  : 0.5000 
+    F1-Macro                  : 0.3333 
+    F1-Micro                  : 0.5000 
+    Precision                 : 0.2500 
+    Recall                    : 0.5000 
+
+  Sample Size                 : 34 
+  Num Classes                 : 2 
+
+
+Entry: Hyperboloid (karate) (seed 6)
+----------------------------------------
+  Reg. Obj Time               : 0.01502 s
+  Batch Obj Time              : 0.00012 s
+  Obj Speedup                 : 128.50 x
+  Grad Diff                   : 0.31913248 
+  Hess Diff                   : 0.62620150 
+
+  Reg. Train Time             : 1.34484 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.12319 s
+  Train Speedup               : 10.92 x
+
+Regular Metrics:
+    Accuracy                  : 1.0000 
+    F1-Macro                  : 1.0000 
+    F1-Micro                  : 1.0000 
+    Precision                 : 1.0000 
+    Recall                    : 1.0000 
+Batch Metrics:
+    Accuracy                  : 1.0000 
+    F1-Macro                  : 1.0000 
+    F1-Micro                  : 1.0000 
+    Precision                 : 1.0000 
+    Recall                    : 1.0000 
+
+  Sample Size                 : 34 
+  Num Classes                 : 2 
+
+
+Entry: Logistic Regression (wordnet) (seed 7)
+----------------------------------------
+  Reg. Obj Time               : 0.66113 s
+  Batch Obj Time              : 0.00398 s
+  Obj Speedup                 : 165.99 x
+  Grad Diff                   : 0.00000019 
+  Hess Diff                   : 0.00000003 
+
+  Reg. Train Time             : 36.18940 s
+  Reg. Stopped Early          : True 
+  Reg. Rounds Completed       : 40 
+  Batch Train Time            : 0.70841 s
+  Train Speedup               : 51.09 x
+
+Regular Metrics:
+    Accuracy                  : 0.9948 
+    F1-Macro                  : 0.9726 
+    F1-Micro                  : 0.9948 
+    Precision                 : 0.9658 
+    Recall                    : 0.9796 
+Batch Metrics:
+    Accuracy                  : 0.9948 
+    F1-Macro                  : 0.9724 
+    F1-Micro                  : 0.9948 
+    Precision                 : 0.9693 
+    Recall                    : 0.9754 
+
+  Sample Size                 : 52552 
+  Num Classes                 : 2 
+
+
+Entry: Poincare (wordnet) (seed 7)
+----------------------------------------
+  Reg. Obj Time               : 2.28430 s
+  Batch Obj Time              : 0.00488 s
+  Obj Speedup                 : 468.38 x
+  Grad Diff                   : 0.00157969 
+  Hess Diff                   : 0.02562779 
+
+  Reg. Train Time             : 44.35255 s
+  Reg. Stopped Early          : True 
+  Reg. Rounds Completed       : 14 
+  Batch Train Time            : 0.87077 s
+  Train Speedup               : 50.93 x
+
+Regular Metrics:
+    Accuracy                  : 0.9941 
+    F1-Macro                  : 0.9682 
+    F1-Micro                  : 0.9941 
+    Precision                 : 0.9695 
+    Recall                    : 0.9668 
+Batch Metrics:
+    Accuracy                  : 0.9944 
+    F1-Macro                  : 0.9698 
+    F1-Micro                  : 0.9944 
+    Precision                 : 0.9704 
+    Recall                    : 0.9693 
+
+  Sample Size                 : 52552 
+  Num Classes                 : 2 
+
+
+Entry: Hyperboloid (wordnet) (seed 7)
+----------------------------------------
+  Reg. Obj Time               : 17.64001 s
+  Batch Obj Time              : 0.01077 s
+  Obj Speedup                 : 1638.03 x
+  Grad Diff                   : 0.30806259 
+  Hess Diff                   : 0.62041312 
+
+  Reg. Train Time             : 70.82941 s
+  Reg. Stopped Early          : True 
+  Reg. Rounds Completed       : 4 
+  Batch Train Time            : 1.22137 s
+  Train Speedup               : 57.99 x
+
+Regular Metrics:
+    Accuracy                  : 0.9942 
+    F1-Macro                  : 0.9690 
+    F1-Micro                  : 0.9942 
+    Precision                 : 0.9631 
+    Recall                    : 0.9751 
+Batch Metrics:
+    Accuracy                  : 0.9947 
+    F1-Macro                  : 0.9717 
+    F1-Micro                  : 0.9947 
+    Precision                 : 0.9682 
+    Recall                    : 0.9754 
+
+  Sample Size                 : 52552 
+  Num Classes                 : 2 
+
+
+Entry: Logistic Regression (polbooks) (seed 7)
+----------------------------------------
+  Reg. Obj Time               : 0.00185 s
+  Batch Obj Time              : 0.00005 s
+  Obj Speedup                 : 38.52 x
+  Grad Diff                   : 0.00000009 
+  Hess Diff                   : 0.00000006 
+
+  Reg. Train Time             : 0.49886 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.25247 s
+  Train Speedup               : 1.98 x
+
+Regular Metrics:
+    Accuracy                  : 0.8762 
+    F1-Macro                  : 0.6229 
+    F1-Micro                  : 0.8762 
+    Precision                 : 0.5893 
+    Recall                    : 0.6667 
+Batch Metrics:
+    Accuracy                  : 0.8762 
+    F1-Macro                  : 0.6229 
+    F1-Micro                  : 0.8762 
+    Precision                 : 0.5893 
+    Recall                    : 0.6667 
+
+  Sample Size                 : 105 
+  Num Classes                 : 3 
+
+
+Entry: Poincare (polbooks) (seed 7)
+----------------------------------------
+  Reg. Obj Time               : 0.00664 s
+  Batch Obj Time              : 0.00004 s
+  Obj Speedup                 : 148.83 x
+  Grad Diff                   : 0.00143101 
+  Hess Diff                   : 0.02811761 
+
+  Reg. Train Time             : 0.97082 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.09556 s
+  Train Speedup               : 10.16 x
+
+Regular Metrics:
+    Accuracy                  : 0.8476 
+    F1-Macro                  : 0.6023 
+    F1-Micro                  : 0.8476 
+    Precision                 : 0.5673 
+    Recall                    : 0.6463 
+Batch Metrics:
+    Accuracy                  : 0.8286 
+    F1-Macro                  : 0.5916 
+    F1-Micro                  : 0.8286 
+    Precision                 : 0.5635 
+    Recall                    : 0.6289 
+
+  Sample Size                 : 105 
+  Num Classes                 : 3 
+
+
+Entry: Hyperboloid (polbooks) (seed 7)
+----------------------------------------
+  Reg. Obj Time               : 0.05122 s
+  Batch Obj Time              : 0.00012 s
+  Obj Speedup                 : 432.45 x
+  Grad Diff                   : 0.28059473 
+  Hess Diff                   : 0.53729890 
+
+  Reg. Train Time             : 5.72724 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.28876 s
+  Train Speedup               : 19.83 x
+
+Regular Metrics:
+    Accuracy                  : 0.8762 
+    F1-Macro                  : 0.6229 
+    F1-Micro                  : 0.8762 
+    Precision                 : 0.5893 
+    Recall                    : 0.6667 
+Batch Metrics:
+    Accuracy                  : 0.8762 
+    F1-Macro                  : 0.6229 
+    F1-Micro                  : 0.8762 
+    Precision                 : 0.5893 
+    Recall                    : 0.6667 
+
+  Sample Size                 : 105 
+  Num Classes                 : 3 
+
+
+Entry: Logistic Regression (football) (seed 7)
+----------------------------------------
+  Reg. Obj Time               : 0.00612 s
+  Batch Obj Time              : 0.00005 s
+  Obj Speedup                 : 123.19 x
+  Grad Diff                   : 0.00000001 
+  Hess Diff                   : 0.00000001 
+
+  Reg. Train Time             : 1.98211 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.92164 s
+  Train Speedup               : 2.15 x
+
+Regular Metrics:
+    Accuracy                  : 0.1478 
+    F1-Macro                  : 0.0950 
+    F1-Micro                  : 0.1478 
+    Precision                 : 0.0896 
+    Recall                    : 0.1667 
+Batch Metrics:
+    Accuracy                  : 0.1478 
+    F1-Macro                  : 0.0950 
+    F1-Micro                  : 0.1478 
+    Precision                 : 0.0896 
+    Recall                    : 0.1667 
+
+  Sample Size                 : 115 
+  Num Classes                 : 12 
+
+
+Entry: Poincare (football) (seed 7)
+----------------------------------------
+  Reg. Obj Time               : 0.02681 s
+  Batch Obj Time              : 0.00009 s
+  Obj Speedup                 : 288.45 x
+  Grad Diff                   : 0.00052624 
+  Hess Diff                   : 0.00511573 
+
+  Reg. Train Time             : 4.15725 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.40192 s
+  Train Speedup               : 10.34 x
+
+Regular Metrics:
+    Accuracy                  : 0.0783 
+    F1-Macro                  : 0.0262 
+    F1-Micro                  : 0.0783 
+    Precision                 : 0.0476 
+    Recall                    : 0.0926 
+Batch Metrics:
+    Accuracy                  : 0.0957 
+    F1-Macro                  : 0.0410 
+    F1-Micro                  : 0.0957 
+    Precision                 : 0.0375 
+    Recall                    : 0.1111 
+
+  Sample Size                 : 115 
+  Num Classes                 : 12 
+
+
+Entry: Hyperboloid (football) (seed 7)
+----------------------------------------
+  Reg. Obj Time               : 0.21527 s
+  Batch Obj Time              : 0.00017 s
+  Obj Speedup                 : 1273.15 x
+  Grad Diff                   : 0.26934825 
+  Hess Diff                   : 0.15461652 
+
+  Reg. Train Time             : 24.11295 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.84137 s
+  Train Speedup               : 28.66 x
+
+Regular Metrics:
+    Accuracy                  : 0.1478 
+    F1-Macro                  : 0.0950 
+    F1-Micro                  : 0.1478 
+    Precision                 : 0.0896 
+    Recall                    : 0.1667 
+Batch Metrics:
+    Accuracy                  : 0.0870 
+    F1-Macro                  : 0.0389 
+    F1-Micro                  : 0.0870 
+    Precision                 : 0.0615 
+    Recall                    : 0.1019 
+
+  Sample Size                 : 115 
+  Num Classes                 : 12 
+
+
+Entry: ERROR (UCIdataE) (seed 7)
+  ERROR: list index out of range
+
+Entry: ERROR (UCIdata) (seed 7)
+  ERROR: list index out of range
+
+Entry: ERROR (gauss) (seed 7)
+  ERROR: [Errno 2] No such file or directory: '/Users/lowoncuties/School/HyperbolicML/hyperXGB/datadata_001.mat'
+
+Entry: ERROR (gausshyper) (seed 7)
+  ERROR: [Errno 2] No such file or directory: '/Users/lowoncuties/School/HyperbolicML/hyperXGB/datadata_001.mat'
+
+Entry: Logistic Regression (polblogs) (seed 7)
+----------------------------------------
+  Reg. Obj Time               : 0.01576 s
+  Batch Obj Time              : 0.00014 s
+  Obj Speedup                 : 112.92 x
+  Grad Diff                   : 0.00000020 
+  Hess Diff                   : 0.00000003 
+
+  Reg. Train Time             : 2.32868 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.26143 s
+  Train Speedup               : 8.91 x
+
+Regular Metrics:
+    Accuracy                  : 0.9992 
+    F1-Macro                  : 0.9992 
+    F1-Micro                  : 0.9992 
+    Precision                 : 0.9992 
+    Recall                    : 0.9991 
+Batch Metrics:
+    Accuracy                  : 0.9992 
+    F1-Macro                  : 0.9992 
+    F1-Micro                  : 0.9992 
+    Precision                 : 0.9992 
+    Recall                    : 0.9991 
+
+  Sample Size                 : 1224 
+  Num Classes                 : 2 
+
+
+Entry: Poincare (polblogs) (seed 7)
+----------------------------------------
+  Reg. Obj Time               : 0.05959 s
+  Batch Obj Time              : 0.00015 s
+  Obj Speedup                 : 389.53 x
+  Grad Diff                   : 0.00158825 
+  Hess Diff                   : 0.02595489 
+
+  Reg. Train Time             : 7.30938 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.28185 s
+  Train Speedup               : 25.93 x
+
+Regular Metrics:
+    Accuracy                  : 0.9583 
+    F1-Macro                  : 0.9583 
+    F1-Micro                  : 0.9583 
+    Precision                 : 0.9583 
+    Recall                    : 0.9582 
+Batch Metrics:
+    Accuracy                  : 0.9428 
+    F1-Macro                  : 0.9427 
+    F1-Micro                  : 0.9428 
+    Precision                 : 0.9431 
+    Recall                    : 0.9424 
+
+  Sample Size                 : 1224 
+  Num Classes                 : 2 
+
+
+Entry: Hyperboloid (polblogs) (seed 7)
+----------------------------------------
+  Reg. Obj Time               : 0.46409 s
+  Batch Obj Time              : 0.00049 s
+  Obj Speedup                 : 940.45 x
+  Grad Diff                   : 0.30262302 
+  Hess Diff                   : 0.61993852 
+
+  Reg. Train Time             : 18.30554 s
+  Reg. Stopped Early          : True 
+  Reg. Rounds Completed       : 45 
+  Batch Train Time            : 0.35846 s
+  Train Speedup               : 51.07 x
+
+Regular Metrics:
+    Accuracy                  : 0.9992 
+    F1-Macro                  : 0.9992 
+    F1-Micro                  : 0.9992 
+    Precision                 : 0.9992 
+    Recall                    : 0.9992 
+Batch Metrics:
+    Accuracy                  : 0.9992 
+    F1-Macro                  : 0.9992 
+    F1-Micro                  : 0.9992 
+    Precision                 : 0.9992 
+    Recall                    : 0.9992 
+
+  Sample Size                 : 1224 
+  Num Classes                 : 2 
+
+
+Entry: Logistic Regression (karate) (seed 7)
+----------------------------------------
+  Reg. Obj Time               : 0.00060 s
+  Batch Obj Time              : 0.00003 s
+  Obj Speedup                 : 17.25 x
+  Grad Diff                   : 0.00000019 
+  Hess Diff                   : 0.00000003 
+
+  Reg. Train Time             : 0.15691 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.26944 s
+  Train Speedup               : 0.58 x
+
+Regular Metrics:
+    Accuracy                  : 1.0000 
+    F1-Macro                  : 1.0000 
+    F1-Micro                  : 1.0000 
+    Precision                 : 1.0000 
+    Recall                    : 1.0000 
+Batch Metrics:
+    Accuracy                  : 1.0000 
+    F1-Macro                  : 1.0000 
+    F1-Micro                  : 1.0000 
+    Precision                 : 1.0000 
+    Recall                    : 1.0000 
+
+  Sample Size                 : 34 
+  Num Classes                 : 2 
+
+
+Entry: Poincare (karate) (seed 7)
+----------------------------------------
+  Reg. Obj Time               : 0.00183 s
+  Batch Obj Time              : 0.00006 s
+  Obj Speedup                 : 30.42 x
+  Grad Diff                   : 0.00155522 
+  Hess Diff                   : 0.02652969 
+
+  Reg. Train Time             : 0.26441 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.06039 s
+  Train Speedup               : 4.38 x
+
+Regular Metrics:
+    Accuracy                  : 0.9706 
+    F1-Macro                  : 0.9706 
+    F1-Micro                  : 0.9706 
+    Precision                 : 0.9722 
+    Recall                    : 0.9706 
+Batch Metrics:
+    Accuracy                  : 0.5000 
+    F1-Macro                  : 0.3333 
+    F1-Micro                  : 0.5000 
+    Precision                 : 0.2500 
+    Recall                    : 0.5000 
+
+  Sample Size                 : 34 
+  Num Classes                 : 2 
+
+
+Entry: Hyperboloid (karate) (seed 7)
+----------------------------------------
+  Reg. Obj Time               : 0.01071 s
+  Batch Obj Time              : 0.00008 s
+  Obj Speedup                 : 142.51 x
+  Grad Diff                   : 0.31913248 
+  Hess Diff                   : 0.62620150 
+
+  Reg. Train Time             : 1.26209 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.09735 s
+  Train Speedup               : 12.96 x
+
+Regular Metrics:
+    Accuracy                  : 1.0000 
+    F1-Macro                  : 1.0000 
+    F1-Micro                  : 1.0000 
+    Precision                 : 1.0000 
+    Recall                    : 1.0000 
+Batch Metrics:
+    Accuracy                  : 1.0000 
+    F1-Macro                  : 1.0000 
+    F1-Micro                  : 1.0000 
+    Precision                 : 1.0000 
+    Recall                    : 1.0000 
+
+  Sample Size                 : 34 
+  Num Classes                 : 2 
+
+
+Entry: Logistic Regression (wordnet) (seed 8)
+----------------------------------------
+  Reg. Obj Time               : 0.65078 s
+  Batch Obj Time              : 0.00359 s
+  Obj Speedup                 : 181.46 x
+  Grad Diff                   : 0.00000019 
+  Hess Diff                   : 0.00000003 
+
+  Reg. Train Time             : 36.39336 s
+  Reg. Stopped Early          : True 
+  Reg. Rounds Completed       : 42 
+  Batch Train Time            : 0.72396 s
+  Train Speedup               : 50.27 x
+
+Regular Metrics:
+    Accuracy                  : 0.9948 
+    F1-Macro                  : 0.9722 
+    F1-Micro                  : 0.9948 
+    Precision                 : 0.9658 
+    Recall                    : 0.9789 
+Batch Metrics:
+    Accuracy                  : 0.9948 
+    F1-Macro                  : 0.9724 
+    F1-Micro                  : 0.9948 
+    Precision                 : 0.9693 
+    Recall                    : 0.9754 
+
+  Sample Size                 : 52552 
+  Num Classes                 : 2 
+
+
+Entry: Poincare (wordnet) (seed 8)
+----------------------------------------
+  Reg. Obj Time               : 2.27857 s
+  Batch Obj Time              : 0.00573 s
+  Obj Speedup                 : 397.40 x
+  Grad Diff                   : 0.00157969 
+  Hess Diff                   : 0.02562779 
+
+  Reg. Train Time             : 42.58865 s
+  Reg. Stopped Early          : True 
+  Reg. Rounds Completed       : 15 
+  Batch Train Time            : 0.79976 s
+  Train Speedup               : 53.25 x
+
+Regular Metrics:
+    Accuracy                  : 0.9940 
+    F1-Macro                  : 0.9676 
+    F1-Micro                  : 0.9940 
+    Precision                 : 0.9673 
+    Recall                    : 0.9679 
+Batch Metrics:
+    Accuracy                  : 0.9944 
+    F1-Macro                  : 0.9698 
+    F1-Micro                  : 0.9944 
+    Precision                 : 0.9704 
+    Recall                    : 0.9693 
+
+  Sample Size                 : 52552 
+  Num Classes                 : 2 
+
+
+Entry: Hyperboloid (wordnet) (seed 8)
+----------------------------------------
+  Reg. Obj Time               : 17.77184 s
+  Batch Obj Time              : 0.01213 s
+  Obj Speedup                 : 1464.78 x
+  Grad Diff                   : 0.30806259 
+  Hess Diff                   : 0.62041312 
+
+  Reg. Train Time             : 72.01004 s
+  Reg. Stopped Early          : True 
+  Reg. Rounds Completed       : 4 
+  Batch Train Time            : 1.22332 s
+  Train Speedup               : 58.86 x
+
+Regular Metrics:
+    Accuracy                  : 0.9942 
+    F1-Macro                  : 0.9690 
+    F1-Micro                  : 0.9942 
+    Precision                 : 0.9631 
+    Recall                    : 0.9751 
+Batch Metrics:
+    Accuracy                  : 0.9947 
+    F1-Macro                  : 0.9717 
+    F1-Micro                  : 0.9947 
+    Precision                 : 0.9682 
+    Recall                    : 0.9754 
+
+  Sample Size                 : 52552 
+  Num Classes                 : 2 
+
+
+Entry: Logistic Regression (polbooks) (seed 8)
+----------------------------------------
+  Reg. Obj Time               : 0.00373 s
+  Batch Obj Time              : 0.00020 s
+  Obj Speedup                 : 18.61 x
+  Grad Diff                   : 0.00000009 
+  Hess Diff                   : 0.00000006 
+
+  Reg. Train Time             : 0.50650 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.28769 s
+  Train Speedup               : 1.76 x
+
+Regular Metrics:
+    Accuracy                  : 0.8762 
+    F1-Macro                  : 0.6229 
+    F1-Micro                  : 0.8762 
+    Precision                 : 0.5893 
+    Recall                    : 0.6667 
+Batch Metrics:
+    Accuracy                  : 0.8762 
+    F1-Macro                  : 0.6229 
+    F1-Micro                  : 0.8762 
+    Precision                 : 0.5893 
+    Recall                    : 0.6667 
+
+  Sample Size                 : 105 
+  Num Classes                 : 3 
+
+
+Entry: Poincare (polbooks) (seed 8)
+----------------------------------------
+  Reg. Obj Time               : 0.00667 s
+  Batch Obj Time              : 0.00006 s
+  Obj Speedup                 : 112.64 x
+  Grad Diff                   : 0.00143101 
+  Hess Diff                   : 0.02811761 
+
+  Reg. Train Time             : 0.94702 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.09688 s
+  Train Speedup               : 9.78 x
+
+Regular Metrics:
+    Accuracy                  : 0.8476 
+    F1-Macro                  : 0.6023 
+    F1-Micro                  : 0.8476 
+    Precision                 : 0.5673 
+    Recall                    : 0.6463 
+Batch Metrics:
+    Accuracy                  : 0.8286 
+    F1-Macro                  : 0.5916 
+    F1-Micro                  : 0.8286 
+    Precision                 : 0.5635 
+    Recall                    : 0.6289 
+
+  Sample Size                 : 105 
+  Num Classes                 : 3 
+
+
+Entry: Hyperboloid (polbooks) (seed 8)
+----------------------------------------
+  Reg. Obj Time               : 0.04987 s
+  Batch Obj Time              : 0.00011 s
+  Obj Speedup                 : 450.04 x
+  Grad Diff                   : 0.28059473 
+  Hess Diff                   : 0.53729890 
+
+  Reg. Train Time             : 5.41556 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.28448 s
+  Train Speedup               : 19.04 x
+
+Regular Metrics:
+    Accuracy                  : 0.8762 
+    F1-Macro                  : 0.6229 
+    F1-Micro                  : 0.8762 
+    Precision                 : 0.5893 
+    Recall                    : 0.6667 
+Batch Metrics:
+    Accuracy                  : 0.8762 
+    F1-Macro                  : 0.6229 
+    F1-Micro                  : 0.8762 
+    Precision                 : 0.5893 
+    Recall                    : 0.6667 
+
+  Sample Size                 : 105 
+  Num Classes                 : 3 
+
+
+Entry: Logistic Regression (football) (seed 8)
+----------------------------------------
+  Reg. Obj Time               : 0.00604 s
+  Batch Obj Time              : 0.00005 s
+  Obj Speedup                 : 113.65 x
+  Grad Diff                   : 0.00000001 
+  Hess Diff                   : 0.00000001 
+
+  Reg. Train Time             : 1.87884 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.88718 s
+  Train Speedup               : 2.12 x
+
+Regular Metrics:
+    Accuracy                  : 0.1478 
+    F1-Macro                  : 0.0950 
+    F1-Micro                  : 0.1478 
+    Precision                 : 0.0896 
+    Recall                    : 0.1667 
+Batch Metrics:
+    Accuracy                  : 0.1478 
+    F1-Macro                  : 0.0950 
+    F1-Micro                  : 0.1478 
+    Precision                 : 0.0896 
+    Recall                    : 0.1667 
+
+  Sample Size                 : 115 
+  Num Classes                 : 12 
+
+
+Entry: Poincare (football) (seed 8)
+----------------------------------------
+  Reg. Obj Time               : 0.02868 s
+  Batch Obj Time              : 0.00010 s
+  Obj Speedup                 : 276.55 x
+  Grad Diff                   : 0.00052624 
+  Hess Diff                   : 0.00511573 
+
+  Reg. Train Time             : 4.03167 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.40496 s
+  Train Speedup               : 9.96 x
+
+Regular Metrics:
+    Accuracy                  : 0.0783 
+    F1-Macro                  : 0.0262 
+    F1-Micro                  : 0.0783 
+    Precision                 : 0.0476 
+    Recall                    : 0.0926 
+Batch Metrics:
+    Accuracy                  : 0.0957 
+    F1-Macro                  : 0.0410 
+    F1-Micro                  : 0.0957 
+    Precision                 : 0.0375 
+    Recall                    : 0.1111 
+
+  Sample Size                 : 115 
+  Num Classes                 : 12 
+
+
+Entry: Hyperboloid (football) (seed 8)
+----------------------------------------
+  Reg. Obj Time               : 0.21853 s
+  Batch Obj Time              : 0.00019 s
+  Obj Speedup                 : 1150.05 x
+  Grad Diff                   : 0.26934825 
+  Hess Diff                   : 0.15461652 
+
+  Reg. Train Time             : 23.92531 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.76731 s
+  Train Speedup               : 31.18 x
+
+Regular Metrics:
+    Accuracy                  : 0.1478 
+    F1-Macro                  : 0.0950 
+    F1-Micro                  : 0.1478 
+    Precision                 : 0.0896 
+    Recall                    : 0.1667 
+Batch Metrics:
+    Accuracy                  : 0.0870 
+    F1-Macro                  : 0.0389 
+    F1-Micro                  : 0.0870 
+    Precision                 : 0.0615 
+    Recall                    : 0.1019 
+
+  Sample Size                 : 115 
+  Num Classes                 : 12 
+
+
+Entry: ERROR (UCIdataE) (seed 8)
+  ERROR: list index out of range
+
+Entry: ERROR (UCIdata) (seed 8)
+  ERROR: list index out of range
+
+Entry: ERROR (gauss) (seed 8)
+  ERROR: [Errno 2] No such file or directory: '/Users/lowoncuties/School/HyperbolicML/hyperXGB/datadata_001.mat'
+
+Entry: ERROR (gausshyper) (seed 8)
+  ERROR: [Errno 2] No such file or directory: '/Users/lowoncuties/School/HyperbolicML/hyperXGB/datadata_001.mat'
+
+Entry: Logistic Regression (polblogs) (seed 8)
+----------------------------------------
+  Reg. Obj Time               : 0.01505 s
+  Batch Obj Time              : 0.00014 s
+  Obj Speedup                 : 104.38 x
+  Grad Diff                   : 0.00000020 
+  Hess Diff                   : 0.00000003 
+
+  Reg. Train Time             : 2.63764 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.26970 s
+  Train Speedup               : 9.78 x
+
+Regular Metrics:
+    Accuracy                  : 0.9992 
+    F1-Macro                  : 0.9992 
+    F1-Micro                  : 0.9992 
+    Precision                 : 0.9992 
+    Recall                    : 0.9991 
+Batch Metrics:
+    Accuracy                  : 0.9992 
+    F1-Macro                  : 0.9992 
+    F1-Micro                  : 0.9992 
+    Precision                 : 0.9992 
+    Recall                    : 0.9991 
+
+  Sample Size                 : 1224 
+  Num Classes                 : 2 
+
+
+Entry: Poincare (polblogs) (seed 8)
+----------------------------------------
+  Reg. Obj Time               : 0.05294 s
+  Batch Obj Time              : 0.00015 s
+  Obj Speedup                 : 348.90 x
+  Grad Diff                   : 0.00158825 
+  Hess Diff                   : 0.02595489 
+
+  Reg. Train Time             : 7.19291 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.24219 s
+  Train Speedup               : 29.70 x
+
+Regular Metrics:
+    Accuracy                  : 0.9583 
+    F1-Macro                  : 0.9583 
+    F1-Micro                  : 0.9583 
+    Precision                 : 0.9583 
+    Recall                    : 0.9582 
+Batch Metrics:
+    Accuracy                  : 0.9428 
+    F1-Macro                  : 0.9427 
+    F1-Micro                  : 0.9428 
+    Precision                 : 0.9431 
+    Recall                    : 0.9424 
+
+  Sample Size                 : 1224 
+  Num Classes                 : 2 
+
+
+Entry: Hyperboloid (polblogs) (seed 8)
+----------------------------------------
+  Reg. Obj Time               : 0.42348 s
+  Batch Obj Time              : 0.00061 s
+  Obj Speedup                 : 695.41 x
+  Grad Diff                   : 0.30262302 
+  Hess Diff                   : 0.61993852 
+
+  Reg. Train Time             : 15.72920 s
+  Reg. Stopped Early          : True 
+  Reg. Rounds Completed       : 37 
+  Batch Train Time            : 0.31065 s
+  Train Speedup               : 50.63 x
+
+Regular Metrics:
+    Accuracy                  : 0.9984 
+    F1-Macro                  : 0.9984 
+    F1-Micro                  : 0.9984 
+    Precision                 : 0.9984 
+    Recall                    : 0.9984 
+Batch Metrics:
+    Accuracy                  : 0.9992 
+    F1-Macro                  : 0.9992 
+    F1-Micro                  : 0.9992 
+    Precision                 : 0.9992 
+    Recall                    : 0.9992 
+
+  Sample Size                 : 1224 
+  Num Classes                 : 2 
+
+
+Entry: Logistic Regression (karate) (seed 8)
+----------------------------------------
+  Reg. Obj Time               : 0.00046 s
+  Batch Obj Time              : 0.00004 s
+  Obj Speedup                 : 10.80 x
+  Grad Diff                   : 0.00000019 
+  Hess Diff                   : 0.00000003 
+
+  Reg. Train Time             : 0.15363 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.09423 s
+  Train Speedup               : 1.63 x
+
+Regular Metrics:
+    Accuracy                  : 1.0000 
+    F1-Macro                  : 1.0000 
+    F1-Micro                  : 1.0000 
+    Precision                 : 1.0000 
+    Recall                    : 1.0000 
+Batch Metrics:
+    Accuracy                  : 1.0000 
+    F1-Macro                  : 1.0000 
+    F1-Micro                  : 1.0000 
+    Precision                 : 1.0000 
+    Recall                    : 1.0000 
+
+  Sample Size                 : 34 
+  Num Classes                 : 2 
+
+
+Entry: Poincare (karate) (seed 8)
+----------------------------------------
+  Reg. Obj Time               : 0.00151 s
+  Batch Obj Time              : 0.00003 s
+  Obj Speedup                 : 48.32 x
+  Grad Diff                   : 0.00155522 
+  Hess Diff                   : 0.02652969 
+
+  Reg. Train Time             : 0.24901 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.05398 s
+  Train Speedup               : 4.61 x
+
+Regular Metrics:
+    Accuracy                  : 0.9706 
+    F1-Macro                  : 0.9706 
+    F1-Micro                  : 0.9706 
+    Precision                 : 0.9722 
+    Recall                    : 0.9706 
+Batch Metrics:
+    Accuracy                  : 0.5000 
+    F1-Macro                  : 0.3333 
+    F1-Micro                  : 0.5000 
+    Precision                 : 0.2500 
+    Recall                    : 0.5000 
+
+  Sample Size                 : 34 
+  Num Classes                 : 2 
+
+
+Entry: Hyperboloid (karate) (seed 8)
+----------------------------------------
+  Reg. Obj Time               : 0.01109 s
+  Batch Obj Time              : 0.00010 s
+  Obj Speedup                 : 112.21 x
+  Grad Diff                   : 0.31913248 
+  Hess Diff                   : 0.62620150 
+
+  Reg. Train Time             : 1.25401 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.09397 s
+  Train Speedup               : 13.34 x
+
+Regular Metrics:
+    Accuracy                  : 1.0000 
+    F1-Macro                  : 1.0000 
+    F1-Micro                  : 1.0000 
+    Precision                 : 1.0000 
+    Recall                    : 1.0000 
+Batch Metrics:
+    Accuracy                  : 1.0000 
+    F1-Macro                  : 1.0000 
+    F1-Micro                  : 1.0000 
+    Precision                 : 1.0000 
+    Recall                    : 1.0000 
+
+  Sample Size                 : 34 
+  Num Classes                 : 2 
+
+
+Entry: Logistic Regression (wordnet) (seed 9)
+----------------------------------------
+  Reg. Obj Time               : 0.63746 s
+  Batch Obj Time              : 0.00360 s
+  Obj Speedup                 : 176.95 x
+  Grad Diff                   : 0.00000019 
+  Hess Diff                   : 0.00000003 
+
+  Reg. Train Time             : 41.14820 s
+  Reg. Stopped Early          : True 
+  Reg. Rounds Completed       : 46 
+  Batch Train Time            : 0.81103 s
+  Train Speedup               : 50.74 x
+
+Regular Metrics:
+    Accuracy                  : 0.9948 
+    F1-Macro                  : 0.9722 
+    F1-Micro                  : 0.9948 
+    Precision                 : 0.9658 
+    Recall                    : 0.9789 
+Batch Metrics:
+    Accuracy                  : 0.9948 
+    F1-Macro                  : 0.9724 
+    F1-Micro                  : 0.9948 
+    Precision                 : 0.9693 
+    Recall                    : 0.9754 
+
+  Sample Size                 : 52552 
+  Num Classes                 : 2 
+
+
+Entry: Poincare (wordnet) (seed 9)
+----------------------------------------
+  Reg. Obj Time               : 2.32466 s
+  Batch Obj Time              : 0.00489 s
+  Obj Speedup                 : 475.75 x
+  Grad Diff                   : 0.00157969 
+  Hess Diff                   : 0.02562779 
+
+  Reg. Train Time             : 43.44111 s
+  Reg. Stopped Early          : True 
+  Reg. Rounds Completed       : 15 
+  Batch Train Time            : 0.85650 s
+  Train Speedup               : 50.72 x
+
+Regular Metrics:
+    Accuracy                  : 0.9940 
+    F1-Macro                  : 0.9676 
+    F1-Micro                  : 0.9940 
+    Precision                 : 0.9673 
+    Recall                    : 0.9679 
+Batch Metrics:
+    Accuracy                  : 0.9944 
+    F1-Macro                  : 0.9698 
+    F1-Micro                  : 0.9944 
+    Precision                 : 0.9704 
+    Recall                    : 0.9693 
+
+  Sample Size                 : 52552 
+  Num Classes                 : 2 
+
+
+Entry: Hyperboloid (wordnet) (seed 9)
+----------------------------------------
+  Reg. Obj Time               : 17.83596 s
+  Batch Obj Time              : 0.01140 s
+  Obj Speedup                 : 1564.33 x
+  Grad Diff                   : 0.30806259 
+  Hess Diff                   : 0.62041312 
+
+  Reg. Train Time             : 73.14686 s
+  Reg. Stopped Early          : True 
+  Reg. Rounds Completed       : 4 
+  Batch Train Time            : 1.18765 s
+  Train Speedup               : 61.59 x
+
+Regular Metrics:
+    Accuracy                  : 0.9942 
+    F1-Macro                  : 0.9690 
+    F1-Micro                  : 0.9942 
+    Precision                 : 0.9631 
+    Recall                    : 0.9751 
+Batch Metrics:
+    Accuracy                  : 0.9947 
+    F1-Macro                  : 0.9717 
+    F1-Micro                  : 0.9947 
+    Precision                 : 0.9682 
+    Recall                    : 0.9754 
+
+  Sample Size                 : 52552 
+  Num Classes                 : 2 
+
+
+Entry: Logistic Regression (polbooks) (seed 9)
+----------------------------------------
+  Reg. Obj Time               : 0.00174 s
+  Batch Obj Time              : 0.00004 s
+  Obj Speedup                 : 43.88 x
+  Grad Diff                   : 0.00000009 
+  Hess Diff                   : 0.00000006 
+
+  Reg. Train Time             : 0.50914 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.25438 s
+  Train Speedup               : 2.00 x
+
+Regular Metrics:
+    Accuracy                  : 0.8762 
+    F1-Macro                  : 0.6229 
+    F1-Micro                  : 0.8762 
+    Precision                 : 0.5893 
+    Recall                    : 0.6667 
+Batch Metrics:
+    Accuracy                  : 0.8762 
+    F1-Macro                  : 0.6229 
+    F1-Micro                  : 0.8762 
+    Precision                 : 0.5893 
+    Recall                    : 0.6667 
+
+  Sample Size                 : 105 
+  Num Classes                 : 3 
+
+
+Entry: Poincare (polbooks) (seed 9)
+----------------------------------------
+  Reg. Obj Time               : 0.00657 s
+  Batch Obj Time              : 0.00007 s
+  Obj Speedup                 : 98.02 x
+  Grad Diff                   : 0.00143101 
+  Hess Diff                   : 0.02811761 
+
+  Reg. Train Time             : 0.93667 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.08800 s
+  Train Speedup               : 10.64 x
+
+Regular Metrics:
+    Accuracy                  : 0.8476 
+    F1-Macro                  : 0.6023 
+    F1-Micro                  : 0.8476 
+    Precision                 : 0.5673 
+    Recall                    : 0.6463 
+Batch Metrics:
+    Accuracy                  : 0.8286 
+    F1-Macro                  : 0.5916 
+    F1-Micro                  : 0.8286 
+    Precision                 : 0.5635 
+    Recall                    : 0.6289 
+
+  Sample Size                 : 105 
+  Num Classes                 : 3 
+
+
+Entry: Hyperboloid (polbooks) (seed 9)
+----------------------------------------
+  Reg. Obj Time               : 0.04872 s
+  Batch Obj Time              : 0.00010 s
+  Obj Speedup                 : 490.29 x
+  Grad Diff                   : 0.28059473 
+  Hess Diff                   : 0.53729890 
+
+  Reg. Train Time             : 5.36847 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.24751 s
+  Train Speedup               : 21.69 x
+
+Regular Metrics:
+    Accuracy                  : 0.8762 
+    F1-Macro                  : 0.6229 
+    F1-Micro                  : 0.8762 
+    Precision                 : 0.5893 
+    Recall                    : 0.6667 
+Batch Metrics:
+    Accuracy                  : 0.8762 
+    F1-Macro                  : 0.6229 
+    F1-Micro                  : 0.8762 
+    Precision                 : 0.5893 
+    Recall                    : 0.6667 
+
+  Sample Size                 : 105 
+  Num Classes                 : 3 
+
+
+Entry: Logistic Regression (football) (seed 9)
+----------------------------------------
+  Reg. Obj Time               : 0.00627 s
+  Batch Obj Time              : 0.00006 s
+  Obj Speedup                 : 101.14 x
+  Grad Diff                   : 0.00000001 
+  Hess Diff                   : 0.00000001 
+
+  Reg. Train Time             : 1.88538 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.86676 s
+  Train Speedup               : 2.18 x
+
+Regular Metrics:
+    Accuracy                  : 0.1478 
+    F1-Macro                  : 0.0950 
+    F1-Micro                  : 0.1478 
+    Precision                 : 0.0896 
+    Recall                    : 0.1667 
+Batch Metrics:
+    Accuracy                  : 0.1478 
+    F1-Macro                  : 0.0950 
+    F1-Micro                  : 0.1478 
+    Precision                 : 0.0896 
+    Recall                    : 0.1667 
+
+  Sample Size                 : 115 
+  Num Classes                 : 12 
+
+
+Entry: Poincare (football) (seed 9)
+----------------------------------------
+  Reg. Obj Time               : 0.02665 s
+  Batch Obj Time              : 0.00008 s
+  Obj Speedup                 : 314.12 x
+  Grad Diff                   : 0.00052624 
+  Hess Diff                   : 0.00511573 
+
+  Reg. Train Time             : 3.84913 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.37627 s
+  Train Speedup               : 10.23 x
+
+Regular Metrics:
+    Accuracy                  : 0.0783 
+    F1-Macro                  : 0.0262 
+    F1-Micro                  : 0.0783 
+    Precision                 : 0.0476 
+    Recall                    : 0.0926 
+Batch Metrics:
+    Accuracy                  : 0.0957 
+    F1-Macro                  : 0.0410 
+    F1-Micro                  : 0.0957 
+    Precision                 : 0.0375 
+    Recall                    : 0.1111 
+
+  Sample Size                 : 115 
+  Num Classes                 : 12 
+
+
+Entry: Hyperboloid (football) (seed 9)
+----------------------------------------
+  Reg. Obj Time               : 0.21520 s
+  Batch Obj Time              : 0.00054 s
+  Obj Speedup                 : 400.42 x
+  Grad Diff                   : 0.26934825 
+  Hess Diff                   : 0.15461652 
+
+  Reg. Train Time             : 22.95719 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.86443 s
+  Train Speedup               : 26.56 x
+
+Regular Metrics:
+    Accuracy                  : 0.1478 
+    F1-Macro                  : 0.0950 
+    F1-Micro                  : 0.1478 
+    Precision                 : 0.0896 
+    Recall                    : 0.1667 
+Batch Metrics:
+    Accuracy                  : 0.0870 
+    F1-Macro                  : 0.0389 
+    F1-Micro                  : 0.0870 
+    Precision                 : 0.0615 
+    Recall                    : 0.1019 
+
+  Sample Size                 : 115 
+  Num Classes                 : 12 
+
+
+Entry: ERROR (UCIdataE) (seed 9)
+  ERROR: list index out of range
+
+Entry: ERROR (UCIdata) (seed 9)
+  ERROR: list index out of range
+
+Entry: ERROR (gauss) (seed 9)
+  ERROR: [Errno 2] No such file or directory: '/Users/lowoncuties/School/HyperbolicML/hyperXGB/datadata_001.mat'
+
+Entry: ERROR (gausshyper) (seed 9)
+  ERROR: [Errno 2] No such file or directory: '/Users/lowoncuties/School/HyperbolicML/hyperXGB/datadata_001.mat'
+
+Entry: Logistic Regression (polblogs) (seed 9)
+----------------------------------------
+  Reg. Obj Time               : 0.01470 s
+  Batch Obj Time              : 0.00009 s
+  Obj Speedup                 : 170.82 x
+  Grad Diff                   : 0.00000020 
+  Hess Diff                   : 0.00000003 
+
+  Reg. Train Time             : 2.32640 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.26471 s
+  Train Speedup               : 8.79 x
+
+Regular Metrics:
+    Accuracy                  : 0.9992 
+    F1-Macro                  : 0.9992 
+    F1-Micro                  : 0.9992 
+    Precision                 : 0.9992 
+    Recall                    : 0.9991 
+Batch Metrics:
+    Accuracy                  : 0.9992 
+    F1-Macro                  : 0.9992 
+    F1-Micro                  : 0.9992 
+    Precision                 : 0.9992 
+    Recall                    : 0.9991 
+
+  Sample Size                 : 1224 
+  Num Classes                 : 2 
+
+
+Entry: Poincare (polblogs) (seed 9)
+----------------------------------------
+  Reg. Obj Time               : 0.05088 s
+  Batch Obj Time              : 0.00012 s
+  Obj Speedup                 : 431.61 x
+  Grad Diff                   : 0.00158825 
+  Hess Diff                   : 0.02595489 
+
+  Reg. Train Time             : 6.98059 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.23877 s
+  Train Speedup               : 29.24 x
+
+Regular Metrics:
+    Accuracy                  : 0.9583 
+    F1-Macro                  : 0.9583 
+    F1-Micro                  : 0.9583 
+    Precision                 : 0.9583 
+    Recall                    : 0.9582 
+Batch Metrics:
+    Accuracy                  : 0.9428 
+    F1-Macro                  : 0.9427 
+    F1-Micro                  : 0.9428 
+    Precision                 : 0.9431 
+    Recall                    : 0.9424 
+
+  Sample Size                 : 1224 
+  Num Classes                 : 2 
+
+
+Entry: Hyperboloid (polblogs) (seed 9)
+----------------------------------------
+  Reg. Obj Time               : 0.42383 s
+  Batch Obj Time              : 0.00061 s
+  Obj Speedup                 : 690.03 x
+  Grad Diff                   : 0.30262302 
+  Hess Diff                   : 0.61993852 
+
+  Reg. Train Time             : 15.40729 s
+  Reg. Stopped Early          : True 
+  Reg. Rounds Completed       : 37 
+  Batch Train Time            : 0.30200 s
+  Train Speedup               : 51.02 x
+
+Regular Metrics:
+    Accuracy                  : 0.9984 
+    F1-Macro                  : 0.9984 
+    F1-Micro                  : 0.9984 
+    Precision                 : 0.9984 
+    Recall                    : 0.9984 
+Batch Metrics:
+    Accuracy                  : 0.9992 
+    F1-Macro                  : 0.9992 
+    F1-Micro                  : 0.9992 
+    Precision                 : 0.9992 
+    Recall                    : 0.9992 
+
+  Sample Size                 : 1224 
+  Num Classes                 : 2 
+
+
+Entry: Logistic Regression (karate) (seed 9)
+----------------------------------------
+  Reg. Obj Time               : 0.00056 s
+  Batch Obj Time              : 0.00004 s
+  Obj Speedup                 : 13.10 x
+  Grad Diff                   : 0.00000019 
+  Hess Diff                   : 0.00000003 
+
+  Reg. Train Time             : 0.18616 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.12263 s
+  Train Speedup               : 1.52 x
+
+Regular Metrics:
+    Accuracy                  : 1.0000 
+    F1-Macro                  : 1.0000 
+    F1-Micro                  : 1.0000 
+    Precision                 : 1.0000 
+    Recall                    : 1.0000 
+Batch Metrics:
+    Accuracy                  : 1.0000 
+    F1-Macro                  : 1.0000 
+    F1-Micro                  : 1.0000 
+    Precision                 : 1.0000 
+    Recall                    : 1.0000 
+
+  Sample Size                 : 34 
+  Num Classes                 : 2 
+
+
+Entry: Poincare (karate) (seed 9)
+----------------------------------------
+  Reg. Obj Time               : 0.00183 s
+  Batch Obj Time              : 0.00006 s
+  Obj Speedup                 : 29.60 x
+  Grad Diff                   : 0.00155522 
+  Hess Diff                   : 0.02652969 
+
+  Reg. Train Time             : 0.28996 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.06763 s
+  Train Speedup               : 4.29 x
+
+Regular Metrics:
+    Accuracy                  : 0.9706 
+    F1-Macro                  : 0.9706 
+    F1-Micro                  : 0.9706 
+    Precision                 : 0.9722 
+    Recall                    : 0.9706 
+Batch Metrics:
+    Accuracy                  : 0.5000 
+    F1-Macro                  : 0.3333 
+    F1-Micro                  : 0.5000 
+    Precision                 : 0.2500 
+    Recall                    : 0.5000 
+
+  Sample Size                 : 34 
+  Num Classes                 : 2 
+
+
+Entry: Hyperboloid (karate) (seed 9)
+----------------------------------------
+  Reg. Obj Time               : 0.01253 s
+  Batch Obj Time              : 0.00012 s
+  Obj Speedup                 : 105.04 x
+  Grad Diff                   : 0.31913248 
+  Hess Diff                   : 0.62620150 
+
+  Reg. Train Time             : 1.31366 s
+  Reg. Stopped Early          : False 
+  Reg. Rounds Completed       : 100 
+  Batch Train Time            : 0.12507 s
+  Train Speedup               : 10.50 x
 
 Regular Metrics:
     Accuracy                  : 1.0000 
