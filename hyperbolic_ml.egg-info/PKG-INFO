@@ -1,3 +1,29 @@
+Metadata-Version: 2.4
+Name: hyperbolic-ml
+Version: 1.0.0
+Summary: High-Performance Hyperbolic Machine Learning Library
+Author: HyperbolicML Contributors
+License: MIT
+Keywords: machine learning,hyperbolic geometry,manifold learning,xgboost
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.21.0
+Requires-Dist: scipy>=1.7.0
+Requires-Dist: xgboost>=1.6.0
+Requires-Dist: scikit-learn>=1.0.0
+
 # HyperbolicML
 
 **High-Performance Hyperbolic Machine Learning Library**
@@ -272,10 +298,10 @@ If you use HyperbolicML in your research, please cite:
 
 ```bibtex
 @software{hyperbolicml2024,
-  title={HyperbolicML: High-Performance Hyperbolic Machine Learning Library},
-  author={Lukas Jochymek},
-  year={2025},
-  url={https://github.com/lowoncuties/HyperbolicML}
+  title={HyperbolicML: Ultra-fast Hyperbolic Machine Learning with XGBoost},
+  author={HyperbolicML Contributors},
+  year={2024},
+  url={https://github.com/username/HyperbolicML}
 }
 ```
 
@@ -287,7 +313,11 @@ If you use HyperbolicML in your research, please cite:
 
 ## 💬 Support
 
-- 🐛 Issues: [GitHub Issues](https://github.com/lowoncuties/HyperbolicML/issues)
+- 📧 Email: support@hyperbolicml.org
+- 💬 Discord: [HyperbolicML Community](https://discord.gg/hyperbolicml)
+- 🐛 Issues: [GitHub Issues](https://github.com/username/HyperbolicML/issues)
+- 📖 Documentation: [hyperbolicml.readthedocs.io](https://hyperbolicml.readthedocs.io)
 
 ---
 
+**Made with ❤️ by the HyperbolicML team**

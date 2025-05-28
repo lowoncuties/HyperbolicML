@@ -1,6 +1,7 @@
 import numpy as np
 import torch
-from xgb.manifold import Manifold
+from .manifold import Manifold
+
 MIN_NORM = 1e-15
 BALL_EPS = {torch.float32: 4e-3, torch.float64: 1e-5}
 
@@ -152,7 +153,7 @@ class PoincareBall(Manifold):
         Returns:
             torch.Tensor with tangent points.
         """
-        sqrt_c = c ** 0.5
+        sqrt_c = c**0.5
         u_norm = u.norm(dim=-1, p=2, keepdim=True).clamp_min(MIN_NORM)
         gamma_1 = torch.tanh(sqrt_c * u_norm) * u / (sqrt_c * u_norm)
         return self.project(gamma_1, c)
@@ -169,7 +170,7 @@ class PoincareBall(Manifold):
         """
         norm = x.norm(dim=-1, p=2, keepdim=True).clamp_min(MIN_NORM)
         eps = BALL_EPS[x.dtype]
-        maxnorm = (1 - eps) / (c ** 0.5)
+        maxnorm = (1 - eps) / (c**0.5)
         cond = norm > maxnorm
         projected = x / norm * maxnorm
         return torch.where(cond, projected, x)

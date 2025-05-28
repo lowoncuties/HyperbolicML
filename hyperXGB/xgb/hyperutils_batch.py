@@ -1,10 +1,10 @@
 import numpy as np
 import xgboost as xgb
-from xgb.poincare import (
+from .poincare import (
     PoincareBall,
 )  # Assuming this path is correct for your project
-from xgb.hyperboloid1 import Hyperbolic  # Assuming this path is correct
-from xgb.hyperboloid_batch import (
+from .hyperboloid1 import Hyperbolic  # Assuming this path is correct
+from .hyperboloid_batch import (
     batch_hyperboloid_rgrad_vectorized,
     batch_hyperboloid_rhess_vectorized,
     batch_poincare_rgrad_vectorized,
@@ -478,3 +478,145 @@ def multiclass_eval(
     # predt are raw scores if custom obj is used
     preds_idx = predt.argmax(axis=1)
     return "PyMError", float((preds_idx != labels).mean())
+
+
+def _handle_binary_classification(predt: np.ndarray) -> np.ndarray:
+    """
+    Handle binary classification by ensuring predictions are 2D.
+
+    XGBoost sends 1D arrays for binary classification but our batch functions
+    expect 2D arrays for multiclass. This function converts binary to multiclass format.
+    """
+    if predt.ndim == 1:
+        # Binary classification: convert to 2-class format
+        # XGBoost binary predictions are logits for P(class=1)
+        # Convert to [logit_class_0, logit_class_1] format
+        n_samples = len(predt)
+        multiclass_predt = np.zeros((n_samples, 2))
+        multiclass_predt[:, 0] = -predt  # logit for class 0
+        multiclass_predt[:, 1] = predt  # logit for class 1
+        return multiclass_predt
+    return predt
+
+
+def custom_multiclass_obj_with_binary_support(
+    predt: np.ndarray, dtrain, manifold: str = "poincare"
+) -> tuple[np.ndarray, np.ndarray]:
+    """
+    Unified objective with binary classification support.
+    Handles both DMatrix and numpy array inputs for compatibility with sklearn API.
+    """
+    # Handle binary classification
+    predt_2d = _handle_binary_classification(predt)
+
+    # Extract labels and weights depending on input type
+    if hasattr(dtrain, "get_label"):
+        # DMatrix object (low-level XGBoost API)
+        labels = dtrain.get_label().astype(int)
+        weights = _prepare_weights(dtrain)
+    else:
+        # Numpy array (sklearn API)
+        labels = dtrain.astype(int)
+        weights = np.ones(len(labels))  # Default weights
+
+    n_samples, n_classes = predt_2d.shape
+
+    probs = batch_softmax(predt_2d)
+    one_hot_labels = _one_hot(labels, n_classes)
+
+    # Euclidean gradients (dL/dz_E) and Hessians (d^2L/dz^2_E) w.r.t. logits z
+    eu_grad = (probs - one_hot_labels) * weights[:, None]
+    min_hess_val = 1e-7  # Consistent minimum Hessian value
+    eu_hess = np.maximum(
+        2.0 * probs * (1.0 - probs) * weights[:, None], min_hess_val
+    )
+
+    flat_x_logits = predt_2d.ravel()  # These are the logits z
+    flat_eu_grad = eu_grad.ravel()  # This is dL/dz_E
+    flat_eu_hess = eu_hess.ravel()  # This is d^2L/dz^2_E
+
+    rgrad = flat_eu_grad  # Default to Euclidean
+    rhess = flat_eu_hess  # Default to Euclidean
+
+    if manifold == "poincare":
+        epsilon_stability = 1e-8  # Small constant for numerical stability
+
+        # Map logits z to Poincaré disk points m = tanh(z)
+        m_on_disk = np.tanh(flat_x_logits)
+
+        # --- Standard Poincaré pullback metric formulas ---
+        # The scaling factor is ( (1-m^2)/2 )^2 which is 1/lambda_conformal(m)^2
+        # where lambda_conformal(m) = 2 / (1-m^2) is the conformal factor for the metric.
+
+        one_minus_m_squared = 1.0 - m_on_disk**2
+        # Ensure the base (1-m^2) is not excessively small before squaring or division.
+        safe_one_minus_m_squared = np.maximum(
+            one_minus_m_squared, epsilon_stability
+        )
+
+        # This is ((1-m^2)/2)^2, which is 1 / (lambda_conformal(m)^2)
+        current_scaling_factor = (safe_one_minus_m_squared / 2.0) ** 2
+
+        rgrad = flat_eu_grad * current_scaling_factor
+
+        hess_curvature_correction = 2.0 * m_on_disk * (flat_eu_grad**2)
+
+        rhess = (
+            flat_eu_hess - hess_curvature_correction
+        ) * current_scaling_factor
+
+        # Ensure Riemannian Hessian is positive for XGBoost stability
+        rhess = np.maximum(
+            rhess, epsilon_stability
+        )  # Using a small positive floor
+
+    elif manifold == "hyperboloid":
+        rgrad = batch_hyperboloid_rgrad(flat_x_logits, flat_eu_grad)
+        rhess = batch_hyperboloid_rhess(
+            flat_x_logits, flat_eu_grad, flat_eu_hess
+        )
+        rhess = np.maximum(
+            rhess, min_hess_val
+        )  # Ensure hyperboloid hessian is positive
+
+    # For 'euclid' (or any other unhandled manifold string), it uses the defaults:
+    # rgrad = flat_eu_grad, rhess = flat_eu_hess
+
+    grad_reshaped = rgrad.reshape(n_samples, n_classes)
+    hess_reshaped = rhess.reshape(n_samples, n_classes)
+
+    # If original was 1D (binary), return 1D
+    if predt.ndim == 1:
+        # For binary, XGBoost expects 1D gradients/hessians
+        # Take the difference: grad_class1 - grad_class0
+        grad_binary = grad_reshaped[:, 1] - grad_reshaped[:, 0]
+        hess_binary = (
+            hess_reshaped[:, 1] + hess_reshaped[:, 0]
+        )  # Sum for binary
+        return grad_binary, hess_binary
+
+    return grad_reshaped.ravel(), hess_reshaped.ravel()
+
+
+# Update wrapper functions to use binary support
+def customgobj_with_binary_support(
+    predt: np.ndarray, dtrain: xgb.DMatrix
+) -> tuple[np.ndarray, np.ndarray]:
+    """Poincaré objective with binary classification support."""
+    return custom_multiclass_obj_with_binary_support(predt, dtrain, "poincare")
+
+
+def hyperobj_with_binary_support(
+    predt: np.ndarray, dtrain: xgb.DMatrix
+) -> tuple[np.ndarray, np.ndarray]:
+    """Hyperboloid objective with binary classification support."""
+    return custom_multiclass_obj_with_binary_support(
+        predt, dtrain, "hyperboloid"
+    )
+
+
+def logregobj_with_binary_support(
+    predt: np.ndarray, dtrain: xgb.DMatrix
+) -> tuple[np.ndarray, np.ndarray]:
+    """Euclidean objective with binary classification support."""
+    return custom_multiclass_obj_with_binary_support(predt, dtrain, "euclid")

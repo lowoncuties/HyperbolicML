@@ -1,7 +1,7 @@
 import numpy as np
 import xgboost as xgb
-from xgb.poincare import PoincareBall
-from xgb.hyperboloid1 import Hyperbolic
+from .poincare import PoincareBall
+from .hyperboloid1 import Hyperbolic
 
 # kRows, kClasses = 280, 4  # for gaussion data
 
