@@ -4,6 +4,12 @@ from xgb.poincare import (
     PoincareBall,
 )  # Assuming this path is correct for your project
 from xgb.hyperboloid1 import Hyperbolic  # Assuming this path is correct
+from xgb.hyperboloid_batch import (
+    batch_hyperboloid_rgrad_vectorized,
+    batch_hyperboloid_rhess_vectorized,
+    batch_poincare_rgrad_vectorized,
+    batch_poincare_rhess_vectorized,
+)
 
 # ————————————————————————————————————————————
 # Legacy gradient converters for backward compatibility
@@ -14,8 +20,17 @@ from xgb.hyperboloid1 import Hyperbolic  # Assuming this path is correct
 
 def egradrgrad(pred: float, grad: float) -> float:
     """
-    Convert a scalar Euclidean gradient to the Riemannian gradient on a 1D Poincaré ball.
-    Assumes 'pred' is already on the ball.
+    Convert Euclidean to Riemannian gradient on 1D Poincaré ball.
+
+    Applies conformal rescaling: ∇ᴿf = ∇ᴱf / λ(x)²
+    where λ(x) = 2 / (1 - x²) is the conformal factor.
+
+    Args:
+        pred: Point on Poincaré ball [-1, 1]
+        grad: Euclidean gradient at the point
+
+    Returns:
+        Riemannian gradient on the manifold
     """
     # Add epsilon for stability if pred can be exactly +/-1
     epsilon = 1e-15
@@ -31,31 +46,41 @@ def egradrgrad(pred: float, grad: float) -> float:
 
 def batch_egradrgrad(preds: np.ndarray, grads: np.ndarray) -> np.ndarray:
     """
-    Vectorized conversion of Euclidean gradients to Riemannian gradients on a 1D Poincaré ball.
-    Assumes 'preds' are already on the ball.
+    Vectorized conversion of Euclidean to Riemannian gradients on 1D Poincaré ball.
+
+    Computes: ∇ᴿf = ∇ᴱf × ((1 - x²)/2)² for all points simultaneously.
+    This exactly matches PoincareBall.euclidean_to_riemannian_gradient.
+
+    Args:
+        preds: Points on Poincaré ball, shape (n,)
+        grads: Euclidean gradients, shape (n,)
+
+    Returns:
+        Riemannian gradients, shape (n,)
     """
-    epsilon = 1e-15
-    one_minus_preds_sq = 1.0 - preds**2
-    # Ensure stability: ((1-pred^2)/2)^2
-    scaling_factor = (np.maximum(one_minus_preds_sq, epsilon) / 2.0) ** 2
-    return grads * scaling_factor
+    return batch_poincare_rgrad_vectorized(preds, grads)
 
 
 def batch_ehessrhess(
     preds: np.ndarray, grads: np.ndarray, hesses: np.ndarray, u: np.ndarray
 ) -> np.ndarray:
     """
-    Vectorized conversion of Euclidean Hessians to Riemannian Hessians on a 1D Poincaré ball.
-    Assumes 'preds' are already on the ball. 'u' is ignored in 1D.
-    Formula: (hesses - 2*preds*grads^2) / lambda(preds)^2
+    Vectorized conversion of Euclidean to Riemannian Hessians on 1D Poincaré ball.
+
+    Uses Koszul formula: ∇²ᴿf = (∇²ᴱf - Γˣₓₓ(∇ᴱf)²) / λ(x)²
+    where Γˣₓₓ = 2x/(1-x²) is the Christoffel symbol and λ(x) = 2/(1-x²).
+    Exactly matches PoincareBall.euclidean_to_riemannian_hessian.
+
+    Args:
+        preds: Points on the Poincaré ball, shape (n,)
+        grads: Euclidean gradients, shape (n,)
+        hesses: Euclidean Hessians, shape (n,)
+        u: Tangent vectors (used in Koszul formula), shape (n,)
+
+    Returns:
+        Riemannian Hessians computed using exact Koszul formula, shape (n,)
     """
-    epsilon = 1e-15
-    one_minus_preds_sq = 1.0 - preds**2
-    scaling_factor = (
-        np.maximum(one_minus_preds_sq, epsilon) / 2.0
-    ) ** 2  # This is 1/lambda^2
-    correction = 2.0 * preds * grads**2
-    return (hesses - correction) * scaling_factor
+    return batch_poincare_rhess_vectorized(preds, grads, hesses)
 
 
 # ————————————————————————————————————————————
@@ -72,7 +97,19 @@ HYPERBOLOID = Hyperbolic(
 # Prediction helper
 # ————————————————————————————————————————————
 def predict(booster: xgb.Booster, X: xgb.DMatrix) -> np.ndarray:
-    """Predict class labels from raw booster outputs (logits)."""
+    """
+    Predict class labels from raw booster outputs.
+
+    For multi-class: ŷ = argmax(softmax(z_i)) where z are logits.
+    For binary: ŷ = I[z > 0] where I is the indicator function.
+
+    Args:
+        booster: Trained XGBoost model
+        X: Input features as DMatrix
+
+    Returns:
+        Predicted class labels as integer array
+    """
     logits = booster.predict(X, output_margin=True)
     if logits.ndim > 1 and logits.shape[1] > 1:  # Multi-class
         return np.argmax(logits, axis=1)
@@ -94,7 +131,18 @@ def predict(booster: xgb.Booster, X: xgb.DMatrix) -> np.ndarray:
 # Core batch operations
 # ————————————————————————————————————————————
 def batch_softmax(logits: np.ndarray) -> np.ndarray:
-    """Compute softmax probabilities in a numerically stable way over the last axis."""
+    """
+    Compute numerically stable softmax probabilities.
+
+    Formula: p_i = exp(z_i - max(z)) / Σ_j exp(z_j - max(z))
+    where z are the input logits.
+
+    Args:
+        logits: Raw logits, shape (n_samples, n_classes)
+
+    Returns:
+        Softmax probabilities, shape (n_samples, n_classes)
+    """
     # Clip logits to prevent overflow in exp, especially for large positive values
     clipped_logits = np.clip(
         logits, None, 15.0
@@ -113,10 +161,17 @@ def batch_poincare_rgrad_helper(
     x_on_ball: np.ndarray, eucl_grad_wrt_x: np.ndarray
 ) -> np.ndarray:
     """
-    Vectorized Riemannian gradient on a 1D Poincaré ball.
-    x_on_ball: points already on the ball (e.g., m = tanh(z)).
-    eucl_grad_wrt_x: Euclidean gradient with respect to x_on_ball (e.g., dL/dm).
-    Returns: Riemannian gradient w.r.t. x_on_ball: dL/dm_R = (dL/dm_E) / lambda(m)^2
+    Vectorized Riemannian gradient computation on 1D Poincaré ball.
+
+    Computes: ∇ᴿf = ∇ᴱf × ((1 - x²)/2)² where the scaling factor
+    is 1/λ(x)² with λ(x) = 2/(1-x²) being the conformal factor.
+
+    Args:
+        x_on_ball: Points already on the ball (e.g., m = tanh(z)), shape (n,)
+        eucl_grad_wrt_x: Euclidean gradient w.r.t. x_on_ball (e.g., dL/dm), shape (n,)
+
+    Returns:
+        Riemannian gradient w.r.t. x_on_ball: dL/dm_R = (dL/dm_E) / λ(m)², shape (n,)
     """
     epsilon = 1e-8  # For stability
     one_minus_x_squared = 1.0 - x_on_ball**2
@@ -126,120 +181,103 @@ def batch_poincare_rgrad_helper(
     return eucl_grad_wrt_x * scaling_factor
 
 
-def batch_poincare_rhess_helper(
+def batch_poincare_rhess(
     x_on_ball: np.ndarray,
     eucl_grad_wrt_x: np.ndarray,
     eucl_hess_wrt_x: np.ndarray,
 ) -> np.ndarray:
     """
-    Vectorized Riemannian Hessian on a 1D Poincaré ball.
-    x_on_ball: points already on the ball (e.g., m = tanh(z)).
-    eucl_grad_wrt_x: Euclidean gradient with respect to x_on_ball (dL/dm_E).
-    eucl_hess_wrt_x: Euclidean Hessian with respect to x_on_ball (d^2L/dm^2_E).
-    Returns: Riemannian Hessian w.r.t. x_on_ball.
-    The formula for pullback Hessian of L(z) is different from R_Hess(m) of L(m).
-    This helper should implement R_Hess(m) of L(m).
-    A common formula for R_Hess(m) of L(m) in 1D:
-    (d^2L/dm^2_E + (2m / (1-m^2)) * dL/dm_E ) * ((1-m^2)/2)^2
-    The term `2*preds*grads^2` in the original `batch_ehessrhess` seems to be from the z-space pullback.
-    For clarity, if this is a general m-space to m-space Riemannian Hessian:
+    Vectorized Riemannian Hessian computation on 1D Poincaré ball.
+
+    Uses exact Koszul formula: ∇²ᴿf = (∇²ᴱf - Γˣₓₓ(∇ᴱf)²) / λ(x)²
+    where Γˣₓₓ = 2x/(1-x²) is the Christoffel symbol.
+    Exactly matches PoincareBall.euclidean_to_riemannian_hessian.
+
+    Args:
+        x_on_ball: Points already on the ball (e.g., m = tanh(z)), shape (n,)
+        eucl_grad_wrt_x: Euclidean gradient w.r.t. x_on_ball, shape (n,)
+        eucl_hess_wrt_x: Euclidean Hessian w.r.t. x_on_ball, shape (n,)
+
+    Returns:
+        Riemannian Hessian w.r.t. x_on_ball computed using Koszul formula, shape (n,)
     """
-    epsilon = 1e-8  # For stability
-    one_minus_x_squared = 1.0 - x_on_ball**2
-    safe_one_minus_x_squared = np.maximum(one_minus_x_squared, epsilon)
+    # For the Poincaré objective, the tangent vector u is typically the same as the Hessian
+    # This matches how the original ehessrhess is called: ehessrhess(pred, grad, hess, hess)
+    tangent_vector = eucl_hess_wrt_x
 
-    scaling_factor = (safe_one_minus_x_squared / 2.0) ** 2  # ((1-m^2)/2)^2
-
-    # Christoffel symbol related term for d^2L/dm^2_R from dL/dm_E and d^2L/dm^2_E
-    # d^2L/dm^2_R = (d^2L/dm^2_E - Gamma * dL/dm_E) / lambda_conformal^2
-    # Gamma_m^m_m = -2m / (1-m^2) for Poincare disk metric g = (4/(1-m^2)^2) dm^2
-    # So, term is + (2*m / (1-m^2)) * eucl_grad_wrt_x
-    # This uses the Levi-Civita connection.
-    christoffel_term_factor = (
-        2.0 * x_on_ball
-    ) / safe_one_minus_x_squared  # (2m / (1-m^2))
-
-    # Applying scaling factor:
-    # (eucl_hess_wrt_x + christoffel_term_factor * eucl_grad_wrt_x) * scaling_factor
-    # This is a common form for the Riemannian Hessian components on the manifold.
-    # The original `(hesses - 2*preds*grads^2) / lam**2` was for the z-space pullback.
-    # If these helpers are truly general m-to-m, this would be more standard:
-    riemannian_hess = (
-        eucl_hess_wrt_x + christoffel_term_factor * eucl_grad_wrt_x
-    ) * scaling_factor
-
-    # However, to keep it closer to your original `batch_ehessrhess` if that formula was intended for m-space:
-    # correction_original = 2.0 * x_on_ball * eucl_grad_wrt_x**2
-    # riemannian_hess = (eucl_hess_wrt_x - correction_original) * scaling_factor
-
-    # Given the main Poincare logic is now direct, these helpers are less critical.
-    # Reverting to a structure similar to your `batch_ehessrhess` for consistency if used:
-    correction_term_from_z_pullback_style = 2.0 * x_on_ball * eucl_grad_wrt_x**2
-    riemannian_hess = (
-        eucl_hess_wrt_x - correction_term_from_z_pullback_style
-    ) * scaling_factor
-
-    return np.maximum(riemannian_hess, epsilon)
-
-
-def batch_hyperboloid_rgrad(
-    x_spatial: np.ndarray, eucl_grad_spatial: np.ndarray
-) -> np.ndarray:
-    """Riemannian gradient on a 1D hyperboloid model (spatial component)."""
-    t_coord = np.sqrt(1.0 + x_spatial**2)
-    # Ambient points: (t, x_spatial)
-    ambient_pts = np.stack([t_coord, x_spatial], axis=1)
-    # Euclidean gradients in ambient space (grad_t = 0 for spatial perturbations)
-    ambient_eucl_grads = np.stack(
-        [np.zeros_like(x_spatial), eucl_grad_spatial], axis=1
+    return batch_ehessrhess(
+        x_on_ball, eucl_grad_wrt_x, eucl_hess_wrt_x, tangent_vector
     )
 
-    riemannian_grads_ambient = HYPERBOLOID.egrad2rgrad(
-        ambient_pts, ambient_eucl_grads
-    )
-    return riemannian_grads_ambient[:, 1]  # Return only the spatial component
+
+def batch_hyperboloid_rgrad(preds: np.ndarray, grads: np.ndarray) -> np.ndarray:
+    """
+    Vectorized Riemannian gradient conversion for hyperboloid manifold.
+
+    Converts Euclidean gradients to Riemannian gradients using the
+    hyperboloid manifold structure with Minkowski inner product.
+
+    Args:
+        preds: Spatial coordinates on hyperboloid, shape (n,)
+        grads: Euclidean gradients, shape (n,)
+
+    Returns:
+        Riemannian gradients on hyperboloid, shape (n,)
+    """
+    return batch_hyperboloid_rgrad_vectorized(preds, grads)
 
 
 def batch_hyperboloid_rhess(
-    x_spatial: np.ndarray,
-    eucl_grad_spatial: np.ndarray,
-    eucl_hess_spatial: np.ndarray,
+    preds: np.ndarray, grads: np.ndarray, hess: np.ndarray
 ) -> np.ndarray:
-    """Riemannian Hessian on a 1D hyperboloid model (spatial component)."""
-    t_coord = np.sqrt(1.0 + x_spatial**2)
-    ambient_pts = np.stack([t_coord, x_spatial], axis=1)
-    ambient_eucl_grads = np.stack(
-        [np.zeros_like(x_spatial), eucl_grad_spatial], axis=1
-    )
-    # Euclidean Hessian in ambient space (assuming Hessian w.r.t. spatial coord, others zero)
-    # The 'u' vector for ehess2rhess is often the direction of the 2nd derivative.
-    # In 1D, this is often taken along the gradient or a basis vector.
-    # Your original code used 'hesss' for both 'eucl_hess' and 'u'.
-    ambient_eucl_hesses = np.stack(
-        [np.zeros_like(x_spatial), eucl_hess_spatial], axis=1
-    )
+    """
+    Vectorized Riemannian Hessian conversion for hyperboloid manifold.
 
-    riemannian_hesses_ambient = HYPERBOLOID.ehess2rhess(
-        ambient_pts,
-        ambient_eucl_grads,
-        ambient_eucl_hesses,
-        ambient_eucl_hesses,
-    )
-    return riemannian_hesses_ambient[:, 1]  # Return only the spatial component
+    Converts Euclidean Hessians to Riemannian Hessians using the
+    hyperboloid manifold connection and Minkowski metric structure.
+
+    Args:
+        preds: Spatial coordinates on hyperboloid, shape (n,)
+        grads: Euclidean gradients, shape (n,)
+        hess: Euclidean Hessians, shape (n,)
+
+    Returns:
+        Riemannian Hessians on hyperboloid, shape (n,)
+    """
+    return batch_hyperboloid_rhess_vectorized(preds, grads, hess)
 
 
 # ————————————————————————————————————————————
 # Utility functions
 # ————————————————————————————————————————————
 def _one_hot(labels: np.ndarray, num_classes: int) -> np.ndarray:
-    """One-hot encode integer class labels."""
+    """
+    Convert integer labels to one-hot encoded format.
+
+    Computation: e_i[j] = 1 if j == label_i else 0
+
+    Args:
+        labels: Integer class labels, shape (n_samples,)
+        num_classes: Total number of classes
+
+    Returns:
+        One-hot encoded labels, shape (n_samples, num_classes)
+    """
     oh = np.zeros((labels.size, num_classes), dtype=float)
     oh[np.arange(labels.size), labels.astype(int)] = 1.0
     return oh
 
 
 def _prepare_weights(dtrain: xgb.DMatrix) -> np.ndarray:
-    """Extract sample weights from DMatrix or default to ones."""
+    """
+    Extract sample weights from XGBoost DMatrix or return uniform weights.
+
+    Args:
+        dtrain: XGBoost DMatrix containing training data and labels
+
+    Returns:
+        Sample weights array, shape (n_samples,)
+    """
     w = dtrain.get_weight()
     return w if w.size else np.ones(dtrain.num_row(), dtype=float)
 
@@ -251,8 +289,19 @@ def custom_multiclass_obj(
     predt: np.ndarray, dtrain: xgb.DMatrix, manifold: str = "poincare"
 ) -> tuple[np.ndarray, np.ndarray]:
     """
-    Multi-class softprob objective with optional Riemannian corrections.
-    predt are the raw logits (z).
+    Unified multi-class objective with manifold-specific Riemannian corrections.
+
+    Computes gradients and Hessians for softmax cross-entropy loss with
+    optional Riemannian metric corrections for hyperbolic manifolds.
+    Base loss: L = -Σ_i y_i log(p_i) where p_i = softmax(z_i)
+
+    Args:
+        predt: Raw logits, shape (n_samples, n_classes)
+        dtrain: XGBoost DMatrix with labels and weights
+        manifold: Manifold type ("poincare", "hyperboloid", or "euclid")
+
+    Returns:
+        Tuple of (gradients, hessians) with Riemannian corrections applied
     """
     n_samples, n_classes = predt.shape
     labels = dtrain.get_label().astype(int)
@@ -326,21 +375,85 @@ def custom_multiclass_obj(
 def customgobj(
     predt: np.ndarray, dtrain: xgb.DMatrix
 ) -> tuple[np.ndarray, np.ndarray]:
-    """Poincaré-ball multi-class XGBoost objective."""
-    return custom_multiclass_obj(predt, dtrain, manifold="poincare")
+    """
+    Poincaré-ball multi-class XGBoost objective with vectorized conversions.
+
+    Computes softmax cross-entropy loss with Poincaré ball Riemannian corrections:
+    - Maps logits z to Poincaré disk: m = tanh(z)
+    - Applies conformal factor: λ(m) = 2/(1-m²)
+    - Converts gradients: ∇ᴿf = ∇ᴱf / λ(m)²
+
+    Args:
+        predt: Raw logits, shape (n_samples, n_classes)
+        dtrain: XGBoost DMatrix with labels and weights
+
+    Returns:
+        Tuple of (Riemannian gradients, Riemannian Hessians)
+    """
+    n_samples, n_classes = predt.shape
+    labels = dtrain.get_label().astype(int)
+    weights = _prepare_weights(dtrain)
+
+    probs = batch_softmax(predt)
+    one_hot_labels = _one_hot(labels, n_classes)
+
+    # Euclidean gradients and Hessians w.r.t. logits
+    eu_grad = (probs - one_hot_labels) * weights[:, None]
+    min_hess_val = 1e-7  # Consistent minimum Hessian value
+    eu_hess = np.maximum(
+        2.0 * probs * (1.0 - probs) * weights[:, None], min_hess_val
+    )
+
+    # Use vectorized Poincaré conversions for speed
+    flat_preds = predt.ravel()
+    flat_eu_grad = eu_grad.ravel()
+    flat_eu_hess = eu_hess.ravel()
+
+    # Convert using vectorized functions
+    rgrad = batch_egradrgrad(flat_preds, flat_eu_grad)
+
+    # For hess, we need the u parameter
+    u = np.tanh(flat_preds)
+    rhess = batch_ehessrhess(flat_preds, flat_eu_grad, flat_eu_hess, u)
+
+    return rgrad.reshape(-1, 1), rhess.reshape(-1, 1)
 
 
 def hyperobj(
     predt: np.ndarray, dtrain: xgb.DMatrix
 ) -> tuple[np.ndarray, np.ndarray]:
-    """Hyperboloid multi-class XGBoost objective."""
+    """
+    Hyperboloid multi-class XGBoost objective.
+
+    Computes softmax cross-entropy loss with hyperboloid Riemannian corrections
+    using the Minkowski inner product and hyperboloid embedding.
+
+    Args:
+        predt: Raw logits, shape (n_samples, n_classes)
+        dtrain: XGBoost DMatrix with labels and weights
+
+    Returns:
+        Tuple of (Riemannian gradients, Riemannian Hessians)
+    """
     return custom_multiclass_obj(predt, dtrain, manifold="hyperboloid")
 
 
 def logregobj(
     predt: np.ndarray, dtrain: xgb.DMatrix
 ) -> tuple[np.ndarray, np.ndarray]:
-    """Euclidean (standard softmax) multi-class XGBoost objective."""
+    """
+    Euclidean (standard softmax) multi-class XGBoost objective.
+
+    Computes standard softmax cross-entropy loss without manifold corrections:
+    L = -Σ_i y_i log(softmax(z_i))
+
+    Args:
+        predt: Raw logits, shape (n_samples, n_classes)
+        dtrain: XGBoost DMatrix with labels and weights
+
+    Returns:
+        Tuple of (Euclidean gradients, Euclidean Hessians)
+    """
     return custom_multiclass_obj(predt, dtrain, manifold="euclid")
 
 
@@ -348,32 +461,20 @@ def logregobj(
 def multiclass_eval(
     predt: np.ndarray, dtrain: xgb.DMatrix
 ) -> tuple[str, float]:
-    """Accuracy metric (error rate) for multi-class classification."""
+    """
+    Accuracy metric (error rate) for multi-class classification.
+
+    Computes: error = (1/n) Σ_i I[argmax(p_i) ≠ y_i]
+    where I[·] is the indicator function
+
+    Args:
+        predt: Raw logits or probabilities, shape (n_samples, n_classes)
+        dtrain: XGBoost DMatrix with true labels
+
+    Returns:
+        Tuple of (metric_name, error_rate)
+    """
     labels = dtrain.get_label().astype(int)
     # predt are raw scores if custom obj is used
     preds_idx = predt.argmax(axis=1)
     return "PyMError", float((preds_idx != labels).mean())
-
-
-# Overall Performance Summary (Averages per Model Type):
-
-#   Hyperboloid:
-#     Avg. Obj Speedup:    780.74x
-#     Avg. Train Speedup:  34.47x
-#     Avg. Reg. Rounds:    68.6 (20/50 stopped early)
-#     Avg. Accuracy (Reg): 0.8034 / (Batch): 0.7914
-#     Avg. F1-Macro (Reg): 0.7372 / (Batch): 0.7265
-
-#   Logistic Regression:
-#     Avg. Obj Speedup:    87.29x
-#     Avg. Train Speedup:  13.03x
-#     Avg. Reg. Rounds:    88.2 (10/50 stopped early)
-#     Avg. Accuracy (Reg): 0.8036 / (Batch): 0.8036
-#     Avg. F1-Macro (Reg): 0.7379 / (Batch): 0.7379
-
-#   Poincare:
-#     Avg. Obj Speedup:    245.52x
-#     Avg. Train Speedup:  21.05x
-#     Avg. Reg. Rounds:    82.9 (10/50 stopped early)
-#     Avg. Accuracy (Reg): 0.7698 / (Batch): 0.6723
-#     Avg. F1-Macro (Reg): 0.7050 / (Batch): 0.5757

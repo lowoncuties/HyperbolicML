@@ -10,6 +10,7 @@ import sys
 import time
 import glob
 import yaml
+import argparse
 import numpy as np
 import pandas as pd
 import xgboost as xgb
@@ -623,7 +624,21 @@ def save_results_to_excel(
 
 
 def main():
+    parser = argparse.ArgumentParser(
+        description="Compare regular and batch implementations across datasets"
+    )
+    parser.add_argument(
+        "--skip-datasets",
+        nargs="*",
+        default=[],
+        help="List of dataset names to skip (e.g., --skip-datasets wordnet)",
+    )
+    args = parser.parse_args()
+
     print("Comparing implementations across datasets...")
+    if args.skip_datasets:
+        print(f"Skipping datasets: {', '.join(args.skip_datasets)}")
+
     config_path = os.path.join(current_dir, "configs")
     config_files = glob.glob(os.path.join(config_path, "params.*.yml"))
     if not config_files:
@@ -640,6 +655,12 @@ def main():
                 .replace("params.", "")
                 .replace(".yml", "")
             )
+
+            # Skip datasets if specified in command line arguments
+            if cfg_name in args.skip_datasets:
+                print(f"Skipping dataset {cfg_name} as requested")
+                continue
+
             print(
                 f"\n\n===== PROCESSING DATASET: {cfg_name} (seed {mc_seed}) ====="
             )
