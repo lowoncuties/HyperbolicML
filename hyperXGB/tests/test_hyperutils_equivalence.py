@@ -12,7 +12,6 @@ import pytest
 import xgboost as xgb
 import sys
 import os
-from typing import Tuple
 
 # Add the xgb directory to Python path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "xgb"))

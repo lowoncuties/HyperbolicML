@@ -1,15 +1,11 @@
-import numpy as np
 from ConfigSpace import Categorical, Configuration, ConfigurationSpace, Float, Integer
 #from ConfigSpace.hyperparameters import UniformFloatHyperparameter, UniformIntegerHyperparameter
 import xgboost as xgb
 from sklearn import metrics
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split
-from xgboost import XGBClassifier
-from sklearn import datasets, svm
+from sklearn import svm
 from xgb.hyperutils import logregobj, accMetric, customgobj
 from smac import HyperparameterOptimizationFacade, Scenario
-from smac import RunHistory, Scenario
 from ConfigSpace.conditions import InCondition
 # for one run, and
 

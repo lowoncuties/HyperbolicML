@@ -2,9 +2,9 @@ import numpy as np
 import torch
 
 import pymanopt
-from pymanopt.manifolds import  Product, Euclidean, Sphere, SymmetricPositiveDefinite
+from pymanopt.manifolds import  Product, Sphere, SymmetricPositiveDefinite
 from pymanopt import Problem
-from pymanopt.optimizers import SteepestDescent, ConjugateGradient
+from pymanopt.optimizers import ConjugateGradient
 
 from sklearn.preprocessing import label_binarize
 

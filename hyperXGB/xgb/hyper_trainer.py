@@ -1,16 +1,12 @@
-import logging
 import os
 import warnings
-from typing import Any, Tuple
+from typing import Any
 import random
 from xgb.poincare import PoincareBall
 import numpy as np
 from sklearn.metrics import (
     f1_score,
-    average_precision_score,
     accuracy_score,
-    roc_auc_score,
-    precision_recall_curve,
     precision_score,
     recall_score,
 )
@@ -18,21 +14,17 @@ import xgboost as xgb
 import torch
 from ConfigSpace import Configuration
 from ignite.utils import setup_logger
-from xgb.hyperutils import logregobj, customgobj, accMetric, predict, hyperobj
+from xgb.hyperutils import logregobj, customgobj, accMetric, predict
 from sklearn.model_selection import train_test_split
 from joblib import Parallel, delayed
 from functools import partial
-from sklearn.utils import resample
 
-import scipy as sp
 
 warnings.filterwarnings("ignore")
 from .utils import (
     archive_code,
     expanduservars,
     _build_datasets,
-    kfold_split,
-    save_results,
     save_results_cc,
     _build_datasets_UCI,
 )

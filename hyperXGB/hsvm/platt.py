@@ -1,11 +1,9 @@
 # Downloaded from http://www.work.caltech.edu/~htlin/program/libsvm/doc/platt.py
 
 #!/usr/bin/env python
-from sys import argv
 #from svm import *
 from math import log, exp
 #from string import atof
-from random import randrange
 #--[Basic Function]---------------------------------------------------------------------
 #input decision_values, real_labels{1,-1}, #positive_instances, #negative_instances
 #output [A,B] that minimize sigmoid likilihood

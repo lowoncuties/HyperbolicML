@@ -2,9 +2,7 @@ import numpy as np
 import xgboost as xgb
 from sklearn import metrics
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split
-from xgboost import XGBClassifier
-from sklearn import datasets, svm
+from sklearn import svm
 from xgb.hyperutils import logregobj, accMetric, customgobj
 import itertools
 

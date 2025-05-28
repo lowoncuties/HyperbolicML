@@ -3,11 +3,9 @@ from ConfigSpace import Categorical, Configuration, ConfigurationSpace, Float, I
 import xgboost as xgb
 from sklearn import metrics
 from sklearn.ensemble import RandomForestClassifier
-from xgboost import XGBClassifier
-from sklearn import datasets, svm
+from sklearn import svm
 from xgb.hyperutils import logregobj, accMetric, customgobj
 from smac import HyperparameterOptimizationFacade, Scenario
-from smac import RunHistory, Scenario
 from ConfigSpace.conditions import InCondition
 import smac
 import os

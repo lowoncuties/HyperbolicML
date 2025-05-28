@@ -6,7 +6,6 @@ from xgb.hyper_trainer import  run_train_UCI
 from xgb.hyper_trainertemp import run_train
 
 def main():
-    import sys
     # params_file = sys.argv[1]
     # print(params_file)
 

@@ -3,10 +3,6 @@ import numpy as np
 import scipy as sp
 from sklearn.svm import LinearSVC
 from sklearn.preprocessing import label_binarize
-from sklearn.model_selection import StratifiedKFold
-from sklearn.metrics import roc_auc_score, precision_recall_curve, accuracy_score
-from sklearn.metrics import recall_score, precision_score, auc
-import sys
 
 # import modules within repository
 

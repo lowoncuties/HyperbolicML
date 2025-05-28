@@ -18,7 +18,6 @@ sys.path.insert(0, current_dir)
 # Import required modules
 from xgb.utils import set_seeds
 from xgb.hyperutils_batch import (
-    custom_multiclass_obj,
     logregobj,
     multiclass_eval,
     customgobj,

@@ -18,7 +18,6 @@ Mathematical Background:
 - Lorentzian inner product: ⟨u,v⟩_L = -u₀v₀ + Σᵢ uᵢvᵢ
 """
 
-from typing import Tuple
 import numpy as np
 
 

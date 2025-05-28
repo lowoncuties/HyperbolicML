@@ -1,29 +1,24 @@
-import logging
 import os
 import warnings
-from typing import Any, Tuple
+from typing import Any
 import random
 from xgb.poincare import PoincareBall
 import numpy as np
-from sklearn.metrics import f1_score, average_precision_score, accuracy_score, roc_auc_score, precision_recall_curve, \
-    precision_score, recall_score
+from sklearn.metrics import f1_score, accuracy_score, precision_score, recall_score
 import xgboost as xgb
 import torch
 from ConfigSpace import Configuration
 from ignite.utils import setup_logger
-from xgb.hyperutils import logregobj, customgobj, accMetric, predict, hyperobj
-from sklearn.model_selection import train_test_split
+from xgb.hyperutils import logregobj, customgobj, accMetric, predict
 from joblib import Parallel, delayed
 from functools import partial
 from sklearn.utils import resample
 from hororf.node import Node
-from hsvm import htools, hsvm
+from hsvm import htools
 import scipy as sp
 warnings.filterwarnings("ignore")
-from .utils import archive_code, expanduservars, _build_datasets, kfold_split, save_results, save_results_cc, \
+from .utils import archive_code, expanduservars, save_results_cc, \
     _build_datasets_UCI
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.svm import SVC
 # LOGGER = logging.getLogger(__name__)
 from xgb.tuneSaveConfig import classifier_tuneXGB, tune_MySVM_MyRF, classifier_tuneSingXGB
 
@@ -385,7 +380,7 @@ class classifier_hyperxgb_EP_m(classifier_hyperxgb_EP):
         obj_native = lossobject[names[ids]]
 
         ibins = np.arange(start=self._tryround, stop=self.kRounds, step= self._steps)
-        early_stop = 0;
+        early_stop = 0
         for idx in ibins:
             native_results = {}
             # Use the same objective function defined in XGBoost.
@@ -495,7 +490,7 @@ class classifier_hyperxgb_EP_v(classifier_hyperxgb_EP):
         ids = np.argmax(Fitness)  # first choice is to use the best one
         booster_native = modelobject[names[ids]]
         obj_native = lossobject[names[ids]]
-        early_stop = 0;
+        early_stop = 0
         ibins = np.arange(start=self._tryround, stop=round, step= self._steps)
         for idx, val in enumerate(ibins):
             native_results = {}

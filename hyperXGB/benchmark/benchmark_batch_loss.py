@@ -9,9 +9,6 @@ import sys
 import time
 import numpy as np
 import argparse
-import matplotlib.pyplot as plt
-from sklearn.datasets import make_classification
-from sklearn.model_selection import train_test_split
 
 # Add parent directory to the path
 sys.path.insert(
@@ -28,7 +25,6 @@ original_logregobj = logregobj
 
 # Import the optimized versions - backup original first
 import importlib
-import xgb.hyperutils
 
 backup_module = importlib.import_module("xgb.hyperutils")
 original_module_dict = backup_module.__dict__.copy()

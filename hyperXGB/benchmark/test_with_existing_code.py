@@ -7,7 +7,6 @@ import os
 import sys
 import time
 import yaml
-import numpy as np
 
 # Add parent directory to the path
 sys.path.insert(

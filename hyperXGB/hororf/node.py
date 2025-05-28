@@ -4,7 +4,7 @@ from scipy.stats import entropy
 
 import torch
 
-from .geom.horo import busemann, busemann_to_horocycle
+from .geom.horo import busemann
 from .horosvm import solve_horosvm
 
 
