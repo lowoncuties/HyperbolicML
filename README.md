@@ -16,11 +16,7 @@ HyperbolicML is a comprehensive Python library for machine learning on hyperboli
 
 ## 📦 Installation
 
-```bash
-pip install hyperbolic-ml
-```
-
-Or install from source:
+From source:
 
 ```bash
 git clone https://github.com/lowoncuties/HyperbolicML.git
@@ -229,29 +225,6 @@ print(f"XGBoost: {xgb_accuracy:.4f} accuracy, {xgb_time:.2f}s")
 print(f"HyperbolicXGBoost: {hyp_accuracy:.4f} accuracy, {hyp_time:.2f}s")
 print(f"Speedup: {xgb_time/hyp_time:.1f}x")
 ```
-
-## 🧪 Examples
-
-See the `examples/` directory for comprehensive usage examples:
-
-- `basic_usage.py`: Getting started with HyperbolicML
-- `advanced_features.py`: Custom objectives and hyperparameter tuning
-- `benchmarks.py`: Performance comparisons and profiling
-- `real_world_datasets.py`: Applications to real datasets
-
-## 📈 When to Use Hyperbolic Geometry
-
-Hyperbolic manifolds are particularly effective for:
-
-- **Hierarchical Data**: Tree-like structures, taxonomies
-- **Social Networks**: Power-law degree distributions
-- **Natural Language**: Word embeddings, language models
-- **Computer Vision**: Object recognition with hierarchical features
-- **Recommender Systems**: User-item interactions with implicit hierarchies
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
 
 ### Development Setup
 
