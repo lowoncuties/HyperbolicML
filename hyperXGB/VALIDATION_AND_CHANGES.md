@@ -39,7 +39,7 @@ def vectorized_poincare_grad(preds, grads):
     factor = 2.0 / one_minus_pred_sq         # 1 SIMD instruction (8 ops)
     return grads / (factor**2)               # 2 SIMD instructions (16 ops)
     # Total: 4 SIMD instructions = 32 scalar operations
-    # Speedup: 4n / 4 = n/1 → 8x speedup just from SIMD!
+    # Speedup: 4n / 4 = n/1
 ```
 
 ### Memory Access Pattern Optimization
